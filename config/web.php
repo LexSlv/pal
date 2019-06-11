@@ -62,12 +62,16 @@ $config = [
         'db' => $db,
 
         'urlManager' => [
+            'class' => 'codemix\localeurls\UrlManager',
+            'languages' => ['ru', 'kz'],
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
                 '<controller>/<action>' => '<controller>/<action>'
             ]
         ],
+
+
 
     ],
     'params' => $params,
