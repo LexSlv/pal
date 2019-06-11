@@ -1,0 +1,336 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #373A55;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a, button {
+    cursor: pointer;
+    outline: none;
+}
+
+input { outline: none; }
+
+.white { color: #FFFFFF; }
+.blue { color: #293b85; }
+.blueBack {  background-color: #293b85; }
+.redBack { background-color: #c03018; }
+
+
+.container {
+    width: 1140px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.headBlock {
+    height: 194px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headBlock h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 400px;
+    margin-right: 9.5%;
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+
+.topBlock {
+    margin: auto auto 0 auto;
+}
+
+.logo {
+    display: block;
+    height: 66px;
+    width: 66px;
+    background: url(/web/img/logo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.phone {
+    display: flex;
+    flex-flow: column;
+    font-size: 28px;
+    font-weight: 600;
+    padding-right: 26px;
+    position: relative;
+    margin: auto 3.5% auto 0;
+}
+
+.phone small {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: right;
+}
+
+.phone:before {
+    position: absolute;
+    content: "";
+    background-color: #c03018;
+    background-image: url(/web/img/phone.png);
+    background-repeat: no-repeat;
+    background-position: 55% 40%;
+    background-size: 22px 26px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    left: -56px;
+}
+
+.lang {
+    display: flex;
+    margin: auto auto auto 0;
+}
+
+.lang span {
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 4px;
+    cursor: pointer;
+}
+
+.scBlock {
+    display: flex;
+}
+
+.scBlock span {
+    height: 34px;
+    width: 34px;
+    background-repeat: no-repeat;
+    display: block;
+    margin: auto 0 auto 30px;
+}
+
+span.search {
+    background-image: url(/web/img/search.png);
+    background-size: contain;
+}
+
+span.cabinet {
+    border-radius: 50%;
+    background-image: url(/web/img/person.png);
+    background-size: 45%;
+    background-position: center;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 72px;
+    margin: auto 0 0 0;
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    position: relative;
+    width: 100%;
+}
+
+.navigation li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 74px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 28px;
+}
+
+banner {
+    height: 680px;
+    width: 100%;
+    display: block;
+    background: olivedrab;
+}
+
+.swiperBox {
+    position: relative;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    background-image: url(/web/img/chevron.svg);
+    width: 38px;
+    height: 38px;
+    background-color: red;
+    left: auto;
+    right: calc(50% - 570px);
+    bottom: 20px;
+    top: auto;
+}
+
+ .swiper-button-prev {
+    right: calc(50% - 500px);
+    transform: scale(-1, 1);
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 10px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets {
+    bottom: 20px;
+    left: calc(50% - 570px);
+    width: 100%;
+    text-align: left;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 0;
+    background: #d5d5d5;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: transparent;
+    border: 4px solid #d5d5d5;
+    height: 10px;
+    width: 10px;
+}
+
+.swiper-container {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+.swiper-slide {
+      text-align: center;
+      height: 100%;
+      margin: 0 auto;
+      font-size: 18px;
+      background: transparent;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+
+
+footer {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #7b7b7b 50%, #3b3b3b 50%);
+}
+
+.half {
+    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 44px 0;
+}
+
+.half h2 {
+    display: inline-block;
+    width: 60%;
+    margin: 0 auto 0 20px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.half p {
+    font-size: 14px;
+    font-weight: bold;
+    word-break: break-word;
+    width: 80%;
+    margin: 30px 0 0 0;
+}
+
+.bottomList {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0;
+    margin-left: 60px;
+}
+
+.bottomList li {
+    margin: 10px 0;
+    font-size: 17px;
+    width: auto;
+    min-width: 45%;
+    list-style: none;
+    display: block;
+}
+.bottomList li::before {
+  content: "\2022"; 
+  color: #3075b6; 
+  font-weight: bold; 
+  display: inline-block; 
+  width: 1em; 
+  margin-left: -1em; 
+}
+
+.bottomBlock {
+    background: #212327;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.bottomBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottomBox a {
+    display: block;
+    margin: auto 0;
+    width: auto;
+    color: #6d6d6d;
+    font-size: 14px;
+}
+
+.studio {
+    background-image: url(/web/img/foxis.png);
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    width: 66px;
+    height: 24px;
+    display: inline-block;
+    margin-left: 6px;
+}

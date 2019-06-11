@@ -1,81 +1,140 @@
 <?php
 
-/* @var $this \yii\web\View */
-/* @var $content string */
-
-use app\widgets\Alert;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
-use app\assets\AppAsset;
 
-AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <link rel='dns-prefetch' href='//fonts.googleapis.com'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/swiper.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <meta charset="utf-8" name="viewport"
+          content="initial-scale=1,maximum-scale=1, width=device-width,  user-scalable=no"/>
     <?php $this->head() ?>
-</head>
+
+    <?php $this->beginBody() ?>
 <body>
-<?php $this->beginBody() ?>
+<header>
+    <div class="headBlock" itemscope itemtype="https://schema.org/Organization">
 
-<div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
-            )
-        ],
-    ]);
-    NavBar::end();
-    ?>
+        <div class="container topBlock">
+            <div class="logo" itemprop="logo" alt="Сpakz Logo"></div>
 
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
+            <h1 class="serif" itemprop="name">Палата профессиональных независимых оценщиков</h1>
+
+            <div class="phone" itemprop="telephone" content="+77272665009">
+                8 (727) 266 50 09
+                <small>Телефон доверия</small>
+            </div>
+
+            <div class="lang white">
+                <span class="kz blueBack" lang="kk">KZ</span>
+                <span class="ru redBack" lang="ru">RU</span>
+            </div>
+
+            <div class="scBlock">
+                <span class="search"></span>
+                <span class="cabinet blueBack"></span>
+            </div>
+
+        </div>
+
+        <nav class="navigation white blueBack" role="navigation">
+            <div class="container">
+                <ul>
+                    <li>О палате</li>
+                    <li>Вступить в палату</li>
+                    <li>Документы</li>
+                    <li>Вопрос-ответ</li>
+                    <li>Партнеры</li>
+                    <li>Реестр членов палаты</li>
+                    <li>...</li>
+                    <li>Контакты</li>
+                </ul>
+            </div>
+        </nav>
+
     </div>
-</div>
+</header>
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+<main>
+<?= $content ?>
+</main>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+<footer>
+    <div class="container white">
+        <div class="half">
+
+            <div class="logo" alt="Сpakz Logo"></div>
+            <h2 class="serif">Палата профессиональных независимых оценщиков</h2>
+
+            <p>050008, г. Алматы, ул. Манаса 7 «Б», 13 этаж, офис 43<br> тел/факс: +7 (727) 266 50 09, e-mail:
+                cpa_kz@mail.ru</p>
+            <p>Председатель Совета Палаты Барнаева Мария&nbsp;Моисеевна тел.: +7 (727) 315 31 18, e-mail:
+                cpa_kz@mail.ru</p>
+
+        </div>
+        <div class="half">
+            <ul class="bottomList">
+                <li>Главная</li>
+                <li>База документов</li>
+                <li>О палате</li>
+                <li>Реестр членов палаты</li>
+                <li>Вступить в палату</li>
+                <li>Обучение</li>
+                <li>Вопрос-ответ</li>
+                <li>Экзамены</li>
+                <li>Эксперты и экспертный совет</li>
+                <li>Личный кабинет</li>
+                <li>Партнёры</li>
+                <li>Контакты</li>
+            </ul>
+        </div>
     </div>
+
+    <div class="bottomBlock">
+        <div class="container bottomBox">
+
+            <a>Пользовательское соглашение</a>
+            <a>Политика конфидециальности</a>
+            <a>Все права защищены (с) 2019</a>
+            <a>Сайт разработан в <span class="studio"></span></a>
+
+        </div>
+    </div>
+
 </footer>
+
 
 <?php $this->endBody() ?>
 </body>
 </html>
+
+<script src="/js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        centeredSlides: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
 <?php $this->endPage() ?>
+
+
+
