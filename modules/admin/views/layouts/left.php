@@ -6,7 +6,7 @@
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
                     //['label' => 'Menu:', 'options' => ['class' => 'header']],
-                    ['label' => 'News', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/news']],
+                    ['label' => 'Текстовые блоки', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/text-blocks']],
                     ['label' => 'About', 'icon' => 'fas fa-feather', 'url' => ['/admin/news']],
                     ['label' => 'Contacts', 'icon' => 'fas fa-address-card', 'url' => ['/admin/news']],
                     ['label' => 'Settings', 'icon' => 'far fa-cogs', 'url' => ['/admin/news']],
