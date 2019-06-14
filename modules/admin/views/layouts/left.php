@@ -8,6 +8,7 @@
                     //['label' => 'Menu:', 'options' => ['class' => 'header']],
                     ['label' => 'Мета', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/meta']],
                     ['label' => 'Меню', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/menu']],
+                    ['label' => 'Партнёры', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/partners']],
                     ['label' => 'Текстовые блоки', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/text-blocks']],
 
                     /*
