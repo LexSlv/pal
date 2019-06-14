@@ -12,6 +12,7 @@
                     ['label' => 'Слайдер', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/slider']],
                     ['label' => 'Партнёры', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/partners']],
                     ['label' => 'Вопросы и ответы', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/faq']],
+                    ['label' => 'Новости', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/news']],
                     ['label' => 'Текстовые блоки', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/text-blocks']],
 
                     /*
