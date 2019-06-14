@@ -1,6 +1,32 @@
 <?php
 
 use yii\helpers\Html;
+use app\components\TbWidget;
+
+
+$lang = Yii::$app->language;
+
+$menus = (new \yii\db\Query())
+    ->select(['*'])
+    ->from('menu')
+    ->orderBy('position ASC')
+    ->all();
+
+$menus_show= (new \yii\db\Query())
+    ->select(['*'])
+    ->from('menu')
+    ->where(['hide'=>0])
+    ->orderBy('position ASC')
+    ->all();
+
+$menus_hide = (new \yii\db\Query())
+    ->select(['*'])
+    ->from('menu')
+    ->where(['hide'=>1])
+    ->orderBy('position ASC')
+    ->all();
+
+
 
 ?>
 <?php $this->beginPage() ?>
@@ -30,7 +56,7 @@ use yii\helpers\Html;
         <div class="container topBlock">
             <div class="logo" itemprop="logo" alt="Сpakz Logo"></div>
 
-            <h1 class="serif" itemprop="name">Палата профессиональных независимых оценщиков</h1>
+            <h1 class="serif" itemprop="name"><?= TbWidget::widget(['alias' => 'logo_text']); ?></h1>
 
             <div class="phone" itemprop="telephone" content="+77272665009">
                 8 (727) 266 50 09
@@ -52,15 +78,18 @@ use yii\helpers\Html;
         <nav class="navigation white blueBack" role="navigation">
             <div class="container">
                 <ul>
-                    <li>О палате</li>
-                    <li>Вступить в палату</li>
-                    <li>Документы</li>
-                    <li>Вопрос-ответ</li>
-                    <li>Партнеры</li>
-                    <li>Реестр членов палаты</li>
+                    <?php foreach ($menus_show AS $k=>$menu): ?>
+                    <?php  if($k == (count($menus_show)-1)): ?>
                     <li>...</li>
-                    <li>Контакты</li>
+                    <?php endif; ?>
+                    <li><?= $menu['title_'.$lang] ?></li>
+                    <?php endforeach; ?>
                 </ul>
+                <!-- СКРЫТОЕ МЕНЮ
+                <?php foreach ($menus_hide AS $k=>$menu): ?>
+                    <li><?= $menu['title_'.$lang] ?></li>
+                <?php endforeach; ?>
+                -->
             </div>
         </nav>
 
@@ -86,18 +115,9 @@ use yii\helpers\Html;
         </div>
         <div class="half">
             <ul class="bottomList">
-                <li>Главная</li>
-                <li>База документов</li>
-                <li>О палате</li>
-                <li>Реестр членов палаты</li>
-                <li>Вступить в палату</li>
-                <li>Обучение</li>
-                <li>Вопрос-ответ</li>
-                <li>Экзамены</li>
-                <li>Эксперты и экспертный совет</li>
-                <li>Личный кабинет</li>
-                <li>Партнёры</li>
-                <li>Контакты</li>
+                <?php foreach ($menus as $menu): ?>
+                <li><?= $menu['title_'.$lang] ?></li>
+                <?php endforeach; ?>
             </ul>
         </div>
     </div>
