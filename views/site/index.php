@@ -1,17 +1,18 @@
-<?php
-
-/* @var $this yii\web\View */
-
-$this->title = 'My Yii Application';
-
-?>
+<?php $lang = Yii::$app->language; ?>
 <banner>
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide container">Slide 1</div>
-            <div class="swiper-slide container">Slide 2</div>
-            <div class="swiper-slide container">Slide 3</div>
-            <div class="swiper-slide container">Slide 4</div>
+            <?php foreach ($slides AS $slide): ?>
+            <div class="swiper-slide container">
+                <?= $slide['title_'.$lang] ?>
+                <br>
+                <?= $slide['description_'.$lang] ?>
+                <br>
+                <?= $slide['img'] ?>
+                <br>
+                <?= $slide['link'] ?>
+            </div>
+            <?php endforeach; ?>
         </div>
 
         <div class="swiper-pagination"></div>

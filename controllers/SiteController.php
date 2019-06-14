@@ -11,6 +11,8 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\TextBlocks;
 use app\models\Meta;
+use app\models\Slider;
+
 
 class SiteController extends Controller
 {
@@ -70,8 +72,9 @@ class SiteController extends Controller
         Yii::$app->view->params['description'] = $meta['description_'.$lang];
         Yii::$app->view->params['keywords'] = $meta['keywords_'.$lang];
 
+        $slides = Slider::find()->orderBy('position ASC')->all();
 
-        return $this->render('index');
+        return $this->render('index', ['slides'=>$slides]);
     }
 
     /**

@@ -6,8 +6,10 @@
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
                     //['label' => 'Menu:', 'options' => ['class' => 'header']],
+                    ['label' => 'HOME', 'icon' => 'fas fa-newspaper', 'url' => ['/']],
                     ['label' => 'Мета', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/meta']],
                     ['label' => 'Меню', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/menu']],
+                    ['label' => 'Слайдер', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/slider']],
                     ['label' => 'Партнёры', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/partners']],
                     ['label' => 'Вопросы и ответы', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/faq']],
                     ['label' => 'Текстовые блоки', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/text-blocks']],
