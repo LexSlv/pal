@@ -10,6 +10,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\TextBlocks;
+use app\models\Meta;
 
 class SiteController extends Controller
 {
@@ -62,6 +63,12 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $lang = Yii::$app->language;
+
+        $meta = Meta::find()->where(['alias'=>'index'])->one();
+        Yii::$app->view->params['title'] = $meta['title_'.$lang];
+        Yii::$app->view->params['description'] = $meta['description_'.$lang];
+        Yii::$app->view->params['keywords'] = $meta['keywords_'.$lang];
 
 
         return $this->render('index');

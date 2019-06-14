@@ -9,7 +9,11 @@ use yii\helpers\Html;
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <?php $this->registerCsrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+
+    <title><?= Html::encode($this->params['title']) ?></title>
+    <meta name="description" content="<?= Html::encode($this->params['description']) ?>"/>
+    <meta name="keywords" content="<?= Html::encode($this->params['keywords']) ?>"/>
+
     <link rel='dns-prefetch' href='//fonts.googleapis.com'>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/swiper.min.css">
