@@ -129,16 +129,16 @@
         },
         {
             "name": "almasaeed2010/adminlte",
-            "version": "v2.4.10",
+            "version": "v2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColorlibHQ/AdminLTE.git",
-                "reference": "4672183ea06a28d540a1d87900a7b5f84b1a1495"
+                "reference": "7309e2e5d5f8fb78d97dd5ebf9243f3168ec8f20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ColorlibHQ/AdminLTE/zipball/4672183ea06a28d540a1d87900a7b5f84b1a1495",
-                "reference": "4672183ea06a28d540a1d87900a7b5f84b1a1495",
+                "url": "https://api.github.com/repos/ColorlibHQ/AdminLTE/zipball/7309e2e5d5f8fb78d97dd5ebf9243f3168ec8f20",
+                "reference": "7309e2e5d5f8fb78d97dd5ebf9243f3168ec8f20",
                 "shasum": ""
             },
             "require": {
@@ -168,7 +168,7 @@
                 "theme",
                 "web"
             ],
-            "time": "2019-03-11T18:01:44+00:00"
+            "time": "2019-06-11T11:52:23+00:00"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -282,16 +282,16 @@
         },
         {
             "name": "bower-asset/jquery",
-            "version": "3.3.1",
+            "version": "3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jquery/jquery-dist.git",
-                "reference": "9e8ec3d10fad04748176144f108d7355662ae75e"
+                "reference": "15bc73803f76bc53b654b9fdbbbc096f56d7c03d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/9e8ec3d10fad04748176144f108d7355662ae75e",
-                "reference": "9e8ec3d10fad04748176144f108d7355662ae75e",
+                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/15bc73803f76bc53b654b9fdbbbc096f56d7c03d",
+                "reference": "15bc73803f76bc53b654b9fdbbbc096f56d7c03d",
                 "shasum": null
             },
             "type": "bower-asset",
@@ -620,20 +620,23 @@
         },
         {
             "name": "doctrine/lexer",
-            "version": "v1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c"
+                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/83893c552fd2045dd78aef794c31e694c37c0b8c",
-                "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/1febd6c3ef84253d7c815bed85fc622ad207a9f8",
+                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.5"
             },
             "type": "library",
             "extra": {
@@ -642,8 +645,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Doctrine\\Common\\Lexer\\": "lib/"
+                "psr-4": {
+                    "Doctrine\\Common\\Lexer\\": "lib/Doctrine/Common/Lexer"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -664,26 +667,29 @@
                     "email": "schmittjoh@gmail.com"
                 }
             ],
-            "description": "Base library for a lexer that can be used in Top-Down, Recursive Descent Parsers.",
-            "homepage": "http://www.doctrine-project.org",
+            "description": "PHP Doctrine Lexer parser library that can be used in Top-Down, Recursive Descent Parsers.",
+            "homepage": "https://www.doctrine-project.org/projects/lexer.html",
             "keywords": [
+                "annotations",
+                "docblock",
                 "lexer",
-                "parser"
+                "parser",
+                "php"
             ],
-            "time": "2014-09-09T13:34:57+00:00"
+            "time": "2019-06-08T11:03:04+00:00"
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.7",
+            "version": "2.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "709f21f92707308cdf8f9bcfa1af4cb26586521e"
+                "reference": "c26463ff9241f27907112fbcd0c86fa670cfef98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/709f21f92707308cdf8f9bcfa1af4cb26586521e",
-                "reference": "709f21f92707308cdf8f9bcfa1af4cb26586521e",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/c26463ff9241f27907112fbcd0c86fa670cfef98",
+                "reference": "c26463ff9241f27907112fbcd0c86fa670cfef98",
                 "shasum": ""
             },
             "require": {
@@ -727,7 +733,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2018-12-04T22:38:24+00:00"
+            "time": "2019-05-16T22:02:54+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -826,24 +832,24 @@
         },
         {
             "name": "imagine/imagine",
-            "version": "v0.7.1",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/avalanche123/Imagine.git",
-                "reference": "a9a702a946073cbca166718f1b02a1e72d742daa"
+                "reference": "69ce33008b73a64f5ea25449d1b69146437144fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/a9a702a946073cbca166718f1b02a1e72d742daa",
-                "reference": "a9a702a946073cbca166718f1b02a1e72d742daa",
+                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/69ce33008b73a64f5ea25449d1b69146437144fd",
+                "reference": "69ce33008b73a64f5ea25449d1b69146437144fd",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "sami/sami": "^3.3",
-                "symfony/phpunit-bridge": "^3.2"
+                "friendsofphp/php-cs-fixer": "2.2.*",
+                "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.4"
             },
             "suggest": {
                 "ext-gd": "to use the GD implementation",
@@ -857,8 +863,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Imagine": "lib/"
+                "psr-4": {
+                    "Imagine\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -880,7 +886,7 @@
                 "image manipulation",
                 "image processing"
             ],
-            "time": "2017-05-16T10:31:22+00:00"
+            "time": "2019-06-03T15:06:06+00:00"
         },
         {
             "name": "mdmsoft/yii2-admin",
@@ -1395,16 +1401,16 @@
         },
         {
             "name": "tinymce/tinymce",
-            "version": "5.0.4",
+            "version": "5.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tinymce/tinymce-dist.git",
-                "reference": "dfb245d73b089cc40fc064832697cdbc7895bb7f"
+                "reference": "0ae953e05a2d2bfdf4a35a9ad8eaf6df0f875393"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/dfb245d73b089cc40fc064832697cdbc7895bb7f",
-                "reference": "dfb245d73b089cc40fc064832697cdbc7895bb7f",
+                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/0ae953e05a2d2bfdf4a35a9ad8eaf6df0f875393",
+                "reference": "0ae953e05a2d2bfdf4a35a9ad8eaf6df0f875393",
                 "shasum": ""
             },
             "type": "component",
@@ -1437,25 +1443,25 @@
                 "tinymce",
                 "wysiwyg"
             ],
-            "time": "2019-04-23T05:01:20+00:00"
+            "time": "2019-06-05T06:30:54+00:00"
         },
         {
             "name": "yiisoft/yii2",
-            "version": "2.0.17",
+            "version": "2.0.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "b56159228c3b4990e38cf41ddd69af27ab015bea"
+                "reference": "bd05e0e0ac353cb239997da78f459d0960a1fe9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/b56159228c3b4990e38cf41ddd69af27ab015bea",
-                "reference": "b56159228c3b4990e38cf41ddd69af27ab015bea",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/bd05e0e0ac353cb239997da78f459d0960a1fe9f",
+                "reference": "bd05e0e0ac353cb239997da78f459d0960a1fe9f",
                 "shasum": ""
             },
             "require": {
                 "bower-asset/inputmask": "~3.2.2 | ~3.3.5",
-                "bower-asset/jquery": "3.3.*@stable | 3.2.*@stable | 3.1.*@stable | 2.2.*@stable | 2.1.*@stable | 1.11.*@stable | 1.12.*@stable",
+                "bower-asset/jquery": "3.4.*@stable | 3.3.*@stable | 3.2.*@stable | 3.1.*@stable | 2.2.*@stable | 2.1.*@stable | 1.11.*@stable | 1.12.*@stable",
                 "bower-asset/punycode": "1.3.*",
                 "bower-asset/yii2-pjax": "~2.0.1",
                 "cebe/markdown": "~1.0.0 | ~1.1.0 | ~1.2.0",
@@ -1537,25 +1543,28 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2019-03-22T21:26:26+00:00"
+            "time": "2019-06-04T19:10:59+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
-            "version": "2.0.9",
+            "version": "2.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-bootstrap.git",
-                "reference": "4677951dda712dd99d5bf2a127eaee118dfea860"
+                "reference": "073c9ab0a4eb71f2485d84c96a1967130300d8fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/4677951dda712dd99d5bf2a127eaee118dfea860",
-                "reference": "4677951dda712dd99d5bf2a127eaee118dfea860",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/073c9ab0a4eb71f2485d84c96a1967130300d8fc",
+                "reference": "073c9ab0a4eb71f2485d84c96a1967130300d8fc",
                 "shasum": ""
             },
             "require": {
                 "bower-asset/bootstrap": "3.4.* | 3.3.* | 3.2.* | 3.1.*",
                 "yiisoft/yii2": "~2.0.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "<7"
             },
             "type": "yii2-extension",
             "extra": {
@@ -1597,7 +1606,7 @@
                 "bootstrap",
                 "yii2"
             ],
-            "time": "2019-01-29T21:39:45+00:00"
+            "time": "2019-04-23T13:18:43+00:00"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -1655,21 +1664,24 @@
         },
         {
             "name": "yiisoft/yii2-imagine",
-            "version": "2.1.1",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-imagine.git",
-                "reference": "a8a1a068862a86e3395e665bc86e63d5c9b60841"
+                "reference": "8637f63ee2eb81b7fe1f4c0e16cc8cc474a68bae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-imagine/zipball/a8a1a068862a86e3395e665bc86e63d5c9b60841",
-                "reference": "a8a1a068862a86e3395e665bc86e63d5c9b60841",
+                "url": "https://api.github.com/repos/yiisoft/yii2-imagine/zipball/8637f63ee2eb81b7fe1f4c0e16cc8cc474a68bae",
+                "reference": "8637f63ee2eb81b7fe1f4c0e16cc8cc474a68bae",
                 "shasum": ""
             },
             "require": {
-                "imagine/imagine": "~0.6.0 | ~0.7.1",
+                "imagine/imagine": "^0.6 | ^0.7 | ^1.0",
                 "yiisoft/yii2": "~2.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "<7"
             },
             "type": "yii2-extension",
             "extra": {
@@ -1699,7 +1711,7 @@
                 "imagine",
                 "yii2"
             ],
-            "time": "2018-02-22T11:57:06+00:00"
+            "time": "2019-06-04T12:38:50+00:00"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -1811,86 +1823,6 @@
                 "parser"
             ],
             "time": "2016-10-30T11:50:56+00:00"
-        },
-        {
-            "name": "bower-asset/jcrop",
-            "version": "v0.9.12",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tapmodo/Jcrop.git",
-                "reference": "1902fbc6afa14481dc019a17e0dcb7d62b808a98"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tapmodo/Jcrop/zipball/1902fbc6afa14481dc019a17e0dcb7d62b808a98",
-                "reference": "1902fbc6afa14481dc019a17e0dcb7d62b808a98",
-                "shasum": null
-            },
-            "type": "bower-asset"
-        },
-        {
-            "name": "bower-asset/simple-ajax-uploader",
-            "version": "2.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/LPology/Simple-Ajax-Uploader.git",
-                "reference": "06c094a7d383a1e6643ab4c77716f01607489b54"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LPology/Simple-Ajax-Uploader/zipball/06c094a7d383a1e6643ab4c77716f01607489b54",
-                "reference": "06c094a7d383a1e6643ab4c77716f01607489b54",
-                "shasum": null
-            },
-            "type": "bower-asset",
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "budyaga/yii2-cropper",
-            "version": "2.0.20",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/krivochenko/yii2-cropper.git",
-                "reference": "bbd21b82c72f29ecca7cfe96dd719ee8e3643923"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/krivochenko/yii2-cropper/zipball/bbd21b82c72f29ecca7cfe96dd719ee8e3643923",
-                "reference": "bbd21b82c72f29ecca7cfe96dd719ee8e3643923",
-                "shasum": ""
-            },
-            "require": {
-                "bower-asset/jcrop": "=0.9.12",
-                "bower-asset/simple-ajax-uploader": "2.6.1",
-                "yiisoft/yii2": "*",
-                "yiisoft/yii2-imagine": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "budyaga\\cropper\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Sergey Krivochenko",
-                    "email": "budyaga@gmail.com"
-                }
-            ],
-            "description": "Yii-Framework widget for uploading and cropping images",
-            "keywords": [
-                "crop",
-                "extension",
-                "upload",
-                "yii2"
-            ],
-            "time": "2018-06-19T06:58:03+00:00"
         },
         {
             "name": "codeception/base",
@@ -2267,108 +2199,6 @@
             "time": "2018-12-04T20:46:45+00:00"
         },
         {
-            "name": "karpoff/yii2-crop-image-upload",
-            "version": "0.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/karpoff/yii2-crop-image-upload.git",
-                "reference": "42bc37832487d4b13de08b3f788856f8250f6ead"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/karpoff/yii2-crop-image-upload/zipball/42bc37832487d4b13de08b3f788856f8250f6ead",
-                "reference": "42bc37832487d4b13de08b3f788856f8250f6ead",
-                "shasum": ""
-            },
-            "require": {
-                "mongosoft/yii2-upload-behavior": "*",
-                "yiisoft/yii2": "*",
-                "yiisoft/yii2-imagine": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "karpoff\\icrop\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Anton Karpov",
-                    "email": "karpoff@bk.ru"
-                }
-            ],
-            "description": "Yii 2 Crop image upload widget",
-            "homepage": "https://github.com/karpoff/yii2-crop-image-upload",
-            "keywords": [
-                "crop",
-                "image",
-                "upload",
-                "yii2"
-            ],
-            "time": "2014-12-15T18:32:02+00:00"
-        },
-        {
-            "name": "mongosoft/yii2-upload-behavior",
-            "version": "0.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mohorev/yii2-upload-behavior.git",
-                "reference": "946439ccdfe7ae897621c8721c14e7088e7b2774"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mohorev/yii2-upload-behavior/zipball/946439ccdfe7ae897621c8721c14e7088e7b2774",
-                "reference": "946439ccdfe7ae897621c8721c14e7088e7b2774",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6.0",
-                "yiisoft/yii2": "~2.0.0"
-            },
-            "require-dev": {
-                "phpunit/dbunit": "~1.0",
-                "phpunit/phpunit": "~4.0",
-                "yiisoft/yii2-imagine": "^2.1"
-            },
-            "suggest": {
-                "yiisoft/yii2-imagine": "Required to use thumbnails processing with UploadImageBehavior"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "mohorev\\file\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Alexander Mohorev",
-                    "email": "dev.mohorev@gmail.com"
-                }
-            ],
-            "description": "Upload behavior for Yii 2",
-            "homepage": "https://github.com/mohorev/yii2-upload-behavior",
-            "keywords": [
-                "Behavior",
-                "extension",
-                "file",
-                "image",
-                "resize",
-                "thumb",
-                "upload",
-                "yii2"
-            ],
-            "abandoned": "mohorev/yii2-upload-behavior",
-            "time": "2018-08-10T07:58:22+00:00"
-        },
-        {
             "name": "myclabs/deep-copy",
             "version": "1.9.1",
             "source": {
@@ -2574,16 +2404,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "4.3.0",
+            "version": "4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "94fd0001232e47129dd3504189fa1c7225010d08"
+                "reference": "bdd9f737ebc2a01c06ea7ff4308ec6697db9b53c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/94fd0001232e47129dd3504189fa1c7225010d08",
-                "reference": "94fd0001232e47129dd3504189fa1c7225010d08",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/bdd9f737ebc2a01c06ea7ff4308ec6697db9b53c",
+                "reference": "bdd9f737ebc2a01c06ea7ff4308ec6697db9b53c",
                 "shasum": ""
             },
             "require": {
@@ -2621,7 +2451,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2017-11-30T07:14:17+00:00"
+            "time": "2019-04-30T17:48:53+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -2710,16 +2540,16 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.8.0",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "4ba436b55987b4bf311cb7c6ba82aa528aac0a06"
+                "reference": "1927e75f4ed19131ec9bcc3b002e07fb1173ee76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/4ba436b55987b4bf311cb7c6ba82aa528aac0a06",
-                "reference": "4ba436b55987b4bf311cb7c6ba82aa528aac0a06",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/1927e75f4ed19131ec9bcc3b002e07fb1173ee76",
+                "reference": "1927e75f4ed19131ec9bcc3b002e07fb1173ee76",
                 "shasum": ""
             },
             "require": {
@@ -2740,8 +2570,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Prophecy\\": "src/"
+                "psr-4": {
+                    "Prophecy\\": "src/Prophecy"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2769,7 +2599,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2018-08-05T17:53:17+00:00"
+            "time": "2019-06-13T12:50:23+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -3253,49 +3083,6 @@
             ],
             "description": "A polyfill for getallheaders.",
             "time": "2016-02-11T07:05:27+00:00"
-        },
-        {
-            "name": "sadovojav/yii2-image-cutter",
-            "version": "1.0.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sadovojav/yii2-image-cutter.git",
-                "reference": "401f9ec56ce6ab69bdf74566f3202b229969af9b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sadovojav/yii2-image-cutter/zipball/401f9ec56ce6ab69bdf74566f3202b229969af9b",
-                "reference": "401f9ec56ce6ab69bdf74566f3202b229969af9b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0",
-                "yiisoft/yii2": "*",
-                "yiisoft/yii2-imagine": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "sadovojav\\cutter\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Aleksandr Sadovoj",
-                    "email": "sadovojav@gmail.com",
-                    "homepage": "https://github.com/sadovojav"
-                }
-            ],
-            "description": "Crop image widget.",
-            "keywords": [
-                "crop",
-                "cutter",
-                "image",
-                "upload",
-                "yii2"
-            ],
-            "time": "2015-06-12T17:02:00+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -3915,25 +3702,27 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.2.7",
+            "version": "v4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "e2840bb38bddad7a0feaf85931e38fdcffdb2f81"
+                "reference": "d50bbeeb0e17e6dd4124ea391eff235e932cbf64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/e2840bb38bddad7a0feaf85931e38fdcffdb2f81",
-                "reference": "e2840bb38bddad7a0feaf85931e38fdcffdb2f81",
+                "url": "https://api.github.com/repos/symfony/console/zipball/d50bbeeb0e17e6dd4124ea391eff235e932cbf64",
+                "reference": "d50bbeeb0e17e6dd4124ea391eff235e932cbf64",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1.3",
-                "symfony/contracts": "^1.0",
-                "symfony/polyfill-mbstring": "~1.0"
+                "symfony/polyfill-mbstring": "~1.0",
+                "symfony/polyfill-php73": "^1.8",
+                "symfony/service-contracts": "^1.1"
             },
             "conflict": {
                 "symfony/dependency-injection": "<3.4",
+                "symfony/event-dispatcher": "<4.3",
                 "symfony/process": "<3.3"
             },
             "provide": {
@@ -3943,9 +3732,10 @@
                 "psr/log": "~1.0",
                 "symfony/config": "~3.4|~4.0",
                 "symfony/dependency-injection": "~3.4|~4.0",
-                "symfony/event-dispatcher": "~3.4|~4.0",
+                "symfony/event-dispatcher": "^4.3",
                 "symfony/lock": "~3.4|~4.0",
-                "symfony/process": "~3.4|~4.0"
+                "symfony/process": "~3.4|~4.0",
+                "symfony/var-dumper": "^4.3"
             },
             "suggest": {
                 "psr/log": "For using the console logger",
@@ -3956,7 +3746,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.2-dev"
+                    "dev-master": "4.3-dev"
                 }
             },
             "autoload": {
@@ -3983,88 +3773,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-04-08T14:23:48+00:00"
-        },
-        {
-            "name": "symfony/contracts",
-            "version": "v1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/contracts.git",
-                "reference": "1aa7ab2429c3d594dd70689604b5cf7421254cdf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/contracts/zipball/1aa7ab2429c3d594dd70689604b5cf7421254cdf",
-                "reference": "1aa7ab2429c3d594dd70689604b5cf7421254cdf",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3"
-            },
-            "require-dev": {
-                "psr/cache": "^1.0",
-                "psr/container": "^1.0"
-            },
-            "suggest": {
-                "psr/cache": "When using the Cache contracts",
-                "psr/container": "When using the Service contracts",
-                "symfony/cache-contracts-implementation": "",
-                "symfony/service-contracts-implementation": "",
-                "symfony/translation-contracts-implementation": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Contracts\\": ""
-                },
-                "exclude-from-classmap": [
-                    "**/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "A set of abstractions extracted out of the Symfony components",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "abstractions",
-                "contracts",
-                "decoupling",
-                "interfaces",
-                "interoperability",
-                "standards"
-            ],
-            "time": "2018-12-05T08:06:11+00:00"
+            "time": "2019-06-05T13:25:51+00:00"
         },
         {
             "name": "symfony/css-selector",
-            "version": "v4.2.7",
+            "version": "v4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "48eddf66950fa57996e1be4a55916d65c10c604a"
+                "reference": "105c98bb0c5d8635bea056135304bd8edcc42b4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/48eddf66950fa57996e1be4a55916d65c10c604a",
-                "reference": "48eddf66950fa57996e1be4a55916d65c10c604a",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/105c98bb0c5d8635bea056135304bd8edcc42b4d",
+                "reference": "105c98bb0c5d8635bea056135304bd8edcc42b4d",
                 "shasum": ""
             },
             "require": {
@@ -4073,7 +3795,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.2-dev"
+                    "dev-master": "4.3-dev"
                 }
             },
             "autoload": {
@@ -4104,20 +3826,20 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-16T20:31:39+00:00"
+            "time": "2019-01-16T21:53:39+00:00"
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v4.2.7",
+            "version": "v4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
-                "reference": "53c97769814c80a84a8403efcf3ae7ae966d53bb"
+                "reference": "06ee58fbc9a8130f1d35b5280e15235a0515d457"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/53c97769814c80a84a8403efcf3ae7ae966d53bb",
-                "reference": "53c97769814c80a84a8403efcf3ae7ae966d53bb",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/06ee58fbc9a8130f1d35b5280e15235a0515d457",
+                "reference": "06ee58fbc9a8130f1d35b5280e15235a0515d457",
                 "shasum": ""
             },
             "require": {
@@ -4125,7 +3847,11 @@
                 "symfony/polyfill-ctype": "~1.8",
                 "symfony/polyfill-mbstring": "~1.0"
             },
+            "conflict": {
+                "masterminds/html5": "<2.6"
+            },
             "require-dev": {
+                "masterminds/html5": "^2.6",
                 "symfony/css-selector": "~3.4|~4.0"
             },
             "suggest": {
@@ -4134,7 +3860,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.2-dev"
+                    "dev-master": "4.3-dev"
                 }
             },
             "autoload": {
@@ -4161,34 +3887,40 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
-            "time": "2019-02-23T15:17:42+00:00"
+            "time": "2019-05-31T18:55:30+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v4.2.7",
+            "version": "v4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "fbce53cd74ac509cbe74b6f227622650ab759b02"
+                "reference": "4e6c670af81c4fb0b6c08b035530a9915d0b691f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/fbce53cd74ac509cbe74b6f227622650ab759b02",
-                "reference": "fbce53cd74ac509cbe74b6f227622650ab759b02",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/4e6c670af81c4fb0b6c08b035530a9915d0b691f",
+                "reference": "4e6c670af81c4fb0b6c08b035530a9915d0b691f",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1.3",
-                "symfony/contracts": "^1.0"
+                "symfony/event-dispatcher-contracts": "^1.1"
             },
             "conflict": {
                 "symfony/dependency-injection": "<3.4"
+            },
+            "provide": {
+                "psr/event-dispatcher-implementation": "1.0",
+                "symfony/event-dispatcher-implementation": "1.1"
             },
             "require-dev": {
                 "psr/log": "~1.0",
                 "symfony/config": "~3.4|~4.0",
                 "symfony/dependency-injection": "~3.4|~4.0",
                 "symfony/expression-language": "~3.4|~4.0",
+                "symfony/http-foundation": "^3.4|^4.0",
+                "symfony/service-contracts": "^1.1",
                 "symfony/stopwatch": "~3.4|~4.0"
             },
             "suggest": {
@@ -4198,7 +3930,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.2-dev"
+                    "dev-master": "4.3-dev"
                 }
             },
             "autoload": {
@@ -4225,20 +3957,78 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2019-04-06T13:51:08+00:00"
+            "time": "2019-05-30T16:10:05+00:00"
         },
         {
-            "name": "symfony/finder",
-            "version": "v4.2.7",
+            "name": "symfony/event-dispatcher-contracts",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/finder.git",
-                "reference": "e45135658bd6c14b61850bf131c4f09a55133f69"
+                "url": "https://github.com/symfony/event-dispatcher-contracts.git",
+                "reference": "8fa2cf2177083dd59cf8e44ea4b6541764fbda69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/e45135658bd6c14b61850bf131c4f09a55133f69",
-                "reference": "e45135658bd6c14b61850bf131c4f09a55133f69",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/8fa2cf2177083dd59cf8e44ea4b6541764fbda69",
+                "reference": "8fa2cf2177083dd59cf8e44ea4b6541764fbda69",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "suggest": {
+                "psr/event-dispatcher": "",
+                "symfony/event-dispatcher-implementation": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\EventDispatcher\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to dispatching event",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "time": "2019-05-22T12:23:29+00:00"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v4.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/finder.git",
+                "reference": "b3d4f4c0e4eadfdd8b296af9ca637cfbf51d8176"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/b3d4f4c0e4eadfdd8b296af9ca637cfbf51d8176",
+                "reference": "b3d4f4c0e4eadfdd8b296af9ca637cfbf51d8176",
                 "shasum": ""
             },
             "require": {
@@ -4247,7 +4037,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.2-dev"
+                    "dev-master": "4.3-dev"
                 }
             },
             "autoload": {
@@ -4274,7 +4064,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2019-04-06T13:51:08+00:00"
+            "time": "2019-05-26T20:47:49+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -4335,17 +4125,133 @@
             "time": "2019-02-06T07:57:58+00:00"
         },
         {
-            "name": "symfony/yaml",
-            "version": "v4.2.7",
+            "name": "symfony/polyfill-php73",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/yaml.git",
-                "reference": "6712daf03ee25b53abb14e7e8e0ede1a770efdb1"
+                "url": "https://github.com/symfony/polyfill-php73.git",
+                "reference": "d1fb4abcc0c47be136208ad9d68bf59f1ee17abd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/6712daf03ee25b53abb14e7e8e0ede1a770efdb1",
-                "reference": "6712daf03ee25b53abb14e7e8e0ede1a770efdb1",
+                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/d1fb4abcc0c47be136208ad9d68bf59f1ee17abd",
+                "reference": "d1fb4abcc0c47be136208ad9d68bf59f1ee17abd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php73\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.3+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2019-02-06T07:57:58+00:00"
+        },
+        {
+            "name": "symfony/service-contracts",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/service-contracts.git",
+                "reference": "191afdcb5804db960d26d8566b7e9a2843cab3a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/191afdcb5804db960d26d8566b7e9a2843cab3a0",
+                "reference": "191afdcb5804db960d26d8566b7e9a2843cab3a0",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "suggest": {
+                "psr/container": "",
+                "symfony/service-implementation": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\Service\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to writing services",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "time": "2019-05-28T07:50:59+00:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v4.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "c60ecf5ba842324433b46f58dc7afc4487dbab99"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/c60ecf5ba842324433b46f58dc7afc4487dbab99",
+                "reference": "c60ecf5ba842324433b46f58dc7afc4487dbab99",
                 "shasum": ""
             },
             "require": {
@@ -4364,7 +4270,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.2-dev"
+                    "dev-master": "4.3-dev"
                 }
             },
             "autoload": {
@@ -4391,20 +4297,20 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2019-03-30T15:58:42+00:00"
+            "time": "2019-04-06T14:04:46+00:00"
         },
         {
             "name": "theseer/tokenizer",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/theseer/tokenizer.git",
-                "reference": "1c42705be2b6c1de5904f8afacef5895cab44bf8"
+                "reference": "11336f6f84e16a720dae9d8e6ed5019efa85a0f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/theseer/tokenizer/zipball/1c42705be2b6c1de5904f8afacef5895cab44bf8",
-                "reference": "1c42705be2b6c1de5904f8afacef5895cab44bf8",
+                "url": "https://api.github.com/repos/theseer/tokenizer/zipball/11336f6f84e16a720dae9d8e6ed5019efa85a0f9",
+                "reference": "11336f6f84e16a720dae9d8e6ed5019efa85a0f9",
                 "shasum": ""
             },
             "require": {
@@ -4431,7 +4337,7 @@
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
-            "time": "2019-04-04T09:56:43+00:00"
+            "time": "2019-06-13T22:48:21+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -4486,16 +4392,16 @@
         },
         {
             "name": "yiisoft/yii2-debug",
-            "version": "2.1.1",
+            "version": "2.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "632929c0682c6470ec838cf15d14c22418e6d07f"
+                "reference": "a6bbf55093e154e2eeb2c778af8717989495270e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/632929c0682c6470ec838cf15d14c22418e6d07f",
-                "reference": "632929c0682c6470ec838cf15d14c22418e6d07f",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/a6bbf55093e154e2eeb2c778af8717989495270e",
+                "reference": "a6bbf55093e154e2eeb2c778af8717989495270e",
                 "shasum": ""
             },
             "require": {
@@ -4539,7 +4445,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2019-03-30T20:33:53+00:00"
+            "time": "2019-06-04T14:21:49+00:00"
         },
         {
             "name": "yiisoft/yii2-faker",
@@ -4638,49 +4544,6 @@
                 "yii2"
             ],
             "time": "2019-03-17T19:23:15+00:00"
-        },
-        {
-            "name": "yurkinx/yii2-image",
-            "version": "v1.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/yurkinx/yii2-image.git",
-                "reference": "590795d0e94c909c636cba1007a619012e118ac9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/yurkinx/yii2-image/zipball/590795d0e94c909c636cba1007a619012e118ac9",
-                "reference": "590795d0e94c909c636cba1007a619012e118ac9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0",
-                "yiisoft/yii2": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-0": {
-                    "yii\\image\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Yuri Kileev",
-                    "email": "kileev@gmail.com"
-                }
-            ],
-            "description": "Yii2 extension for image manipulating using Kohana Image Library.",
-            "homepage": "https://github.com/yurkinx/yii2-image",
-            "keywords": [
-                "extension",
-                "image",
-                "yii2"
-            ],
-            "time": "2019-01-25T01:01:48+00:00"
         }
     ],
     "aliases": [],

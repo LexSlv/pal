@@ -65,7 +65,7 @@ $menus_hide = (new \yii\db\Query())
 
             <div class="lang white">
                 <span class="kz blueBack" lang="kk">KZ</span>
-                <span class="ru redBack" lang="ru">RU</span>
+                <span class="ru backRed" lang="ru">RU</span>
             </div>
 
             <div class="scBlock">
