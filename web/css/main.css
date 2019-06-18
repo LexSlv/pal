@@ -199,14 +199,22 @@ banner {
 }
 
 .swiper-button-next, .swiper-button-prev {
-    background-image: url(/web/img/chevron.svg);
-    width: 38px;
-    height: 38px;
-    background-color: red;
+    background-image: url(/web/img/chevronGrey.svg);
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
     left: auto;
     right: calc(50% - 570px);
     bottom: 20px;
     top: auto;
+    border: 3px solid #D5D5D5;
+    transition: all 0.3s;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background-image: url(/web/img/chevron.svg);
+    border: 3px solid #ff0000;
+    background-color: #ff0000;
 }
 
  .swiper-button-prev {
@@ -479,19 +487,16 @@ footer {
 .mask {
     width: 100%;
     height: 100%;
-    background: transparent;
-    display: block;
-    outline: none;
-}
-
-.mask:hover {
     background-image: url(/web/uploads/images/mask.png);
     background-size: cover;
     background-position: center center;
     position: relative;
+    opacity: 0;
+    outline: none;
+    transition: all 0.2s;
 }
 
-.mask:hover::after {
+.mask::after {
     content: "";
     background-image: url(/web/uploads/images/eye.png);
     background-size: 100%;
@@ -505,7 +510,12 @@ footer {
     width: 10%;
 }
 
-.smallPic .mask:hover::after {
+.new:hover .mask, .mainNew:hover .mask {
+    display: block;
+    opacity: 1;
+}
+
+.smallPic .mask::after {
     top: 43%;
     left: 40%;
     height: 18%;
