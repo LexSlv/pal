@@ -64,18 +64,18 @@ $menus_hide = (new \yii\db\Query())
             </div>
 
             <div class="lang white">
-                <span class="kz blueBack" lang="kk">KZ</span>
+                <span class="kz backBlue" lang="kk">KZ</span>
                 <span class="ru backRed" lang="ru">RU</span>
             </div>
 
             <div class="scBlock">
                 <span class="search"></span>
-                <span class="cabinet blueBack"></span>
+                <span class="cabinet backBlue"></span>
             </div>
 
         </div>
 
-        <nav class="navigation white blueBack" role="navigation">
+        <nav class="navigation white backBlue" role="navigation">
             <div class="container">
                 <ul>
                     <?php foreach ($menus_show AS $k=>$menu): ?>

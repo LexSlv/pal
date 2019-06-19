@@ -92,25 +92,87 @@
     </section>
     <section class="whiteBack">
         <div class="infoBox container">
-
+            <div class="longBlock"></div>
+            <div class="shortBlock"></div>
         </div>
 
     </section>
     <section class="greyBack">
 
         <div class="benefits container">
-            <div class="benefit"></div>
-            <div class="benefit"></div>
-            <div class="benefit"></div>
-            <div class="benefit"></div>
+            <div class="benefit">
+                <div class="round backBlue bIcon1"></div>
+                <h3>1530</h3>
+                <span>участников</span>
+            </div>
+            <div class="benefit">
+                <div class="round backRed bIcon2"></div>
+                <h3>Методические</h3>
+                <span>рекомендации</span>
+            </div>
+            <div class="benefit">
+                <div class="round backBlue bIcon3"></div>
+                <h3>Повышение</h3>
+                <span>квалификации<span>
+            </div>
+            <div class="benefit">
+                <div class="round backRed bIcon4"></div>
+                <h3>Экспертиза</h3>
+            </div>
         </div>
     
     </section>
 
     <section class="whiteBack">
         <div class="infoBox container">
-
+            <div class="shortBlock"></div>
+            <div class="longBlock"></div>
         </div>
     </section>
 
 </article>
+
+<style>
+
+.longBlock {
+    height: 100%;
+    width: 750px;
+    box-shadow: 0 2px 8px rgba(120,120,120,.3);
+}
+
+.shortBlock {
+    height: 100%;
+    width: 360px;
+    background: blue;
+}
+
+.round {
+    height: 132px;
+    width: 132px;
+    border-radius: 50%;
+    background-size: 40%;
+    background-position: center center;
+    background-repeat: no-repeat;
+} 
+
+.bIcon1 { background-image: url(/web/uploads/images/icon1.png); }
+.bIcon2 { background-image: url(/web/uploads/images/icon2.png); }
+.bIcon3 { background-image: url(/web/uploads/images/icon3.png); }
+.bIcon4 { background-image: url(/web/uploads/images/icon4.png); }
+
+
+.benefit h3{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 25px auto 5px auto;
+}
+
+.benefit span {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 5px auto;
+}
+  
+</style>
