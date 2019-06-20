@@ -41,7 +41,7 @@ $menus_hide = (new \yii\db\Query())
     <meta name="keywords" content="<?= Html::encode($this->params['keywords']) ?>"/>
 
     <link rel='dns-prefetch' href='//fonts.googleapis.com'>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/swiper.min.css">
     <link rel="stylesheet" href="/css/main.css">
     <meta charset="utf-8" name="viewport"

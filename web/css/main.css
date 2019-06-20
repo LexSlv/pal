@@ -407,30 +407,65 @@ footer {
     font-size: 46px;
 }
 
-.redButton {
-    font-size: 18px;
-    text-transform: uppercase;
-    padding: 13px 35px 13px 25px;
+.redButton, .blueButton, .whiteButton {
     position: relative;
     border: 0;
     outline: 0;
-    background-color: #C03018;
-    color: #FFFFFF;
     text-decoration: none;
     line-height: 20px;
+    font-size: 18px;
+}
+
+.redButton::after, .blueButton::after, .whiteButton::after {
+    content: '';
+    background-size: contain;
+    background-repeat: no-repeat;    
+    position: absolute;
+    left: auto;
+    right: 12px;
+}
+
+
+.redButton {
+    text-transform: uppercase;
+    padding: 13px 35px 13px 25px;
+    background-color: #C03018;
+    color: #FFFFFF;
 }
 
 .redButton:after {
-    content: '';
     background-image: url(/web/img/chevron.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
     width: 16px;
     height: 16px;
-    left: auto;
-    right: 12px;
     top: 14px;
-    position: absolute;
+}
+
+.blueButton {
+    padding: 11px 33px 11px 23px;
+    border: 2px solid #293b85;
+    background-color: transparent;
+    color: #293b85;
+}
+
+.blueButton:after {
+    background-image: url(/web/img/chevronBlue.svg);
+    width: 14px;
+    height: 14px;
+    top: 15px;
+}
+
+.whiteButton {
+    padding: 11px 33px 11px 23px;
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+    color: #FFFFFF;
+}
+
+.whiteButton:after {
+    background-image: url(/web/img/chevron.svg);
+    width: 14px;
+    height: 14px;
+    top: 15px;
 }
 
 .tabs {
@@ -620,12 +655,89 @@ footer {
     height: 100%;
     width: 750px;
     box-shadow: 0 2px 8px rgba(120,120,120,.3);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: baseline;
+    padding: 20px 80px;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: #2a2d32;
+}
+
+.longBlock h4 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px 0 10px 0;
+}
+
+.longBlock p {
+    font-size: 18px;
+    margin: 10px 0 15px 0;
+    font-weight: 300;
+}
+
+.longBlock button {
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 .shortBlock {
     height: 100%;
     width: 360px;
-    background: blue;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: baseline;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.shortBlock h4 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px 0 10px 0;
+}
+
+.shortBlock p {
+    font-size: 18px;
+    margin: 10px 0 15px 0;
+    font-weight: 300;
+}
+
+.shortBlock button {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.shortBlock h5 {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-flow: column;
+    font-size: 36px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.shortBlock h5 b { font-weight: 700; }
+
+.advert .longBlock { width: 660px; }
+
+.advert .shortBlock { width: 460px;}
+
+
+.buttonsBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonsBox .blueButton {
+    margin-left: 20px;
 }
 
 .round {

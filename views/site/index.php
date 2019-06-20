@@ -92,8 +92,23 @@
     </section>
     <section class="whiteBack">
         <div class="infoBox container">
-            <div class="longBlock"></div>
-            <div class="shortBlock"></div>
+            <div class="longBlock">
+
+                <h4>Вступить в палату</h4>
+                <p>Какой-то текст мотивирующий на вступление в палату, текст мотивирующий на вступление в палату, текст мотивирующий на вступление в палату, текст мотивирующий на вступление в палату</p>
+                
+                <div class="buttonsBox">
+                    <button class="redButton">Вступить</button>
+                    <button class="blueButton">Скачать PDF-анкету</button>              
+                </div>
+
+
+            </div>
+            <div class="shortBlock white" style="background-image: url(/web/uploads/images/exam.jpg)">
+                <h4>Экзамены</h4>
+                <p>Какая-то информация об экзаменах, какая-то информация об экзаменах, информация об экзаменах</p>
+                <button class="whiteButton">Подробнее</button>
+            </div>
         </div>
 
     </section>
@@ -124,9 +139,18 @@
     </section>
 
     <section class="whiteBack">
-        <div class="infoBox container">
-            <div class="shortBlock"></div>
-            <div class="longBlock"></div>
+        <div class="infoBox container advert">
+            <div class="shortBlock white" style="background-image: url(/web/uploads/images/rbanner.jpg);">
+                <h5><b>Реклама</b> в палате</h5>
+            </div>
+            <div class="longBlock">
+                <h4>Важное обьявление</h4>
+                <p>Какое-то важное объявление, текст какого-то важного
+                объявления, текст какого-то важного объявления, текст
+                какого-то важного объявления, текст какого-то важного
+                объявления,</p>
+                <button class="redButton">Подробнее</button>
+            </div>
         </div>
     </section>
 
