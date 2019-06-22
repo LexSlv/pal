@@ -769,6 +769,44 @@ footer {
     margin: 5px auto;
 }
 
+@media screen and (max-width: 1140px) {
+    
+    .container { width: 100%;}
+
+    .topBlock { flex-flow: wrap; }
+    .lang { margin: auto 0; }
+    .headBlock h1 { max-width: 300px; }
+
+    .swiperBanner { margin: auto 5%; }
+
+    .swiperBanner h3, .swiperBanner p { width: 70%; }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets { left: 5%; }
+
+    .swiper-button-prev { right: 12.5%; }
+    .swiper-button-next { right: 5%; }
+
+    .headNews {
+        padding: 20px 5%;
+        box-sizing: border-box;
+    }
+
+    .tabs {
+        width: 90%;
+        margin: 0 5%;
+    }
+
+    .benefit h3 { font-size: 18px; }
+    .benefit span { font-size: 20px; }
+
+    .longBlock { width: 65%; padding: 20px 5%; }
+    .shortBlock { width: 35%; padding: 20px 5%; }
+
+    .advert .longBlock { width: 60%; }
+    .advert .shortBlock { width: 40%; }
+
+}
+
 @media screen and (max-width: 600px) {
 
     .container { width: 100vw;}
