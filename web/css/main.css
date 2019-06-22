@@ -768,3 +768,213 @@ footer {
     line-height: 1.2;
     margin: 5px auto;
 }
+
+@media screen and (max-width: 600px) {
+
+    .container { width: 100vw;}
+
+    .topBlock { flex-flow: row wrap; }
+
+    .headBlock { height: auto; }
+
+    .logo {
+        display: block;
+        height: 48px;
+        width: 48px;
+        margin: 0 15px;
+    }
+
+    .headBlock h1 {
+        font-size: 16px;
+        line-height: 20px;
+        max-width: calc(100% - 90px);
+        margin-right: auto;
+        margin-left: 0;
+    }
+    .phone {
+        font-size: 22px;
+        margin: auto 15px;
+    }
+
+    .swiperBanner h3 {
+        width: 90%;
+        font-size: 28px;
+        margin: 20px 5%;
+    }
+
+    .swiperBanner p {
+        width: 90%;
+        font-size: 18px;
+        margin: 10px 5%;
+    }
+
+    .swiperBanner a { margin: 20px 5%; }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets { left: 20px; }
+
+    .swiper-button-prev { right: 90px; }
+    .swiper-button-next { right: 20px; }
+
+
+    .redButton { padding: 6px 25px 6px 15px; }
+ 
+    .blueButton, .whiteButton { padding: 5px 25px 5px 15px; }
+
+    .redButton::after, .blueButton::after, .whiteButton::after  {
+        width: 14px;
+        height: 14px;
+        top: 9px;
+        right: 8px;
+    }
+
+    .redButton, .blueButton, .whiteButton { font-size: 14px; }
+
+    .headNews {
+        padding: 20px 5%;
+        box-sizing: border-box;
+    }
+
+    .headNews h2 { font-size: 32px; }
+
+    .benefits {
+        padding: 25px 0;
+        flex-flow: row wrap;
+    }
+
+    .benefit {
+        margin: 0 5% 5% 5%;
+        align-items: center;
+        flex-flow: column;
+    }
+
+    .benefit h3 {
+        font-size: 16px;
+        margin: 25px auto 5px auto;
+    }
+
+    .benefit span {
+        font-size: 16px;
+        margin: 5px auto;
+    }
+
+    .round {
+        height: 120px;
+        width: 120px;
+    }
+
+    .tabsHead a { margin: 0 5%; }
+
+    .newsBlock { flex-flow: column; }
+
+    .mainNew {
+        width: 90%;
+        margin: 10px 5%;
+    }
+
+    .bigPic { height: 300px; }
+
+    .bigText { height: auto; }
+
+    .bigText h4 {
+        font-size: 18px;
+        margin: 20px 0;
+    }
+
+    .bigText p {
+        font-size: 16px;
+        height: auto;
+    }
+
+    .newsBox { width: 100%; }
+
+    .new {
+        width: 90%;
+        height: 120px;
+        margin: 10px 5%;
+    }
+
+    .smallPic { width: 120px; }
+
+    .smallText { width: calc(100% - 120px); }
+
+    .smallText h4 { font-size: 16px; }
+
+    .smallText p {
+        font-size: 12px;
+        max-height: 44px;
+    }
+
+    .infoBox {
+        height: auto;
+        margin: 20px auto;
+        flex-flow: column;
+    }
+
+    .longBlock {
+        width: 100%;
+        padding: 20px 5%;
+        margin: 20px 0;
+        box-shadow: none;
+    }
+
+    .longBlock h4, .shortBlock h4 {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    .longBlock p, .shortBlock p {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    .shortBlock {
+        width: 100%;
+        padding: 20px 25px;
+        margin: 20px 0;
+    }
+
+    .advert .shortBlock {
+        width: 100%;
+        height: 300px;
+    }   
+
+    .advert .longBlock { width: 100%; }
+
+    footer { background: linear-gradient(to bottom, #7b7b7b 50%, #3b3b3b 50%); }
+
+    footer .container { flex-flow: column; }
+
+    .half {
+         width: 100%;
+        padding: 25px 0;
+    }
+
+    .half h2 {
+        font-size: 16px;
+        line-height: 20px;
+        max-width: calc(100% - 90px);
+        margin-right: auto;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .half p {
+        font-size: 14px;
+        width: 90%;
+        margin: 30px 5% 0 5%;
+    }
+
+    .bottomList {
+        margin: 20px 0;
+        background: #3b3b3b;
+        padding: 5% 15%;
+    }
+
+    .bottomBlock {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .bottomBox a { margin: 15px 0; }
+
+}
