@@ -1097,4 +1097,8 @@ footer {
 
     .bottomBox a { margin: 15px 0; }
 
+    .contacts { flex-flow: column; }
+
+    .contactBox { width: 85%;  margin: 10px auto 10px 0; }
+
 }
