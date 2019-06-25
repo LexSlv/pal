@@ -55,18 +55,17 @@ $menus_hide = (new \yii\db\Query())
     <div class="headBlock" itemscope itemtype="https://schema.org/Organization">
 
         <div class="container topBlock">
-            <div class="logo" itemprop="logo" alt="Сpakz Logo"></div>
+            <a href="/<?= $lang ?>"><div class="logo" alt="Сpakz Logo"></div></a>
 
             <h1 class="serif" itemprop="name"><?= TbWidget::widget(['alias' => 'logo_text']); ?></h1>
 
-            <div class="phone" itemprop="telephone" content="+77272665009">
-                8 (727) 266 50 09
-                <small>Телефон доверия</small>
-            </div>
+            <?= TbWidget::widget(['alias' => 'phone_header']); ?>
+
+
 
             <div class="lang white">
-                <span class="kz backBlue" lang="kk">KZ</span>
-                <span class="ru backRed" lang="ru">RU</span>
+                <a href="/kz"><span class="kz backBlue" lang="kk">KZ</span></a>
+                <a href="/ru"><span class="ru backRed" lang="ru">RU</span></a>
             </div>
 
             <div class="scBlock">
@@ -83,12 +82,12 @@ $menus_hide = (new \yii\db\Query())
                     <?php  if($k == (count($menus_show)-1)): ?>
                     <li>...</li>
                     <?php endif; ?>
-                    <li><?= $menu['title_'.$lang] ?></li>
+                    <li><a href="<?= $menu['link'] ?>"><?= $menu['title_'.$lang] ?></a></li>
                     <?php endforeach; ?>
                 </ul>
                 <!-- СКРЫТОЕ МЕНЮ
                 <?php foreach ($menus_hide AS $k=>$menu): ?>
-                    <li><?= $menu['title_'.$lang] ?></li>
+                    <li><a href="<?= $menu['link'] ?>"><?= $menu['title_'.$lang] ?></a></li>
                 <?php endforeach; ?>
                 -->
             </div>
@@ -105,19 +104,18 @@ $menus_hide = (new \yii\db\Query())
     <div class="container white">
         <div class="half">
 
-            <div class="logo" alt="Сpakz Logo"></div>
-            <h2 class="serif">Палата профессиональных независимых оценщиков</h2>
+            <a href="/<?= $lang ?>"><div class="logo" alt="Сpakz Logo"></div></a>
+            <h2 class="serif"><?= TbWidget::widget(['alias' => 'logo_text']); ?></h2>
 
-            <p>050008, г. Алматы, ул. Манаса 7 «Б», 13 этаж, офис 43<br> тел/факс: +7 (727) 266 50 09, e-mail:
-                cpa_kz@mail.ru</p>
-            <p>Председатель Совета Палаты Барнаева Мария&nbsp;Моисеевна тел.: +7 (727) 315 31 18, e-mail:
-                cpa_kz@mail.ru</p>
+            <?= TbWidget::widget(['alias' => 'footer_text']); ?>
+
+
 
         </div>
         <div class="half">
             <ul class="bottomList">
                 <?php foreach ($menus as $menu): ?>
-                <li><?= $menu['title_'.$lang] ?></li>
+                <li><a href="<?= $menu['link'] ?>"><?= $menu['title_'.$lang] ?></a></li>
                 <?php endforeach; ?>
             </ul>
         </div>
@@ -126,10 +124,8 @@ $menus_hide = (new \yii\db\Query())
     <div class="bottomBlock">
         <div class="container bottomBox">
 
-            <a>Пользовательское соглашение</a>
-            <a>Политика конфидециальности</a>
-            <a>Все права защищены (с) 2019</a>
-            <a>Сайт разработан в <span class="studio"></span></a>
+            <?= TbWidget::widget(['alias' => 'footer_text2']); ?>
+
 
         </div>
     </div>

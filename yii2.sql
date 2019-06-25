@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.3
 -- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.2:3306
--- Время создания: Июн 14 2019 г., 14:49
--- Версия сервера: 5.7.20
--- Версия PHP: 7.2.0
+-- Хост: 127.0.0.1:3306
+-- Время создания: Июн 25 2019 г., 12:12
+-- Версия сервера: 5.7.19
+-- Версия PHP: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -220,7 +220,13 @@ CREATE TABLE `text_blocks` (
 
 INSERT INTO `text_blocks` (`id`, `alias`, `ru`, `kz`) VALUES
 (1, 'test', 'Это тест', 'Бул тест'),
-(2, 'logo_text', 'ПАЛАТА ПРОФЕССИОНАЛЬНЫХ НЕЗАВИСИМЫХ ОЦЕНЩИКОВ', 'Палата оценщиков(Каз. яз)');
+(2, 'logo_text', 'ПАЛАТА ПРОФЕССИОНАЛЬНЫХ НЕЗАВИСИМЫХ ОЦЕНЩИКОВ', 'Палата оценщиков(Каз. яз)'),
+(3, 'phone_header', '<div class=\"phone\" itemprop=\"telephone\" content=\"+77272665009\">\r\n    8 (727) 266 50 09\r\n    <small>Телефон доверия</small>\r\n</div>', '<div class=\"phone\" itemprop=\"telephone\" content=\"+77272665009\">\r\n    8 (727) 266 50 09\r\n    <small>Телефон доверия</small>\r\n</div>'),
+(4, 'footer_text', '          <p>050008, г. Алматы, ул. Манаса 7 «Б», 13 этаж, офис 43<br> тел/факс: +7 (727) 266 50 09, e-mail:\r\n                cpa_kz@mail.ru</p>\r\n            <p>Председатель Совета Палаты Барнаева Мария&nbsp;Моисеевна тел.: +7 (727) 315 31 18, e-mail:\r\n                cpa_kz@mail.ru</p>', '          <p>050008, г. Алматы, ул. Манаса 7 «Б», 13 этаж, офис 43<br> тел/факс: +7 (727) 266 50 09, e-mail:\r\n                cpa_kz@mail.ru</p>\r\n            <p>Председатель Совета Палаты Барнаева Мария&nbsp;Моисеевна тел.: +7 (727) 315 31 18, e-mail:\r\n                cpa_kz@mail.ru</p>'),
+(5, 'index_block1', '    <section class=\"whiteBack\">\r\n        <div class=\"infoBox container\">\r\n            <div class=\"longBlock\">\r\n\r\n                <h4>Вступить в палату</h4>\r\n                <p>Какой-то текст мотивирующий на вступление в палату, текст мотивирующий на вступление в палату, текст мотивирующий на вступление в палату, текст мотивирующий на вступление в палату</p>\r\n                \r\n                <div class=\"buttonsBox\">\r\n                    <button class=\"redButton\">Вступить</button>\r\n                    <button class=\"blueButton\">Скачать PDF-анкету</button>              \r\n                </div>\r\n\r\n\r\n            </div>\r\n            <div class=\"shortBlock white\" style=\"background-image: url(/web/uploads/images/exam.jpg)\">\r\n                <h4>Экзамены</h4>\r\n                <p>Какая-то информация об экзаменах, какая-то информация об экзаменах, информация об экзаменах</p>\r\n                <button class=\"whiteButton\">Подробнее</button>\r\n            </div>\r\n        </div>\r\n    </section>', '    <section class=\"whiteBack\">\r\n        <div class=\"infoBox container\">\r\n            <div class=\"longBlock\">\r\n\r\n                <h4>Вступить в палату</h4>\r\n                <p>Какой-то текст мотивирующий на вступление в палату, текст мотивирующий на вступление в палату, текст мотивирующий на вступление в палату, текст мотивирующий на вступление в палату</p>\r\n                \r\n                <div class=\"buttonsBox\">\r\n                    <button class=\"redButton\">Вступить</button>\r\n                    <button class=\"blueButton\">Скачать PDF-анкету</button>              \r\n                </div>\r\n\r\n\r\n            </div>\r\n            <div class=\"shortBlock white\" style=\"background-image: url(/web/uploads/images/exam.jpg)\">\r\n                <h4>Экзамены</h4>\r\n                <p>Какая-то информация об экзаменах, какая-то информация об экзаменах, информация об экзаменах</p>\r\n                <button class=\"whiteButton\">Подробнее</button>\r\n            </div>\r\n        </div>\r\n    </section>'),
+(6, 'index_block2', '    <section class=\"greyBack\">\r\n        <div class=\"benefits container\">\r\n            <div class=\"benefit\">\r\n                <div class=\"round backBlue bIcon1\"></div>\r\n                <h3>1530</h3>\r\n                <span>участников</span>\r\n            </div>\r\n            <div class=\"benefit\">\r\n                <div class=\"round backRed bIcon2\"></div>\r\n                <h3>Методические</h3>\r\n                <span>рекомендации</span>\r\n            </div>\r\n            <div class=\"benefit\">\r\n                <div class=\"round backBlue bIcon3\"></div>\r\n                <h3>Повышение</h3>\r\n                <span>квалификации<span>\r\n            </div>\r\n            <div class=\"benefit\">\r\n                <div class=\"round backRed bIcon4\"></div>\r\n                <h3>Экспертиза</h3>\r\n            </div>\r\n        </div>\r\n    </section>', '    <section class=\"greyBack\">\r\n        <div class=\"benefits container\">\r\n            <div class=\"benefit\">\r\n                <div class=\"round backBlue bIcon1\"></div>\r\n                <h3>1530</h3>\r\n                <span>участников</span>\r\n            </div>\r\n            <div class=\"benefit\">\r\n                <div class=\"round backRed bIcon2\"></div>\r\n                <h3>Методические</h3>\r\n                <span>рекомендации</span>\r\n            </div>\r\n            <div class=\"benefit\">\r\n                <div class=\"round backBlue bIcon3\"></div>\r\n                <h3>Повышение</h3>\r\n                <span>квалификации<span>\r\n            </div>\r\n            <div class=\"benefit\">\r\n                <div class=\"round backRed bIcon4\"></div>\r\n                <h3>Экспертиза</h3>\r\n            </div>\r\n        </div>\r\n    </section>'),
+(7, 'index_block3', '    <section class=\"whiteBack\">\r\n        <div class=\"infoBox container advert\">\r\n            <div class=\"shortBlock white\" style=\"background-image: url(/web/uploads/images/rbanner.jpg);\">\r\n                <h5><b>Реклама</b> в палате</h5>\r\n            </div>\r\n            <div class=\"longBlock\">\r\n                <h4>Важное обьявление</h4>\r\n                <p>Какое-то важное объявление, текст какого-то важного\r\n                объявления, текст какого-то важного объявления, текст\r\n                какого-то важного объявления, текст какого-то важного\r\n                объявления,</p>\r\n                <button class=\"redButton\">Подробнее</button>\r\n            </div>\r\n        </div>\r\n    </section>\r\n\r\n</article>', '    <section class=\"whiteBack\">\r\n        <div class=\"infoBox container advert\">\r\n            <div class=\"shortBlock white\" style=\"background-image: url(/web/uploads/images/rbanner.jpg);\">\r\n                <h5><b>Реклама</b> в палате</h5>\r\n            </div>\r\n            <div class=\"longBlock\">\r\n                <h4>Важное обьявление</h4>\r\n                <p>Какое-то важное объявление, текст какого-то важного\r\n                объявления, текст какого-то важного объявления, текст\r\n                какого-то важного объявления, текст какого-то важного\r\n                объявления,</p>\r\n                <button class=\"redButton\">Подробнее</button>\r\n            </div>\r\n        </div>\r\n    </section>\r\n\r\n</article>'),
+(8, 'footer_text2', '        <a>Пользовательское соглашение</a>\r\n            <a>Политика конфидециальности</a>\r\n            <a>Все права защищены (с) 2019</a>\r\n            <a>Сайт разработан в <span class=\"studio\"></span></a>', '        <a>Пользовательское соглашение</a>\r\n            <a>Политика конфидециальности</a>\r\n            <a>Все права защищены (с) 2019</a>\r\n            <a>Сайт разработан в <span class=\"studio\"></span></a>');
 
 --
 -- Индексы сохранённых таблиц
@@ -283,43 +289,36 @@ ALTER TABLE `text_blocks`
 --
 ALTER TABLE `faq`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT для таблицы `menu`
 --
 ALTER TABLE `menu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
 --
 -- AUTO_INCREMENT для таблицы `meta`
 --
 ALTER TABLE `meta`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT для таблицы `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT для таблицы `partners`
 --
 ALTER TABLE `partners`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT для таблицы `slider`
 --
 ALTER TABLE `slider`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT для таблицы `text_blocks`
 --
 ALTER TABLE `text_blocks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -1,3 +1,7 @@
+<?php
+    use app\components\TbWidget;
+?>
+
 <?php $lang = Yii::$app->language; ?>
 <banner>
     <div class="swiper-container">
@@ -90,68 +94,12 @@
             </div>
         </div>
     </section>
-    <section class="whiteBack">
-        <div class="infoBox container">
-            <div class="longBlock">
-
-                <h4>Вступить в палату</h4>
-                <p>Какой-то текст мотивирующий на вступление в палату, текст мотивирующий на вступление в палату, текст мотивирующий на вступление в палату, текст мотивирующий на вступление в палату</p>
-                
-                <div class="buttonsBox">
-                    <button class="redButton">Вступить</button>
-                    <button class="blueButton">Скачать PDF-анкету</button>              
-                </div>
 
 
-            </div>
-            <div class="shortBlock white" style="background-image: url(/web/uploads/images/exam.jpg)">
-                <h4>Экзамены</h4>
-                <p>Какая-то информация об экзаменах, какая-то информация об экзаменах, информация об экзаменах</p>
-                <button class="whiteButton">Подробнее</button>
-            </div>
-        </div>
+    <?= TbWidget::widget(['alias' => 'index_block1']); ?>
+    <?= TbWidget::widget(['alias' => 'index_block2']); ?>
+    <?= TbWidget::widget(['alias' => 'index_block3']); ?>
 
-    </section>
-    <section class="greyBack">
 
-        <div class="benefits container">
-            <div class="benefit">
-                <div class="round backBlue bIcon1"></div>
-                <h3>1530</h3>
-                <span>участников</span>
-            </div>
-            <div class="benefit">
-                <div class="round backRed bIcon2"></div>
-                <h3>Методические</h3>
-                <span>рекомендации</span>
-            </div>
-            <div class="benefit">
-                <div class="round backBlue bIcon3"></div>
-                <h3>Повышение</h3>
-                <span>квалификации<span>
-            </div>
-            <div class="benefit">
-                <div class="round backRed bIcon4"></div>
-                <h3>Экспертиза</h3>
-            </div>
-        </div>
-    
-    </section>
 
-    <section class="whiteBack">
-        <div class="infoBox container advert">
-            <div class="shortBlock white" style="background-image: url(/web/uploads/images/rbanner.jpg);">
-                <h5><b>Реклама</b> в палате</h5>
-            </div>
-            <div class="longBlock">
-                <h4>Важное обьявление</h4>
-                <p>Какое-то важное объявление, текст какого-то важного
-                объявления, текст какого-то важного объявления, текст
-                какого-то важного объявления, текст какого-то важного
-                объявления,</p>
-                <button class="redButton">Подробнее</button>
-            </div>
-        </div>
-    </section>
 
-</article>
