@@ -3,7 +3,7 @@
 namespace app\controllers;
 use yii\web\Controller;
 
-class ContactsController extends Controller
+class ExpertsController extends Controller
 {
 
     public function actionIndex()

@@ -1,11 +1,22 @@
-<?php $lang = Yii::$app->language; ?>
 
-<?php foreach ($partners as $partner): ?>
+<div class="container pageBody">
 
-<?= $partner['title_'.$lang] ?>
-    <br>
-    <a href="http://<?= $partner['link'] ?>"><?= $partner['link'] ?></a>
-    <hr>
+    <div class="breadcrumbs">
+        <a href="/" >Главная</a> / <span class="red">Партнёры</a>
+    </div>
 
-<?php endforeach; ?>
+    <h1 class="pageTitle red">Партнёры</h1>
+
+    <?php $lang = Yii::$app->language; ?>
+
+    <?php foreach ($partners as $partner): ?>
+
+    <?= $partner['title_'.$lang] ?>
+        <br>
+        <a href="http://<?= $partner['link'] ?>"><?= $partner['link'] ?></a>
+        <hr>
+
+    <?php endforeach; ?>
+
+</div>
 
