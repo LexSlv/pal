@@ -6,5 +6,4 @@
 
     <h1 class="pageTitle red">Обучение</h1>
 
-
 </div>

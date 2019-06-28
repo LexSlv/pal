@@ -7,6 +7,8 @@
 
     <h1 class="pageTitle red">Вопрос-ответ</h1>
 
+    <div class="answer"
+
     <?php $lang = Yii::$app->language; ?>
     <?php foreach ($faq as $faq_item): ?>
 

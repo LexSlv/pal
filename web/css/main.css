@@ -413,7 +413,7 @@ footer {
     font-size: 46px;
 }
 
-.redButton, .blueButton, .whiteButton {
+.redButton, .blueButton, .whiteButton, .uniButton {
     position: relative;
     border: 0;
     outline: 0;
@@ -422,7 +422,7 @@ footer {
     font-size: 18px;
 }
 
-.redButton::after, .blueButton::after, .whiteButton::after {
+.redButton::after, .blueButton::after, .whiteButton::after, .uniButton::after {
     content: '';
     background-size: contain;
     background-repeat: no-repeat;    
@@ -431,6 +431,10 @@ footer {
     right: 12px;
 }
 
+.uniButton {
+    text-transform: uppercase;
+    padding: 13px 35px 13px 25px;  
+}
 
 .redButton {
     text-transform: uppercase;
@@ -439,7 +443,7 @@ footer {
     color: #FFFFFF;
 }
 
-.redButton:after {
+.redButton:after, .uniButton::after {
     background-image: url(/web/img/chevron.svg);
     width: 16px;
     height: 16px;
