@@ -12,6 +12,7 @@ use app\models\ContactForm;
 use app\models\TextBlocks;
 use app\models\Meta;
 use app\models\Slider;
+use app\models\News;
 
 
 class SiteController extends Controller
@@ -73,8 +74,13 @@ class SiteController extends Controller
         Yii::$app->view->params['keywords'] = $meta['keywords_'.$lang];
 
         $slides = Slider::find()->orderBy('position ASC')->all();
+        $news1 = News::find()->orderBy('date DESC')->limit(5)->where(['cat'=>0])->all();
+        $news2 = News::find()->orderBy('date DESC')->limit(5)->where(['cat'=>1])->all();
+        $news3 = News::find()->orderBy('date DESC')->limit(5)->where(['cat'=>2])->all();
 
-        return $this->render('index', ['slides'=>$slides]);
+
+
+        return $this->render('index', ['slides'=>$slides,'news1'=>$news1, 'news2'=>$news2, 'news3'=>$news3]);
     }
 
     /**

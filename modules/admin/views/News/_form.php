@@ -27,7 +27,7 @@ use dosamigos\tinymce\TinyMce;
 
     <?= $form->field($model, 'alias')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'cat')->dropDownList(['cat 1', 'cat 2', 'cat 3']) ?>
+    <?= $form->field($model, 'cat')->dropDownList(['Везде', 'В стране', 'В регионах']) ?>
 
     <?= $form->field($model, 'title_ru')->textInput(['maxlength' => true]) ?>
 
