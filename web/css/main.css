@@ -171,7 +171,7 @@ banner {
     flex-flow: column;
     text-align: left;
     justify-content: center;
-    align-items: baseline;    
+    align-items: baseline;
 }
 
 .swiperBanner h3 {
@@ -218,7 +218,7 @@ banner {
     background-color: #ff0000;
 }
 
- .swiper-button-prev {
+.swiper-button-prev {
     right: calc(50% - 500px);
     transform: scale(-1, 1);
 }
@@ -252,32 +252,32 @@ banner {
 }
 
 .swiper-container {
-      width: 100%;
-      height: 100%;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .swiper-slide {
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      height: 100%;
-      margin: 0 auto;
-      font-size: 18px;
-      background: transparent;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0 auto;
+    font-size: 18px;
+    background: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
 
 
 
@@ -334,12 +334,12 @@ footer {
     display: block;
 }
 .bottomList li::before {
-  content: "\2022"; 
-  color: #3075b6; 
-  font-weight: bold; 
-  display: inline-block; 
-  width: 1em; 
-  margin-left: -1em; 
+    content: "\2022";
+    color: #3075b6;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
 
 .bottomList a {
@@ -386,14 +386,14 @@ footer {
 
 
 .greyBack {
-    background: #F8F8F8; 
+    background: #F8F8F8;
     width: 100%;
     height: auto;
     padding: 40px 0;
 }
 
 .whiteBack {
-    background: #FFFFFF; 
+    background: #FFFFFF;
     width: 100%;
     height: auto;
 }
@@ -425,7 +425,7 @@ footer {
 .redButton::after, .blueButton::after, .whiteButton::after, .uniButton::after {
     content: '';
     background-size: contain;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
     position: absolute;
     left: auto;
     right: 12px;
@@ -433,7 +433,7 @@ footer {
 
 .uniButton {
     text-transform: uppercase;
-    padding: 13px 35px 13px 25px;  
+    padding: 13px 35px 13px 25px;
 }
 
 .redButton {
@@ -521,12 +521,12 @@ footer {
 }
 
 .tabs .newsBlock:first-child {
-	z-index: 1;
+    z-index: 1;
 }
 
 .tabs .newsBlock:target {
-	color: #C03018;
-	z-index: 2;
+    color: #C03018;
+    z-index: 2;
 }
 
 .mainNew {
@@ -631,7 +631,7 @@ footer {
     font-size: 20px;
     font-weight: bold;
     line-height: 1;
-    margin: 8px 0 8px 15px; 
+    margin: 8px 0 8px 15px;
 }
 
 .smallText p {
@@ -776,7 +776,7 @@ footer {
     background-size: 40%;
     background-position: center center;
     background-repeat: no-repeat;
-} 
+}
 
 .bIcon1 { background-image: url(/web/uploads/images/icon1.png); }
 .bIcon2 { background-image: url(/web/uploads/images/icon2.png); }
@@ -864,7 +864,7 @@ footer {
 .cIcon1 { background-image: url(../web/img/icon1.png); background-size: 50%; }
 .cIcon2 { background-image: url(../web/img/icon2.png); }
 .cIcon3 { background-image: url(../web/img/icon3.png); }
-.cIcon4 { 
+.cIcon4 {
     background-image: url(../web/img/icon4.png);
     border-radius: 0;
     background-size: auto;
@@ -882,7 +882,7 @@ footer {
 
 /* Faq */
 
-.answerBlock p { 
+.answerBlock p {
     display: block;
     margin: 10px 40% 10px 0;
 }
@@ -899,18 +899,18 @@ footer {
 }
 
 .toggle {
-  display: none;
+    display: none;
 }
 
 .option {
-  position: relative;
-  margin-bottom: 1em;
+    position: relative;
+    margin-bottom: 1em;
 }
 
 .title, .content {
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  transition: all 0.2s;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: all 0.2s;
 }
 
 .title {
@@ -933,23 +933,23 @@ footer {
 }
 
 .title:after, .title:before {
-  content: '';
-  position: absolute;
-  right: 1.25em;
-  top: 1.25em;
-  width: 2px;
-  height: 0.75em;
-  background-color: #FFFFFF;
-  transition: all 0.2s;
+    content: '';
+    position: absolute;
+    right: 1.25em;
+    top: 1.25em;
+    width: 2px;
+    height: 0.75em;
+    background-color: #FFFFFF;
+    transition: all 0.2s;
 }
 .title:after {
-  transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .content {
-  max-height: 0;
-  overflow: hidden;
-  background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    background-color: transparent;
 }
 .content p {
     margin: 0;
@@ -1036,9 +1036,9 @@ footer {
 }
 
 .statementsTitle {
-  font-size: 30px;
-  margin: 10px 0;
-  padding: 5px 0;
+    font-size: 30px;
+    margin: 10px 0;
+    padding: 5px 0;
 }
 
 .statementsBox {
@@ -1057,8 +1057,8 @@ footer {
 }
 
 .statements a {
-  font-size: 16px;
-  color: #263678;
+    font-size: 16px;
+    color: #263678;
 }
 
 .statements ul {
@@ -1115,12 +1115,12 @@ footer {
 
 .gridBox {
     display: grid;
-    grid-template-areas: 
-    "block1 block1" 
-    "block2 block3" 
-    "block4 block4";
+    grid-template-areas:
+            "block1 block1"
+            "block2 block3"
+            "block4 block4";
     grid-template-rows: 640px 340px auto;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
     height: auto;
     margin: 0;
@@ -1130,7 +1130,7 @@ footer {
 .gridBox section {}
 
 
-.block1 { 
+.block1 {
     grid-area: block1;
     column-count: 2;
     column-gap: 5em;
@@ -1158,7 +1158,7 @@ footer {
     top: 0;
     position: absolute;
     font-size: 30px;
-    margin: 10px 0 20px 0;    
+    margin: 10px 0 20px 0;
 }
 
 .block2 { grid-area: block2; }
@@ -1177,7 +1177,7 @@ footer {
     box-sizing: border-box;
     background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
 }
 
 .block2 h4, .block3 h4 {
@@ -1188,8 +1188,8 @@ footer {
 }
 
 .block2 p, .block3 p {
-  font-size: 18px;
-  margin: 10px 0 20px 0;
+    font-size: 18px;
+    margin: 10px 0 20px 0;
 }
 
 .block4 {
@@ -1205,7 +1205,7 @@ footer {
     top: 0;
     position: absolute;
     font-size: 30px;
-    margin: 10px 0 20px 0;   
+    margin: 10px 0 20px 0;
     width: 50%;
 }
 
@@ -1219,15 +1219,15 @@ footer {
 }
 
 .block4 ol li {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .block4 ol {
-    list-style: none; 
+    list-style: none;
     counter-reset: li;
 }
 
-.block4 li {     
+.block4 li {
     counter-increment: li;
     position: relative;
     margin: 20px 20px;
@@ -1237,8 +1237,8 @@ footer {
 }
 
 .block4  li::before {content: counter(li); color: #FFFFFF;
-  display: inline-block; width: 1em;
-  margin-left: -1em}
+    display: inline-block; width: 1em;
+    margin-left: -1em}
 
 .block4  ol li::before {
     content: counter(li);
@@ -1284,7 +1284,7 @@ footer {
 .aboutHalf h2 {
     font-size: 30px;
     font-weight: bold;
-    margin: 10px 0 20px 0;    
+    margin: 10px 0 20px 0;
     line-height: 1;
 }
 
@@ -1300,9 +1300,9 @@ footer {
 }
 
 .aboutBox p {
-  font-size: 20px;
-  line-height: 1.5;
-  font-weight: 300;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 300;
 }
 
 .aboutBottom {
@@ -1316,16 +1316,55 @@ footer {
     page-break-inside: avoid;
     break-inside: avoid;
     font-size: 20px;
-    line-height: 1.5; 
+    line-height: 1.5;
 }
 
 .aboutBottom .align {
     padding-top: 20px;
 }
 
+/* Partners */
+
+.partnerBox {
+    display: block;
+    width: 45%;
+    flex-flow: column;
+    margin: 0 0 auto 0;
+}
+
+.partnerBox h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 25px 0 5px 0;
+}
+.partnerBox ul {
+    padding-left: 20px;
+    list-style: none;
+    margin: 5px 0;
+}
+.partnerBox ul li::before {
+    content: "\2022";
+    color: #293b85;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+.partnerBox a  {
+    font-size: 20px;
+    color: #293b85;
+}
+
+/* Experts */
+
+.expertsText {
+    width: 75%;
+    font-size: 20px;
+    line-height: 1.5;
+}
 
 @media screen and (max-width: 1140px) {
-    
+
     .container { width: 100%;}
 
     .topBlock { flex-flow: wrap; }
@@ -1410,7 +1449,7 @@ footer {
 
 
     .redButton { padding: 6px 25px 6px 15px; }
- 
+
     .blueButton, .whiteButton { padding: 5px 25px 5px 15px; }
 
     .redButton::after, .blueButton::after, .whiteButton::after  {
@@ -1529,7 +1568,7 @@ footer {
     .advert .shortBlock {
         width: 100%;
         height: 300px;
-    }   
+    }
 
     .advert .longBlock { width: 100%; }
 
@@ -1538,7 +1577,7 @@ footer {
     footer .container { flex-flow: column; }
 
     .half {
-         width: 100%;
+        width: 100%;
         padding: 25px 0;
     }
 

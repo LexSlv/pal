@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 25 2019 г., 12:12
+-- Время создания: Июл 04 2019 г., 18:49
 -- Версия сервера: 5.7.19
 -- Версия PHP: 7.1.7
 
@@ -42,8 +42,10 @@ CREATE TABLE `faq` (
 --
 
 INSERT INTO `faq` (`id`, `q_ru`, `a_ru`, `q_kz`, `a_kz`, `position`) VALUES
-(1, 'q 1', 'a1', 'q1', 'a1', 1),
-(2, 'q2', 'a2', 'q2', 'a2', 2);
+(1, 'Какой-то вопрос, какой-то вопрос, какой-то вопрос, вопрос?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'Какой-то вопрос, какой-то вопрос, какой-то вопрос, вопрос?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 1),
+(2, 'I am here to assist you', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'I am here to assist you', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 2),
+(3, 'Какой-то вопрос, какой-то вопрос, какой-то вопрос, вопрос?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'Какой-то вопрос, какой-то вопрос, какой-то вопрос, вопрос?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 3),
+(4, 'Let\'s get started', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\n', 'Let\'s get started', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\n', 4);
 
 -- --------------------------------------------------------
 
@@ -65,18 +67,17 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`id`, `title_ru`, `title_kz`, `link`, `position`, `hide`) VALUES
-(1, 'Menu 1', 'Menu 1', '#', 1, 0),
-(2, 'Menu 2', 'Menu 2', '#', 2, 0),
-(3, 'Menu 3', 'Menu 3', '#', 3, 0),
-(4, 'Menu 4', 'Menu 4', '#', 4, 0),
-(5, 'Menu 5', 'Menu 5', '#', 5, 0),
-(6, 'Menu 6', 'Menu 6', '#', 6, 0),
-(7, 'Menu 7', 'Menu 7', '#', 7, 0),
-(8, 'Menu 8', 'Menu 8', '#', 8, 1),
-(9, 'Menu 9', 'Menu 9', '#', 9, 1),
-(10, 'Menu 10', 'Menu 10', '#', 10, 1),
-(11, 'Menu 11', 'Menu 11', '#', 11, 1),
-(12, 'Menu 12', 'Menu 12', '#', 12, 1);
+(1, 'О палате	', 'О палате	', '/ru/about', 1, 0),
+(2, 'Вступить в палату', 'Вступить в палату', '/ru/join', 2, 0),
+(3, 'Вопрос-ответ', 'Вопрос-ответ', '/ru/faq', 3, 0),
+(4, 'Эксперты и экспертный совет', 'Эксперты и экспертный совет', '/ru/experts', 4, 0),
+(5, 'Партнёры', 'Партнёры', '/ru/partners', 5, 0),
+(6, 'База документов', 'База документов', '/ru/base', 6, 0),
+(7, 'Реестр членов палаты', 'Реестр членов палаты', '/ru/register', 7, 1),
+(8, 'Личный кабинет', 'Личный кабинет', '#', 8, 1),
+(9, 'Экзамены', 'Экзамены', '/ru/exams', 9, 1),
+(10, 'Обучение', 'Обучение', '/ru/training', 10, 1),
+(12, 'Контакты', 'Контакты', '/ru/contacts', 12, 1);
 
 -- --------------------------------------------------------
 
@@ -151,8 +152,11 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `date`, `alias`, `cat`, `title_ru`, `text_ru`, `title_kz`, `text_kz`, `image`) VALUES
-(2, '2019-06-04', 'qqq', 0, 'qqq', '<p>www</p>', 'eee', '<p>rrr</p>', '33.png'),
-(3, '2019-06-06', '132', 1, '123', '<p>wewqe</p>', 'ds', '<p>ada</p>', '33.png');
+(4, '2019-07-07', 'test1', 0, 'test', '<p>test test test test</p>', 'test', '<p>test test test test</p>', 'Penguins.jpg'),
+(5, '2019-06-30', 'test2', 0, 'test2', '<p>test2test2test2</p>', 'test2', '<p>test2 test2 test2</p>', 'Chrysanthemum.jpg'),
+(6, '2019-06-04', 'test3', 0, 'test3', '<p>test3 test3 test3</p>', 'test3', '<p>test3 test3 test3</p>', 'Desert.jpg'),
+(7, '2019-07-10', 'test4', 0, 'test4', '<p>test4 test4 test4</p>', 'test4 test4 test4', '<p>test4 test4 test4</p>', 'Hydrangeas.jpg'),
+(8, '2019-07-11', 'test5', 0, 'test5', '<p>test5 test5 test5</p>', 'test5', '<p>test5 test5 test5</p>', 'Koala.jpg');
 
 -- --------------------------------------------------------
 
@@ -173,8 +177,13 @@ CREATE TABLE `partners` (
 --
 
 INSERT INTO `partners` (`id`, `title_ru`, `title_kz`, `link`, `position`) VALUES
-(1, 'Партнёр 1', 'Партнёр 1', 'google.com', 1),
-(2, 'Партнёр 2', 'Партнёр 2', 'yandex.ru', 2);
+(1, 'IVSC', 'IVSC', 'www.ivsc.org', 1),
+(2, 'TEGoVA', 'TEGoVA', 'www.tegova.org', 2),
+(3, 'Appraisal Institute', 'Appraisal Institute', 'www.appraisalinstitute.org', 3),
+(4, 'American Society of Appraisal', 'American Society of Appraisal', 'www.old.appraisers.org', 4),
+(5, 'The Appraisal Faundation', 'The Appraisal Faundation', 'www.appraisalfaundation.org', 5),
+(6, 'РОО', 'РОО', 'www.mrsa.ru', 6),
+(7, 'Палата аудиторов Казахстана', 'Палата аудиторов Казахстана', 'www.audit.kz', 7);
 
 -- --------------------------------------------------------
 
@@ -198,8 +207,8 @@ CREATE TABLE `slider` (
 --
 
 INSERT INTO `slider` (`id`, `title_ru`, `description_ru`, `title_kz`, `description_kz`, `img`, `link`, `position`) VALUES
-(1, 'Заголовок слайдера 1', 'Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. ', 'Заголовок слайдера 1', 'Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. ', '/image/paths/', 'https://github.com/LexSlv/pal', 1),
-(2, 'Заголовок слайдера 2', 'Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. ', 'Заголовок слайдера 2', 'Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. ', '/image/paths/2', 'https://github.com/LexSlv/pal', 2);
+(1, 'Заголовок слайдера 1', 'Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. ', 'Заголовок слайдера 1', 'Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. Описание всякое. ', '/web/uploads/images/banner.jpg', 'https://github.com/LexSlv/pal', 1),
+(2, 'Заголовок слайдера 2', 'Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. ', 'Заголовок слайдера 2', 'Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. Другое описание. ', '/web/uploads/images/banner.jpg', 'https://github.com/LexSlv/pal', 2);
 
 -- --------------------------------------------------------
 
@@ -288,7 +297,7 @@ ALTER TABLE `text_blocks`
 -- AUTO_INCREMENT для таблицы `faq`
 --
 ALTER TABLE `faq`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT для таблицы `menu`
 --
@@ -303,12 +312,12 @@ ALTER TABLE `meta`
 -- AUTO_INCREMENT для таблицы `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT для таблицы `partners`
 --
 ALTER TABLE `partners`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT для таблицы `slider`
 --

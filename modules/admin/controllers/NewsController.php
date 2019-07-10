@@ -72,7 +72,7 @@ class NewsController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             $model->image = UploadedFile::getInstance($model, 'image');
-            Image::resize($model->image->tempName, 400, null)->save('uploads/news/small/' . $model->image->baseName . '.' . $model->image->extension);
+            Image::resize($model->image->tempName, 160, null)->save('uploads/news/small/' . $model->image->baseName . '.' . $model->image->extension);
             Image::resize($model->image->tempName, 1000, null)->save('uploads/news/big/' . $model->image->baseName . '.' . $model->image->extension);
             $model->save(false);
 

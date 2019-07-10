@@ -7,10 +7,10 @@
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <?php foreach ($slides AS $slide): ?>
-            <div class="swiper-slide" style="background-image: url(/web/uploads/images/banner.jpg)">
+            <div class="swiper-slide" style="background-image: url(<?= $slide['img'] ?>)">
                 <div class="container swiperBanner">
                     <h3><?= $slide['title_'.$lang] ?></h3>
-                    <p><?= $slide['description_'.$lang] ?><br /><?= $slide['img'] ?></p>
+                    <p><?= $slide['description_'.$lang] ?></p>
                     <a class="redButton" href="<?= $slide['link'] ?>">Подробнее</a>                                   
                 </div>
             </div>
@@ -40,172 +40,116 @@
             </div>
 
             <div class="newsBlock container" v-if="tab == 1">
-
+                <?php foreach ($news1 as $key=>$news_item): ?>
+                <?php if($key==0): ?>
                 <div class="mainNew">
-                    <div class="bigPic" style="background-image: url(/web/uploads/images/new.png);">
+                    <div class="bigPic" style="background-image: url(/web/uploads/news/big/<?= $news_item['image']  ?>);">
                         <a class="mask"></a>
                     </div>
                     <div class="bigText">
-                        <h4>Какой-то интересный заголовок 1</h4>
-                        <p>Краткое описание новости, краткое описание новости, описание новости, краткое описание новости</p>
-                        <small>10. 04. 2019 г.</small>
+                        <h4><?= $news_item['title_'.$lang] ?></h4>
+                        <p><?= strip_tags(substr($news_item['text_'.$lang], 0,80)) ?></p>
+                        <small><?= date('d.m.Y', strtotime($news_item['date'])) ?></small>
                     </div>
                 </div>
+                <?php endif; ?>
+                <?php endforeach; ?>
+
+
                 <div class="newsBox">
+                    <?php foreach ($news1 as $key=>$news_item): ?>
+                    <?php if($key>0): ?>
                     <div class="new">
-                        <div class="smallPic" style="background-image: url(/web/uploads/images/new.png);">
+                        <div class="smallPic" style="background-image: url(/web/uploads/news/small/<?= $news_item['image'] ?>);">
                             <a class="mask"></a>
                         </div>
                         <div class="smallText">
-                            <h4>Какой-то интересный заголовок</h4>
-                            <p>Краткое описание новости, краткое описание новости, описание новости, краткое описание</p>
-                            <small>10. 04. 2019 г.</small>
-                        </div>                    
-                    </div>
-                    <div class="new">
-                        <div class="smallPic" style="background-image: url(/web/uploads/images/new.png);">
-                            <a class="mask"></a>
+                            <h4><?= $news_item['title_'.$lang] ?></h4>
+                            <p><?= strip_tags(substr($news_item['text_'.$lang], 0,80)) ?></p>
+                            <small><?= date('d.m.Y', strtotime($news_item['date'])) ?></small>
                         </div>
-                        <div class="smallText">
-                            <h4>Какой-то интересный заголовок</h4>
-                            <p>Краткое описание новости, краткое описание новости, описание новости, краткое описание новости</p>
-                            <small>10. 04. 2019 г.</small>
-                        </div>                        
                     </div>
-                    <div class="new">
-                        <div class="smallPic" style="background-image: url(/web/uploads/images/new.png);">
-                            <a class="mask"></a>
-                        </div>                        
-                        <div class="smallText">
-                            <h4>Какой-то интересный заголовок</h4>
-                            <p>Краткое описание новости, краткое описание новости, описание новости, краткое описание новости</p>
-                            <small>10. 04. 2019 г.</small>
-                        </div>                       
-                    </div>
-                    <div class="new">
-                        <div class="smallPic" style="background-image: url(/web/uploads/images/new.png);">
-                            <a class="mask"></a>
-                        </div>
-                        <div class="smallText">
-                            <h4>Какой-то интересный заголовок</h4>
-                            <p>Краткое описание, краткое описание новости, описание новости, краткое описание новости</p>
-                            <small>10. 04. 2019 г.</small>
-                        </div>                      
-                    </div>        
+                    <?php endif; ?>
+                    <?php endforeach; ?>
                 </div>
+
+
             </div>
 
             <div class="newsBlock container" v-if="tab == 2">
+                <?php foreach ($news2 as $key=>$news_item): ?>
+                    <?php if($key==0): ?>
+                        <div class="mainNew">
+                            <div class="bigPic" style="background-image: url(/web/uploads/news/big/<?= $news_item['image']  ?>);">
+                                <a class="mask"></a>
+                            </div>
+                            <div class="bigText">
+                                <h4><?= $news_item['title_'.$lang] ?></h4>
+                                <p><?= strip_tags(substr($news_item['text_'.$lang], 0,80)) ?></p>
+                                <small><?= date('d.m.Y', strtotime($news_item['date'])) ?></small>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
 
-                <div class="mainNew">
-                    <div class="bigPic" style="background-image: url(/web/uploads/images/new.png);">
-                        <a class="mask"></a>
-                    </div>
-                    <div class="bigText">
-                        <h4>Какой-то интересный заголовок 2</h4>
-                        <p>Краткое описание новости, краткое описание новости, описание новости, краткое описание новости</p>
-                        <small>10. 04. 2019 г.</small>
-                    </div>
-                </div>
+
                 <div class="newsBox">
-                    <div class="new">
-                        <div class="smallPic" style="background-image: url(/web/uploads/images/new.png);">
-                            <a class="mask"></a>
-                        </div>
-                        <div class="smallText">
-                            <h4>Какой-то интересный заголовок</h4>
-                            <p>Краткое описание новости, краткое описание новости, описание новости, краткое описание</p>
-                            <small>10. 04. 2019 г.</small>
-                        </div>                    
-                    </div>
-                    <div class="new">
-                        <div class="smallPic" style="background-image: url(/web/uploads/images/new.png);">
-                            <a class="mask"></a>
-                        </div>
-                        <div class="smallText">
-                            <h4>Какой-то интересный заголовок</h4>
-                            <p>Краткое описание новости, краткое описание новости, описание новости, краткое описание новости</p>
-                            <small>10. 04. 2019 г.</small>
-                        </div>                        
-                    </div>
-                    <div class="new">
-                        <div class="smallPic" style="background-image: url(/web/uploads/images/new.png);">
-                            <a class="mask"></a>
-                        </div>                        
-                        <div class="smallText">
-                            <h4>Какой-то интересный заголовок</h4>
-                            <p>Краткое описание новости, краткое описание новости, описание новости, краткое описание новости</p>
-                            <small>10. 04. 2019 г.</small>
-                        </div>                       
-                    </div>
-                    <div class="new">
-                        <div class="smallPic" style="background-image: url(/web/uploads/images/new.png);">
-                            <a class="mask"></a>
-                        </div>
-                        <div class="smallText">
-                            <h4>Какой-то интересный заголовок</h4>
-                            <p>Краткое описание, краткое описание новости, описание новости, краткое описание новости</p>
-                            <small>10. 04. 2019 г.</small>
-                        </div>                      
-                    </div>        
+                    <?php foreach ($news2 as $key=>$news_item): ?>
+                        <?php if($key>0): ?>
+                            <div class="new">
+                                <div class="smallPic" style="background-image: url(/web/uploads/news/small/<?= $news_item['image'] ?>);">
+                                    <a class="mask"></a>
+                                </div>
+                                <div class="smallText">
+                                    <h4><?= $news_item['title_'.$lang] ?></h4>
+                                    <p><?= strip_tags(substr($news_item['text_'.$lang], 0,80)) ?></p>
+                                    <small><?= date('d.m.Y', strtotime($news_item['date'])) ?></small>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                 </div>
+
+
             </div>
 
             <div class="newsBlock container" v-if="tab == 3">
-   
-                <div class="mainNew">
-                    <div class="bigPic" style="background-image: url(/web/uploads/images/new.png);">
-                        <a class="mask"></a>
-                    </div>
-                    <div class="bigText">
-                        <h4>Какой-то интересный заголовок 3</h4>
-                        <p>Краткое описание новости, краткое описание новости, описание новости, краткое описание новости</p>
-                        <small>10. 04. 2019 г.</small>
-                    </div>
-                </div>
+                <?php foreach ($news3 as $key=>$news_item): ?>
+                    <?php if($key==0): ?>
+                        <div class="mainNew">
+                            <div class="bigPic" style="background-image: url(/web/uploads/news/big/<?= $news_item['image']  ?>);">
+                                <a class="mask"></a>
+                            </div>
+                            <div class="bigText">
+                                <h4><?= $news_item['title_'.$lang] ?></h4>
+                                <p><?= strip_tags(substr($news_item['text_'.$lang], 0,80)) ?></p>
+                                <small><?= date('d.m.Y', strtotime($news_item['date'])) ?></small>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+
+
                 <div class="newsBox">
-                    <div class="new">
-                        <div class="smallPic" style="background-image: url(/web/uploads/images/new.png);">
-                            <a class="mask"></a>
-                        </div>
-                        <div class="smallText">
-                            <h4>Какой-то интересный заголовок</h4>
-                            <p>Краткое описание новости, краткое описание новости, описание новости, краткое описание</p>
-                            <small>10. 04. 2019 г.</small>
-                        </div>                    
-                    </div>
-                    <div class="new">
-                        <div class="smallPic" style="background-image: url(/web/uploads/images/new.png);">
-                            <a class="mask"></a>
-                        </div>
-                        <div class="smallText">
-                            <h4>Какой-то интересный заголовок</h4>
-                            <p>Краткое описание новости, краткое описание новости, описание новости, краткое описание новости</p>
-                            <small>10. 04. 2019 г.</small>
-                        </div>                        
-                    </div>
-                    <div class="new">
-                        <div class="smallPic" style="background-image: url(/web/uploads/images/new.png);">
-                            <a class="mask"></a>
-                        </div>                        
-                        <div class="smallText">
-                            <h4>Какой-то интересный заголовок</h4>
-                            <p>Краткое описание новости, краткое описание новости, описание новости, краткое описание новости</p>
-                            <small>10. 04. 2019 г.</small>
-                        </div>                       
-                    </div>
-                    <div class="new">
-                        <div class="smallPic" style="background-image: url(/web/uploads/images/new.png);">
-                            <a class="mask"></a>
-                        </div>
-                        <div class="smallText">
-                            <h4>Какой-то интересный заголовок</h4>
-                            <p>Краткое описание, краткое описание новости, описание новости, краткое описание новости</p>
-                            <small>10. 04. 2019 г.</small>
-                        </div>                      
-                    </div>        
+                    <?php foreach ($news3 as $key=>$news_item): ?>
+                        <?php if($key>0): ?>
+                            <div class="new">
+                                <div class="smallPic" style="background-image: url(/web/uploads/news/small/<?= $news_item['image'] ?>);">
+                                    <a class="mask"></a>
+                                </div>
+                                <div class="smallText">
+                                    <h4><?= $news_item['title_'.$lang] ?></h4>
+                                    <p><?= strip_tags(substr($news_item['text_'.$lang], 0,80)) ?></p>
+                                    <small><?= date('d.m.Y', strtotime($news_item['date'])) ?></small>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                 </div>
+
+
             </div>
+
         </div>
     </section>
 
