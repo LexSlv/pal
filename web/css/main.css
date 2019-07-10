@@ -1363,6 +1363,81 @@ footer {
     line-height: 1.5;
 }
 
+/* Training */
+
+.trainingBlock {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.trainingBlock .shortBlock {
+    margin: 10px 0;
+}
+
+.trainingBox { display: flex; justify-content: space-between; }
+.trainingBox div {  width: 45%; }
+.trainingBox span {  display: block;  margin: 20px 0; }
+.trainingBox p, .trainingBox strong {  display: inline; }
+
+.trainingText { width: 60%; }
+
+.trainingText p {     
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 10px 0;
+    margin: 0; 
+}
+
+/* Exams */
+
+
+.examsText {
+    width: 75%;
+    margin: 20px 0;
+}
+
+.examsText p, .examsText ul li {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.examsBox {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 404px;
+    padding: 60px 80px;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    box-shadow: 0 2px 8px rgba(120,120,120,.3);
+}
+
+.examsBox h3 {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0 0 auto 0;
+}
+
+.examsBox p i {
+    font-size: 20px;
+}
+
+.examsBox p {
+    padding: 0;
+    margin: 2px 0;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.examsBox button {
+    width: fit-content;
+    margin: auto 0 0 0;
+}
+
+
 @media screen and (max-width: 1140px) {
 
     .container { width: 100%;}

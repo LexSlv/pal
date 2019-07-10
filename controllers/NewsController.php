@@ -3,7 +3,7 @@
 namespace app\controllers;
 use yii\web\Controller;
 
-class RegisterController extends Controller
+class NewsController extends Controller
 {
 
     public function actionIndex()
