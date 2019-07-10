@@ -115,6 +115,7 @@ $menus_hide = (new \yii\db\Query())
         </div>
         <div class="half">
             <ul class="bottomList">
+                <li><a href="/ru">Главная</a></li>
                 <?php foreach ($menus as $menu): ?>
                 <li><a href="<?= $menu['link'] ?>"><?= $menu['title_'.$lang] ?></a></li>
                 <?php endforeach; ?>
