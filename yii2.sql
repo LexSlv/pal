@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июл 04 2019 г., 18:49
+-- Время создания: Июл 16 2019 г., 21:06
 -- Версия сервера: 5.7.19
 -- Версия PHP: 7.1.7
 
@@ -103,7 +103,9 @@ CREATE TABLE `meta` (
 INSERT INTO `meta` (`id`, `alias`, `title_ru`, `title_kz`, `description_ru`, `description_kz`, `keywords_ru`, `keywords_kz`) VALUES
 (1, 'index', 'Палата оценщиков', 'Палата оценщиков', '', '', '', ''),
 (2, 'partners', 'Партнёры', 'Партнёры', '', '', '', ''),
-(3, 'faq', 'Вопросы и ответы', 'Вопросы и ответы', '', '', '', '');
+(3, 'faq', 'Вопросы и ответы', 'Вопросы и ответы', '', '', '', ''),
+(4, 'about', 'about', 'about', 'about', 'about', 'about', 'about'),
+(5, 'news', 'news', 'news', 'news', 'news', 'news', 'news');
 
 -- --------------------------------------------------------
 
@@ -307,7 +309,7 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT для таблицы `meta`
 --
 ALTER TABLE `meta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT для таблицы `news`
 --
