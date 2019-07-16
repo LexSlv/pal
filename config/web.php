@@ -69,6 +69,7 @@ $config = [
             'rules' => [
                 'news/page/<page:\d+>' => 'news/index',
                 'news/' => 'news/index',
+                'news/<alias:[A-z0-9_-]+>' => 'news/article',
             ]
         ],
 
