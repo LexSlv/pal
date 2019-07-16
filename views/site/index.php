@@ -1,8 +1,9 @@
 <?php
     use app\components\TbWidget;
+    $lang = Yii::$app->language;
 ?>
 
-<?php $lang = Yii::$app->language; ?>
+
 <banner>
     <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -66,7 +67,7 @@
                         <div class="smallText">
                             <h4><?= $news_item['title_'.$lang] ?></h4>
                             <p><?= strip_tags(substr($news_item['text_'.$lang], 0,80)) ?></p>
-                            <small><?= date('d.m.Y', strtotime($news_item['date'])) ?></small>
+                            <small><?= date('d.m.Y', strtotime($news_item['date'])) ?> г.</small>
                         </div>
                     </div>
                     <?php endif; ?>
