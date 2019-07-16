@@ -34,4 +34,18 @@ class NewsController extends Controller
         return $this->render('index',['news'=>$articles, 'pagination'=>$pagination]);
     }
 
+    public function actionArticle($alias)
+    {
+        $news = News::find()->where(['alias'=>$alias])->one();
+        $meta = Meta::find()->where(['alias'=>'news'])->one();
+
+        $lang = Yii::$app->language;
+        Yii::$app->view->params['title'] = $news['title_'.$lang];
+        Yii::$app->view->params['description'] = $meta['description_'.$lang];
+        Yii::$app->view->params['keywords'] = $meta['keywords_'.$lang];
+
+
+
+        return $this->render('article',['news'=>$news]);
+    }
 }
