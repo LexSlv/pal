@@ -1,9 +1,14 @@
+<?php
+    use app\components\TbWidget;
+    $lang = Yii::$app->language;
+?>
+
 <div class="container pageBody">
 
     <div class="breadcrumbs">
         <a href="/" >Главная</a> / <span class="red">О палате</a>
     </div>
-
+    Какой-то интересный заголовок
     <h1 class="pageTitle red">О палате</h1>
 
 
@@ -26,7 +31,7 @@
                 что сложившаяся структура организации
                 обеспечивает широкому кругу (специалистов)
                 участие в формировании систем массового участия.</p>
-                
+
             <p class="aboutText">Таким образом консультация с широким активом
                 позволяет оценить значение позиций, занимаемых
                 участниками в отношении поставленных задач.
@@ -36,7 +41,21 @@
         </div>
         <div class="aboutHalf">
             <button class="redButton">Лента новостей</button>
-            <div class="newsBox"><div class="new"><div class="smallPic" style="background-image: url(&quot;/web/uploads/images/new.png&quot;);"><a class="mask"></a></div> <div class="smallText"><h4>Какой-то интересный заголовок</h4> <p>Краткое описание новости, краткое описание новости, описание новости, краткое описание</p> <small>10. 04. 2019 г.</small></div></div> <div class="new"><div class="smallPic" style="background-image: url(&quot;/web/uploads/images/new.png&quot;);"><a class="mask"></a></div> <div class="smallText"><h4>Какой-то интересный заголовок</h4> <p>Краткое описание новости, краткое описание новости, описание новости, краткое описание новости</p> <small>10. 04. 2019 г.</small></div></div> <div class="new"><div class="smallPic" style="background-image: url(&quot;/web/uploads/images/new.png&quot;);"><a class="mask"></a></div> <div class="smallText"><h4>Какой-то интересный заголовок</h4> <p>Краткое описание новости, краткое описание новости, описание новости, краткое описание новости</p> <small>10. 04. 2019 г.</small></div></div> <div class="new"><div class="smallPic" style="background-image: url(&quot;/web/uploads/images/new.png&quot;);"><a class="mask"></a></div> <div class="smallText"><h4>Какой-то интересный заголовок</h4> <p>Краткое описание, краткое описание новости, описание новости, краткое описание новости</p> <small>10. 04. 2019 г.</small></div></div></div>
+            <div class="newsBox">
+
+                <?php foreach ($news as $news_item): ?>
+                <div class="new">
+                    <div class="smallPic" style="background-image: url(/web/uploads/news/small/<?= $news_item['image'] ?>);">
+                        <a class="mask"></a>
+                    </div>
+                    <div class="smallText">
+                        <h4><?= $news_item['title_'.$lang] ?></h4>
+                        <p><?= strip_tags(substr($news_item['text_'.$lang], 0,80)) ?></p>
+                            <small><?= date('d.m.Y', strtotime($news_item['date'])) ?> г.</small>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
         </div>
 
     </div>
@@ -68,7 +87,7 @@
             что сложившаяся структура организации
             обеспечивает широкому кругу (специалистов)
             участие в формировании систем массового участия.</p>
-            
+
         <p>Таким образом консультация с широким активом
             позволяет оценить значение позиций, занимаемых
             участниками в отношении поставленных задач.
@@ -94,17 +113,17 @@
 
     <div class="infoBox">
         <div class="longBlock">
-            <h4>Вступить в палату</h4> 
-            <p>Какой-то текст мотивирующий на вступление в палату, текст мотивирующий на вступление в палату, текст мотивирующий на вступление в палату, текст мотивирующий на вступление в палату</p> 
+            <h4>Вступить в палату</h4>
+            <p>Какой-то текст мотивирующий на вступление в палату, текст мотивирующий на вступление в палату, текст мотивирующий на вступление в палату, текст мотивирующий на вступление в палату</p>
             <div class="buttonsBox">
-                <button class="redButton">Вступить</button> 
+                <button class="redButton">Вступить</button>
                 <button class="blueButton">Скачать PDF-анкету</button>
             </div>
-        </div> 
-        
+        </div>
+
         <div class="shortBlock white" style="background-image: url(&quot;/web/uploads/images/exam.jpg&quot;);">
-            <h4>Экзамены</h4> 
-            <p>Какая-то информация об экзаменах, какая-то информация об экзаменах, информация об экзаменах</p> 
+            <h4>Экзамены</h4>
+            <p>Какая-то информация об экзаменах, какая-то информация об экзаменах, информация об экзаменах</p>
             <button class="whiteButton">Подробнее</button>
         </div>
     </div>
