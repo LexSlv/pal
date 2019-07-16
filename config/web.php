@@ -67,7 +67,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                'news/page-<page:\d+>' => 'news/index',
+                'news/page/<page:\d+>' => 'news/index',
                 'news/' => 'news/index',
             ]
         ],
