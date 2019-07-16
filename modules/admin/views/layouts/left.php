@@ -15,6 +15,52 @@
                     ['label' => 'Новости', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/news']],
                     ['label' => 'Текстовые блоки', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/text-blocks']],
 
+                    [
+                        'label' => 'Документы',
+                        'icon' => 'share',
+                        'url' => '#',
+                        'items' => [
+                            [
+                                'label' => 'В слейдере',
+                                'icon' => 'fas fa-newspaper',
+                                'url' => '#',
+                            ],
+                            [
+                                'label' => 'Ежеквартальная отчетность',
+                                'icon' => 'fas fa-newspaper',
+                                'url' => '#',
+                            ],
+
+                            [
+                                'label' => 'Библиотека палаты',
+                                'icon' => 'fas fa-newspaper',
+                                'url' => '#',
+                            ],
+
+                            [
+                                'label' => 'Библиотека палаты',
+                                'icon' => 'fas fa-newspaper',
+                                'url' => '#',
+                            ],
+
+                            [
+                                'label' => 'Зак. акты',
+                                'icon' => 'fas fa-newspaper',
+                                'url' => '#',
+                            ],
+
+                            [
+                                'label' => 'Зак. акты(утрат)',
+                                'icon' => 'fas fa-newspaper',
+                                'url' => '#',
+                            ],
+
+                        ],
+
+
+
+
+                    ],
                     /*
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
