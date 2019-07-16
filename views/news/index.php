@@ -17,7 +17,7 @@
                 <a class="mask"></a>
             </div>
             <div class="smallText">
-                <h4><?= $news_item['title_'.$lang] ?></h4>
+                <h4><a href="/news/<?= $news_item['alias'] ?>"><?= $news_item['title_'.$lang] ?></a></h4>
                 <p><?= strip_tags(substr($news_item['text_'.$lang], 0,80)) ?></p>
                 <small><?= date('d.m.Y', strtotime($news_item['date'])) ?> г.</small>
             </div>
