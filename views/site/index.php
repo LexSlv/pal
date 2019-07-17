@@ -25,12 +25,25 @@
     </div>
 </banner>
 
+<?php 
+
+    function internoetics_string_strrpos($string, $length = 240, $trimmarker = '...') {
+        $len = strlen(trim($string));                             
+        $newstring = ($len > $length) ? rtrim(substr($string, 0, strrpos(substr($string, 0, $length), ' '))) . $trimmarker : $string;
+    return $newstring;
+    }
+?>
+
+
+
 <article id="main">
 
     <section class="greyBack">
         <div class="headNews container">
             <h2 class="red">Новости</h2>
-            <button class="redButton">лента новостей</button>
+            <a href="/news">
+                <button class="redButton">лента новостей</button>
+            </a>
         </div>
         <div class="tabs container">
 
@@ -43,16 +56,20 @@
             <div class="newsBlock container" v-if="tab == 1">
                 <?php foreach ($news1 as $key=>$news_item): ?>
                 <?php if($key==0): ?>
-                <div class="mainNew">
-                    <div class="bigPic" style="background-image: url(/web/uploads/news/big/<?= $news_item['image']  ?>);">
-                        <a class="mask"></a>
+
+                    <div class="mainNew">
+                        <div class="bigPic" style="background-image: url(/web/uploads/news/big/<?= $news_item['image']  ?>);">
+                            <a href="/news/<?= $news_item['alias'] ?>" class="mask"></a>
+                        </div>
+                        <div class="bigText">
+                            <a href="/news/<?= $news_item['alias'] ?>" style="color: black">
+                                <h4><?= $news_item['title_'.$lang] ?></h4>
+                                <p><?= strip_tags(internoetics_string_strrpos($news_item['text_'.$lang])) ?> </p>
+                                <small><?= date('d.m.Y', strtotime($news_item['date'])) ?></small>
+                            </a>
+                        </div>
                     </div>
-                    <div class="bigText">
-                        <h4><?= $news_item['title_'.$lang] ?></h4>
-                        <p><?= strip_tags(substr($news_item['text_'.$lang], 0,80)) ?></p>
-                        <small><?= date('d.m.Y', strtotime($news_item['date'])) ?></small>
-                    </div>
-                </div>
+
                 <?php endif; ?>
                 <?php endforeach; ?>
 
@@ -62,12 +79,14 @@
                     <?php if($key>0): ?>
                     <div class="new">
                         <div class="smallPic" style="background-image: url(/web/uploads/news/small/<?= $news_item['image'] ?>);">
-                            <a class="mask"></a>
+                            <a class="mask" href="/news/<?= $news_item['alias'] ?>"></a>
                         </div>
                         <div class="smallText">
-                            <h4><?= $news_item['title_'.$lang] ?></h4>
-                            <p><?= strip_tags(substr($news_item['text_'.$lang], 0,80)) ?></p>
-                            <small><?= date('d.m.Y', strtotime($news_item['date'])) ?> г.</small>
+                            <a href="/news/<?= $news_item['alias'] ?>" style="color: black">
+                                <h4><?= $news_item['title_'.$lang] ?></h4>
+                                <p><?= strip_tags(internoetics_string_strrpos($news_item['text_'.$lang])) ?> </p>
+                                <small><?= date('d.m.Y', strtotime($news_item['date'])) ?> г.</small>
+                            </a>
                         </div>
                     </div>
                     <?php endif; ?>
@@ -82,11 +101,11 @@
                     <?php if($key==0): ?>
                         <div class="mainNew">
                             <div class="bigPic" style="background-image: url(/web/uploads/news/big/<?= $news_item['image']  ?>);">
-                                <a class="mask"></a>
+                                <a class="mask" href="/news/<?= $news_item['alias'] ?>"></a>
                             </div>
                             <div class="bigText">
                                 <h4><?= $news_item['title_'.$lang] ?></h4>
-                                <p><?= strip_tags(substr($news_item['text_'.$lang], 0,80)) ?></p>
+                                <p><?= strip_tags(internoetics_string_strrpos($news_item['text_'.$lang])) ?> </p>
                                 <small><?= date('d.m.Y', strtotime($news_item['date'])) ?></small>
                             </div>
                         </div>
@@ -99,12 +118,14 @@
                         <?php if($key>0): ?>
                             <div class="new">
                                 <div class="smallPic" style="background-image: url(/web/uploads/news/small/<?= $news_item['image'] ?>);">
-                                    <a class="mask"></a>
+                                    <a class="mask" href="/news/<?= $news_item['alias'] ?>"></a>
                                 </div>
                                 <div class="smallText">
+                                <a href="/news/<?= $news_item['alias'] ?>" style="color: black">
                                     <h4><?= $news_item['title_'.$lang] ?></h4>
-                                    <p><?= strip_tags(substr($news_item['text_'.$lang], 0,80)) ?></p>
-                                    <small><?= date('d.m.Y', strtotime($news_item['date'])) ?></small>
+                                    <p><?= strip_tags(internoetics_string_strrpos($news_item['text_'.$lang])) ?> </p>
+                                    <small><?= date('d.m.Y', strtotime($news_item['date'])) ?> г.</small>
+                                </a>
                                 </div>
                             </div>
                         <?php endif; ?>
@@ -119,7 +140,7 @@
                     <?php if($key==0): ?>
                         <div class="mainNew">
                             <div class="bigPic" style="background-image: url(/web/uploads/news/big/<?= $news_item['image']  ?>);">
-                                <a class="mask"></a>
+                                <a class="mask" href="/news/<?= $news_item['alias'] ?>"></a>
                             </div>
                             <div class="bigText">
                                 <h4><?= $news_item['title_'.$lang] ?></h4>
@@ -136,24 +157,24 @@
                         <?php if($key>0): ?>
                             <div class="new">
                                 <div class="smallPic" style="background-image: url(/web/uploads/news/small/<?= $news_item['image'] ?>);">
-                                    <a class="mask"></a>
+                                    <a class="mask" href="/news/<?= $news_item['alias'] ?>"></a>
                                 </div>
                                 <div class="smallText">
+                                <a href="/news/<?= $news_item['alias'] ?>" style="color: black">
                                     <h4><?= $news_item['title_'.$lang] ?></h4>
-                                    <p><?= strip_tags(substr($news_item['text_'.$lang], 0,80)) ?></p>
-                                    <small><?= date('d.m.Y', strtotime($news_item['date'])) ?></small>
+                                    <p><?= strip_tags(internoetics_string_strrpos($news_item['text_'.$lang])) ?> </p>
+                                    <small><?= date('d.m.Y', strtotime($news_item['date'])) ?> г.</small>
+                                </a>
                                 </div>
                             </div>
                         <?php endif; ?>
                     <?php endforeach; ?>
                 </div>
 
-
             </div>
 
         </div>
     </section>
-
 
     <?= TbWidget::widget(['alias' => 'index_block1']); ?>
     <?= TbWidget::widget(['alias' => 'index_block2']); ?>
