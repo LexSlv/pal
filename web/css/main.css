@@ -825,6 +825,15 @@ footer {
     margin: 10px 0 20px 0;
 }
 
+.pageText {
+    width: 78%;
+}
+
+.pageText p {
+    font-size: 20px;
+    line-height: 1.5; 
+}
+
 .contacts {
     display: flex;
 }
@@ -1209,7 +1218,7 @@ footer {
     width: 50%;
 }
 
-.block4 ol {
+.block4 ol, .newsGrid ol {
     float: left;
     display: block;
     margin: -25px 0 20px 0;
@@ -1218,16 +1227,16 @@ footer {
     position: relative;
 }
 
-.block4 ol li {
+.block4 ol li, .newsGrid ol li {
     font-size: 20px;
 }
 
-.block4 ol {
+.block4 ol, .newsGrid ol {
     list-style: none;
     counter-reset: li;
 }
 
-.block4 li {
+.block4 li, .newsGrid li {
     counter-increment: li;
     position: relative;
     margin: 20px 20px;
@@ -1236,11 +1245,11 @@ footer {
     padding: 10px 0;
 }
 
-.block4  li::before {content: counter(li); color: #FFFFFF;
+.block4  li::before, .newsGrid li::before {content: counter(li); color: #FFFFFF;
     display: inline-block; width: 1em;
     margin-left: -1em}
 
-.block4  ol li::before {
+.block4  ol li::before, .newsGrid ol li::before {
     content: counter(li);
     background-color: #293b85;
     display: inline-block;
@@ -1302,6 +1311,12 @@ footer {
 .aboutBox p {
     font-size: 20px;
     line-height: 1.5;
+    font-weight: 300;
+}
+
+.aboutBox i {
+    font-size: 20px;
+    line-height: 1.6;
     font-weight: 300;
 }
 
@@ -1573,6 +1588,70 @@ footer {
     top: 15px;
     right: auto;
     margin-left: 10px;
+}
+
+
+/* News */
+
+.pagination {
+    display: flex;
+    margin: 20px auto;
+    width: 200px;
+}
+
+.pagination li {
+    list-style: none;
+    padding: 10px;
+}
+
+.newsPageBlock {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-flow: row wrap;
+}
+
+.newsPageBlock div {
+    width: 50%;
+}
+
+.newsPageBlock p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.newsPageBlock h2 {
+  font-size: 30px;
+  line-height: 1;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.newsPageBlock h3 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.25;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.newsImage {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px 0;
+}
+
+.mediumNewsBlock {
+    width: 48%!important;
+}
+
+.newsGrid {
+    column-count: 2;
+    column-gap: 5em;
+    font-size: 20px;
+    position: relative;
 }
 
 

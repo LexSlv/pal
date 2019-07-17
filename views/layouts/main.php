@@ -42,7 +42,7 @@ $menus_hide = (new \yii\db\Query())
 
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="api-maps.yandex.ru" href="//api-maps.yandex.ru">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/swiper.min.css">
     <link rel="stylesheet" href="/css/main.css">
     <script src="/js/vue.js"></script>
@@ -81,7 +81,20 @@ $menus_hide = (new \yii\db\Query())
                 <ul>
                     <?php foreach ($menus_show AS $k=>$menu): ?>
                     <?php  if($k == (count($menus_show)-1)): ?>
-                    <li>...</li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">...</button>
+                            <div class="dropdown-content backBlue">
+                                <div class="container">
+                                    <a href="#">Реестр членов палаты</a>
+                                    <a href="#">Личный кабинет</a>
+                                    <a href="#">Экзамены</a>
+                                    <a href="#">Обучение</a>
+                                    <a href="#">Контакты</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                     <?php endif; ?>
                     <li><a class="white" href="<?= $menu['link'] ?>"><?= $menu['title_'.$lang] ?></a></li>
                     <?php endforeach; ?>
@@ -96,6 +109,51 @@ $menus_hide = (new \yii\db\Query())
 
     </div>
 </header>
+
+<style>
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 72px;
+  margin: 0;  
+}
+
+.dropdown-content a {
+  color: #FFFFFF;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: transparent;}
+
+.dropdown:hover .dropdown-content {    
+    display: block;
+    width: 100vw;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+}
+
+.dropdown:hover .dropbtn { background-color: transparent;}
+</style>
+
+
 
 <main>
 <?= $content ?>
