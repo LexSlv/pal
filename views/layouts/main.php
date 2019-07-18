@@ -86,11 +86,9 @@ $menus_hide = (new \yii\db\Query())
                             <button class="dropbtn">...</button>
                             <div class="dropdown-content backBlue">
                                 <div class="container">
-                                    <a href="#">Реестр членов палаты</a>
-                                    <a href="#">Личный кабинет</a>
-                                    <a href="#">Экзамены</a>
-                                    <a href="#">Обучение</a>
-                                    <a href="#">Контакты</a>
+                                   <?php foreach ($menus_hide AS $k=>$h_menu): ?>
+                                        <a class="white" href="<?= $h_menu['link'] ?>"><?= $h_menu['title_'.$lang] ?></a>
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
                         </div>
@@ -99,61 +97,23 @@ $menus_hide = (new \yii\db\Query())
                     <li><a class="white" href="<?= $menu['link'] ?>"><?= $menu['title_'.$lang] ?></a></li>
                     <?php endforeach; ?>
                 </ul>
-                <!-- СКРЫТОЕ МЕНЮ
-                <?php foreach ($menus_hide AS $k=>$menu): ?>
-                    <li><a class="white" href="<?= $menu['link'] ?>"><?= $menu['title_'.$lang] ?></a></li>
-                <?php endforeach; ?>
-                -->
             </div>
         </nav>
 
+        <nav class="navigationInMobile white backBlue" role="navigation" id="mobileMenu">
+                <div class="container">
+                    <div class="OpenMenu" @click="show = !show">Меню <span :class="show ? 'arrow_up' : 'arrow_down'"></span></div>
+                    <ul class="ulMobile" v-if="show">
+                        <li><a href="/ru">Главная</a></li>
+                        <?php foreach ($menus as $menu): ?>
+                        <li><a href="<?= $menu['link'] ?>"><?= $menu['title_'.$lang] ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            </nav>
+
     </div>
 </header>
-
-<style>
-.dropbtn {
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  background-color: transparent;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 72px;
-  margin: 0;  
-}
-
-.dropdown-content a {
-  color: #FFFFFF;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: transparent;}
-
-.dropdown:hover .dropdown-content {    
-    display: block;
-    width: 100vw;
-    position: fixed;
-    z-index: 2;
-    left: 0;
-}
-
-.dropdown:hover .dropbtn { background-color: transparent;}
-</style>
-
-
 
 <main>
 <?= $content ?>
