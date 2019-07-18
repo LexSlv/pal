@@ -3,5 +3,12 @@ new Vue({
     data: {
         tab: 1,
     },
+});
+
+new Vue({
+    el: '#mobileMenu',
+    data: {
+        show: false,
+    },
     methods: {}
 });

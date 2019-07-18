@@ -130,6 +130,8 @@ span.cabinet {
     background-position: center;
 }
 
+.navigationInMobile { display: none; }
+
 .navigation {
     width: 100%;
     display: flex;
@@ -145,7 +147,7 @@ span.cabinet {
     margin-block-start: 0;
     margin-block-end: 0;
     padding-inline-start: 0;
-    position: relative;
+    /*position: relative;*/
     width: 100%;
 }
 
@@ -159,6 +161,53 @@ span.cabinet {
     font-size: 19px;
     line-height: 28px;
 }
+
+nav.navigation a:hover {
+    color: #3bc0fe;
+}
+
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+}
+  
+.dropdown {
+    /*position: relative;*/
+    display: inline-block;
+    padding: 12px 6px;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 72px;
+    margin: 0;  
+}
+  
+.dropdown-content a {
+    color: #FFFFFF;
+    padding: 12px 2.5% 12px 0;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {background-color: transparent;}
+  
+.dropdown:hover .dropdown-content {    
+      display: block;
+      width: 100%;
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      margin-top: 10px;
+}
+
+.dropdown:hover .dropbtn { background-color: transparent;}
 
 banner {
     height: 680px;
@@ -1658,7 +1707,7 @@ footer {
 @media screen and (max-width: 1140px) {
 
     .container { width: 100%;}
-
+    .navigationInMobile { display: none; }
     .topBlock { flex-flow: wrap; }
     .lang { margin: auto 0; }
     .headBlock h1 { max-width: 300px; }
@@ -1715,10 +1764,54 @@ footer {
         margin-right: auto;
         margin-left: 0;
     }
-    .phone {
-        font-size: 22px;
-        margin: auto 15px;
+
+    .navigationInMobile {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 36px;
+        margin: auto 0 0 0; 
+        position: relative;
     }
+
+    .OpenMenu {
+        margin: 0 auto;
+        padding: 10px 35%;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+
+    .arrow_up, .arrow_down {
+        background-image: url(/web/img/chevron.svg);
+        background-size: 12px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 12px;
+        width: 12px;
+        display: inline-block;
+        transition: all .3s;
+        padding: 10px;
+    }
+ 
+    .arrow_up { transform: rotate(270deg); }
+
+    .arrow_down { transform: rotate(90deg); }
+
+    .ulMobile {
+        position: absolute;
+        top: 36px;
+        width: calc(100% - 40px);
+        background: #21306c;
+        margin: 0;
+        z-index: 2;
+    }
+
+    .ulMobile a { color: #FFFFFF; }
+    
+    .phone, .lang, .scBlock, .navigation { display: none; }
 
     .swiperBanner h3 {
         width: 90%;
@@ -1788,7 +1881,7 @@ footer {
 
     .tabsHead a { margin: 0 5%; }
 
-    .newsBlock { flex-flow: column; }
+    .newsBlock { flex-flow: column; position: relative; }
 
     .mainNew {
         width: 90%;
@@ -1808,6 +1901,8 @@ footer {
         font-size: 16px;
         height: auto;
     }
+
+    .tabs { margin: 0; }
 
     .newsBox { width: 100%; }
 
@@ -1864,9 +1959,14 @@ footer {
 
     .advert .longBlock { width: 100%; }
 
-    footer { background: linear-gradient(to bottom, #7b7b7b 50%, #3b3b3b 50%); }
+    footer { background: #7b7b7b; }
 
-    footer .container { flex-flow: column; }
+    footer .container {  flex-flow: row wrap; justify-content: space-around; }
+
+    .bottomBox a:nth-child(1) { order: 1; }
+    .bottomBox a:nth-child(2) { order: 3; }
+    .bottomBox a:nth-child(3) { order: 2; }
+    .bottomBox a:nth-child(4) { order: 4; }
 
     .half {
         width: 100%;
@@ -1889,9 +1989,7 @@ footer {
     }
 
     .bottomList {
-        margin: 20px 0;
-        background: #3b3b3b;
-        padding: 5% 15%;
+        display: none;
     }
 
     .bottomBlock {
@@ -1899,10 +1997,17 @@ footer {
         padding: 20px 0;
     }
 
-    .bottomBox a { margin: 15px 0; }
+    .bottomBox a { margin: 15px 0; width: 40%; }
 
     .contacts { flex-flow: column; }
 
     .contactBox { width: 85%;  margin: 10px auto 10px 0; }
+
+    .studio {
+        width: 56px;
+        height: 20px;
+        margin-left: 0; 
+    }
+
 
 }
