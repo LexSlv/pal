@@ -2,10 +2,10 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.1:3306
--- Время создания: Июл 18 2019 г., 18:24
--- Версия сервера: 10.2.11-MariaDB
--- Версия PHP: 7.2.0
+-- Хост: 127.0.0.2:3306
+-- Время создания: Июл 23 2019 г., 14:09
+-- Версия сервера: 5.7.20
+-- Версия PHP: 7.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `palata`
+-- База данных: `yii2`
 --
 
 -- --------------------------------------------------------
@@ -30,10 +30,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `faq` (
   `id` int(11) NOT NULL,
-  `q_ru` text DEFAULT NULL,
-  `a_ru` text DEFAULT NULL,
-  `q_kz` text DEFAULT NULL,
-  `a_kz` text DEFAULT NULL,
+  `q_ru` text,
+  `a_ru` text,
+  `q_kz` text,
+  `a_kz` text,
   `position` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -90,10 +90,10 @@ CREATE TABLE `meta` (
   `alias` varchar(255) DEFAULT NULL,
   `title_ru` varchar(255) DEFAULT NULL,
   `title_kz` varchar(255) DEFAULT NULL,
-  `description_ru` text DEFAULT NULL,
-  `description_kz` text DEFAULT NULL,
-  `keywords_ru` text DEFAULT NULL,
-  `keywords_kz` text DEFAULT NULL
+  `description_ru` text,
+  `description_kz` text,
+  `keywords_ru` text,
+  `keywords_kz` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -105,7 +105,12 @@ INSERT INTO `meta` (`id`, `alias`, `title_ru`, `title_kz`, `description_ru`, `de
 (2, 'partners', 'Партнёры', 'Партнёры', '', '', '', ''),
 (3, 'faq', 'Вопросы и ответы', 'Вопросы и ответы', '', '', '', ''),
 (4, 'about', 'about', 'about', 'about', 'about', 'about', 'about'),
-(5, 'news', 'news', 'news', 'news', 'news', 'news', 'news');
+(5, 'news', 'news', 'news', 'news', 'news', 'news', 'news'),
+(6, 'register', 'register', 'register', 'register', 'register', 'register', 'register'),
+(7, 'join', 'join', 'join', 'join', 'join', 'join', 'join'),
+(8, 'exams', 'exams', 'exams', 'exams', 'exams', 'exams', 'exams'),
+(9, 'training', 'training', 'training', 'training', 'training', 'training', 'training'),
+(10, 'contacts', 'contacts', 'contacts', 'contacts', 'contacts', 'contacts', 'contacts');
 
 -- --------------------------------------------------------
 
@@ -143,9 +148,9 @@ CREATE TABLE `news` (
   `alias` varchar(255) DEFAULT NULL,
   `cat` int(11) DEFAULT NULL,
   `title_ru` varchar(255) DEFAULT NULL,
-  `text_ru` text DEFAULT NULL,
+  `text_ru` text,
   `title_kz` varchar(255) DEFAULT NULL,
-  `text_kz` text DEFAULT NULL,
+  `text_kz` text,
   `image` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -196,9 +201,9 @@ INSERT INTO `partners` (`id`, `title_ru`, `title_kz`, `link`, `position`) VALUES
 CREATE TABLE `slider` (
   `id` int(11) NOT NULL,
   `title_ru` varchar(255) DEFAULT NULL,
-  `description_ru` text DEFAULT NULL,
+  `description_ru` text,
   `title_kz` varchar(255) DEFAULT NULL,
-  `description_kz` text DEFAULT NULL,
+  `description_kz` text,
   `img` varchar(255) DEFAULT NULL,
   `link` varchar(255) DEFAULT NULL,
   `position` int(11) DEFAULT NULL
@@ -221,8 +226,8 @@ INSERT INTO `slider` (`id`, `title_ru`, `description_ru`, `title_kz`, `descripti
 CREATE TABLE `text_blocks` (
   `id` int(11) NOT NULL,
   `alias` varchar(255) DEFAULT NULL,
-  `ru` text DEFAULT NULL,
-  `kz` text DEFAULT NULL
+  `ru` text,
+  `kz` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -311,7 +316,7 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT для таблицы `meta`
 --
 ALTER TABLE `meta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT для таблицы `news`
