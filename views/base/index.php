@@ -1,5 +1,5 @@
-<div class="container pageBody">
 
+<div class="container pageBody">
     <div class="breadcrumbs">
         <a href="/" >Главная</a> / <span class="red">База документов</a>
     </div>
@@ -9,47 +9,39 @@
     <div class="baseBanner">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="swiperBase">
-                        <div>
-                            <p>Регистрация СРО</p>
-                        </div>
-                        <div>
-                            <p>Уведомление о начале деятельности СРО</p>
-                        </div>
-                        <div>3</div>
-                        <div>4</div>
-                        <div>5</div>
-                        <div>6</div>
-                        <div>7</div>
-                        <div>8</div>
-                        <div>9</div>
-                        <div>10</div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                        <div class="swiperBase">
-                            <div>
-                                <p>Регистрация СРО 2</p>
-                            </div>
-                            <div>
-                                <p>Уведомление о начале деятельности СРО 2</p>
-                            </div>
-                            <div>3 2</div>
-                            <div>4 2</div>
-                            <div>5 2</div>
-                            <div>6 2</div>
-                            <div>7 2</div>
-                            <div>8 2</div>
-                            <div>9 2</div>
-                            <div>10 2</div>
-                        </div>
-                    </div>                
+                <?php
+                    $lang = Yii::$app->language;
+                    $sdocs_count = count($sdocs);
+                    $i=0;
+                ?>
+                <?php foreach ($sdocs as $k=>$sdoc): ?>
+                <?php  $i++; $j++;?>
+                <?php if($i==1): ?>
+                <div class="swiper-slide"><div class="swiperBase">
+                <?php endif; ?>
+
+                        <div><?= $sdoc['text_'.$lang] ?></div>
+
+                <?php if($i == 10): ?>
+                <?php $i=0; ?>
+                    </div></div>
+                <?php endif; ?>
+                <?php endforeach; ?>
+
+                <?php if($sdocs_count % 10 != 0): ?>
+                    </div></div>
+                <?php endif; ?>
+
             </div>
         </div>
+
+
+
         <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>    
+        <div class="swiper-button-prev"></div>
     </div>
+
+
 
     <div class="fullWidthBanner">
         <p>ОТЧЕТ о деятельности Палаты Оценщиков «Саморегулируемая организация «Палата
@@ -126,12 +118,12 @@
             <p>Оценка автотранспортных средств /Ю.В.Андрианов/ 2003/488с./</p>
             <p>Бизнес-план инвестиционного проекта /под ред. В.М.Попова /2002/432с./</p>
             <p>Интеллектуальный капитал: ключ к успеху в новом тысячелетии /Э.Брукинг/ /2001/288с./</p>
-            <p>Оценка эффективности деятельности компании /Нильс-Горан Ольве, Жан Рой, Магнус Веттер/2004/304с./</p>                      
+            <p>Оценка эффективности деятельности компании /Нильс-Горан Ольве, Жан Рой, Магнус Веттер/2004/304с./</p>
         </div>
         <button class="uniButton backBlue">Показать весь список</button>
 
     </div>
-    
+
     <div class="statements">
         <h2 class="statementsTitle red">Законодательные акты рк в области оценочной деятельности</h2>
 
@@ -163,15 +155,15 @@
                             активов) и интеллектуальной собственности, стоимости нематериальных активов. Вводится в действие по истечении двадцати
                             одного календарного дня после первого официального опубликования. Опубликовано в газете «Казахстанская правда»
                             17 июля 2013 года. </a>
-                </li>                                                                                                                                            
+                </li>
             </ul>
         </div>
-        <button class="uniButton backBlue">Показать весь список</button>        
+        <button class="uniButton backBlue">Показать весь список</button>
     </div>
-  
+
     <div class="statements">
         <h2 class="statementsTitle red">Законодательные акты в области оценочной деятельности, утратившие свою силу</h2>
-        
+
         <div class="statementsBlock">
             <ul>
                 <li>
@@ -202,5 +194,5 @@
         </div>
         <button class="uniButton backBlue">Показать весь список</button>
     </div>
-    
+
 </div>
