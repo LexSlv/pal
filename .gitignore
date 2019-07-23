@@ -16,7 +16,7 @@ Thumbs.db
 /vendor
 
 /web/fm
-
+/web/uploads/thumbs
 # composer itself is not needed
 composer.phar
 
