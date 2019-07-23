@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.3
 -- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.2:3306
--- Время создания: Июл 23 2019 г., 14:09
--- Версия сервера: 5.7.20
--- Версия PHP: 7.0.26
+-- Хост: 127.0.0.1:3306
+-- Время создания: Июл 23 2019 г., 21:57
+-- Версия сервера: 5.7.19
+-- Версия PHP: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -110,7 +110,8 @@ INSERT INTO `meta` (`id`, `alias`, `title_ru`, `title_kz`, `description_ru`, `de
 (7, 'join', 'join', 'join', 'join', 'join', 'join', 'join'),
 (8, 'exams', 'exams', 'exams', 'exams', 'exams', 'exams', 'exams'),
 (9, 'training', 'training', 'training', 'training', 'training', 'training', 'training'),
-(10, 'contacts', 'contacts', 'contacts', 'contacts', 'contacts', 'contacts', 'contacts');
+(10, 'contacts', 'contacts', 'contacts', 'contacts', 'contacts', 'contacts', 'contacts'),
+(11, 'base', 'base', 'base', 'base', 'base', 'base', 'base');
 
 -- --------------------------------------------------------
 
@@ -195,6 +196,46 @@ INSERT INTO `partners` (`id`, `title_ru`, `title_kz`, `link`, `position`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `sdocs`
+--
+
+CREATE TABLE `sdocs` (
+  `id` int(11) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  `text_ru` varchar(255) NOT NULL,
+  `text_kz` varchar(255) NOT NULL,
+  `position` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `sdocs`
+--
+
+INSERT INTO `sdocs` (`id`, `link`, `text_ru`, `text_kz`, `position`) VALUES
+(1, '/uploads/documents/test/exxx.pdf', 'test 1', 'test 1', 1),
+(2, '/uploads/documents/test/exxx.pdf', 'test 2', 'test 2', 2),
+(3, '/uploads/documents/test/exxx.pdf', 'test 3', 'test 3', 3),
+(4, '/uploads/documents/test/exxx.pdf', 'test 4', 'test 4', 4),
+(5, '/uploads/documents/test/exxx.pdf', 'test 5', 'test 5', 5),
+(6, '/uploads/documents/test/exxx.pdf', 'test 6', 'test 6', 6),
+(7, '/uploads/documents/test/exxx.pdf', 'test 7', 'test 7', 7),
+(8, '/uploads/documents/test/exxx.pdf', 'test 8', 'test 8', 8),
+(9, '/uploads/documents/test/exxx.pdf', 'test 9', 'test 9', 9),
+(10, '/uploads/documents/test/exxx.pdf', 'test 10', 'test 10', 10),
+(11, '/uploads/documents/test/exxx.pdf', 'test 11', 'test 11', 11),
+(12, '/uploads/documents/test/exxx.pdf', 'test 12', 'test 12', 12),
+(13, '/uploads/documents/test/exxx.pdf', 'test 13', 'test 13', 13),
+(14, '/uploads/documents/test/exxx.pdf', 'test 14', 'test 14', 14),
+(15, '/uploads/documents/test/exxx.pdf', 'test 15', 'test 15', 15),
+(16, '/uploads/documents/test/exxx.pdf', 'test 16', 'test 16', 16),
+(17, '/uploads/documents/test/exxx.pdf', 'test 17', 'test 17', 17),
+(18, '/uploads/documents/test/exxx.pdf', 'test 18', 'test 18', 18),
+(19, '/uploads/documents/test/exxx.pdf', 'test 19', 'test 19', 19),
+(22, '/uploads/documents/test/exxx.pdf	', 'test 20', 'test 20', 20);
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `slider`
 --
 
@@ -235,7 +276,6 @@ CREATE TABLE `text_blocks` (
 --
 
 INSERT INTO `text_blocks` (`id`, `alias`, `ru`, `kz`) VALUES
-(1, 'test', 'Это тест', 'Бул тест'),
 (2, 'logo_text', 'ПАЛАТА ПРОФЕССИОНАЛЬНЫХ НЕЗАВИСИМЫХ ОЦЕНЩИКОВ', 'Палата оценщиков(Каз. яз)'),
 (3, 'phone_header', '<div class=\"phone\" itemprop=\"telephone\" content=\"+77272665009\">\r\n    8 (727) 266 50 09\r\n    <small>Телефон доверия</small>\r\n</div>', '<div class=\"phone\" itemprop=\"telephone\" content=\"+77272665009\">\r\n    8 (727) 266 50 09\r\n    <small>Телефон доверия</small>\r\n</div>'),
 (4, 'footer_text', '          <p>050008, г. Алматы, ул. Манаса 7 «Б», 13 этаж, офис 43<br> тел/факс: +7 (727) 266 50 09, e-mail:\r\n                cpa_kz@mail.ru</p>\r\n            <p>Председатель Совета Палаты Барнаева Мария&nbsp;Моисеевна тел.: +7 (727) 315 31 18, e-mail:\r\n                cpa_kz@mail.ru</p>', '          <p>050008, г. Алматы, ул. Манаса 7 «Б», 13 этаж, офис 43<br> тел/факс: +7 (727) 266 50 09, e-mail:\r\n                cpa_kz@mail.ru</p>\r\n            <p>Председатель Совета Палаты Барнаева Мария&nbsp;Моисеевна тел.: +7 (727) 315 31 18, e-mail:\r\n                cpa_kz@mail.ru</p>'),
@@ -285,6 +325,12 @@ ALTER TABLE `partners`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `sdocs`
+--
+ALTER TABLE `sdocs`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `slider`
 --
 ALTER TABLE `slider`
@@ -305,43 +351,41 @@ ALTER TABLE `text_blocks`
 --
 ALTER TABLE `faq`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT для таблицы `menu`
 --
 ALTER TABLE `menu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
 --
 -- AUTO_INCREMENT для таблицы `meta`
 --
 ALTER TABLE `meta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT для таблицы `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
 --
 -- AUTO_INCREMENT для таблицы `partners`
 --
 ALTER TABLE `partners`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
+--
+-- AUTO_INCREMENT для таблицы `sdocs`
+--
+ALTER TABLE `sdocs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT для таблицы `slider`
 --
 ALTER TABLE `slider`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT для таблицы `text_blocks`
 --
 ALTER TABLE `text_blocks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
