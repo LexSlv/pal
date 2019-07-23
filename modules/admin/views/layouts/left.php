@@ -6,18 +6,21 @@
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
                     //['label' => 'Menu:', 'options' => ['class' => 'header']],
-                    ['label' => 'HOME', 'icon' => 'fas fa-newspaper', 'url' => ['/']],
-                    ['label' => 'Мета', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/meta']],
-                    ['label' => 'Меню', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/menu']],
-                    ['label' => 'Слайдер', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/slider']],
-                    ['label' => 'Партнёры', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/partners']],
-                    ['label' => 'Вопросы и ответы', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/faq']],
-                    ['label' => 'Новости', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/news']],
-                    ['label' => 'Текстовые блоки', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/text-blocks']],
+                    ['label' => 'Вернуться на сайт', 'icon' => 'fas fa-home', 'url' => ['/']],
+                    ['label' => 'Содержание:', 'options' => ['class' => 'header']],
+                    ['label' => 'Мета теги', 'icon' => 'fas fa-file-code', 'url' => ['/admin/meta']],
+                    ['label' => 'Текстовые блоки', 'icon' => 'fas fa-cubes', 'url' => ['/admin/text-blocks']],
+                    ['label' => 'Меню', 'icon' => 'fas fa-list-ol', 'url' => ['/admin/menu']],
+                    ['label' => 'Слайдер', 'icon' => 'fas fa-hand-point-up', 'url' => ['/admin/slider']],
+                    ['label' => 'Страницы:', 'options' => ['class' => 'header']],
+                    ['label' => 'Партнёры', 'icon' => 'fas fa-handshake', 'url' => ['/admin/partners']],
+                    ['label' => 'Вопросы и ответы', 'icon' => 'far fa-question-circle', 'url' => ['/admin/faq']],
+                    ['label' => 'Новости', 'icon' => 'far fa-newspaper', 'url' => ['/admin/news']],
 
+                    ['label' => 'Файлы:', 'options' => ['class' => 'header']],
                     [
                         'label' => 'Документы',
-                        'icon' => 'share',
+                        'icon' => 'fas fa-file-word',
                         'url' => '#',
                         'items' => [
                             [
