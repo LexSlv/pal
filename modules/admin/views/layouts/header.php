@@ -33,11 +33,7 @@ BootstrapTreeviewAsset::register($this);
 
 
                 <li>
-                    <div style="width: 400px; display: inline-block; margin-top: 7px;">
-                        <input type="text" class="form form-control" style="width: 250px; display: inline-block; border-radius: 3px;"  id="fieldID2">
-                        <a class="btn btn-warning" style="display: inline-block; margin-top: -2px;" data-toggle="modal" href="" data-target="#modal-id" data-remote="false"> Files manager</a>
-                    </div>
-
+                    <a href="/web/fm/" class="btn-warning" target="_blank">Файловый менеджер</a>
                 </li>
 
 
