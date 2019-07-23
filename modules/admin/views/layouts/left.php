@@ -26,7 +26,7 @@
                             [
                                 'label' => 'В слейдере',
                                 'icon' => 'fas fa-newspaper',
-                                'url' => '#',
+                                'url' => '/admin/sdocs/',
                             ],
                             [
                                 'label' => 'Ежеквартальная отчетность',
