@@ -53,6 +53,18 @@
                                 'url' => '/admin/docs/update?id=3',
                             ],
 
+                            [
+                                'label' => 'Ссылки(эксп.)',
+                                'icon' => 'fas fa-arrow-right',
+                                'url' => '/admin/docs/update?id=3',
+                            ],
+
+                            [
+                                'label' => 'Документы(эксп.)',
+                                'icon' => 'fas fa-arrow-right',
+                                'url' => '/admin/docs/update?id=3',
+                            ],
+
                         ],
 
 

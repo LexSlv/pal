@@ -21,9 +21,9 @@ class BaseController extends Controller
         Yii::$app->view->params['keywords'] = $meta['keywords_'.$lang];
 
         $sdocs = Sdocs::find()->orderBy('position ASC')->all();
+
         $qreports = Qreports::find()->orderBy("date DESC")->all();
         $library = Docs::find()->where(['alias'=>'library'])->one();
-
         $zak_act_new = Docs::find()->where(['alias'=>'zak_act_new'])->one();
         $zak_act_old = Docs::find()->where(['alias'=>'zak_act_old'])->one();
 
