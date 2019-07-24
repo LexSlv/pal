@@ -13,7 +13,10 @@ use dosamigos\tinymce\TinyMce;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'alias')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'alias')->textInput([
+            'maxlength' => true,
+            'readOnly'=>($model->scenario == 'update')? "readonly" : ""
+    ]) ?>
 
     <?= $form->field($model, 'text_ru')->widget(TinyMce::className(), [
         'options' => ['rows' => 6],
