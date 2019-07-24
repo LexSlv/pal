@@ -1,3 +1,9 @@
+<?php $lang = Yii::$app->language;
+
+//echo count($exams);
+
+     $block1 = ceil(count($exams)/2);
+?>
 <div class="container pageBody">
 
     <div class="breadcrumbs">
@@ -48,6 +54,26 @@
 
         <div class="trainingBox">
             <div>
+                <?php for($i=0; $i<$block1; $i++): ?>
+                <span>
+                    <strong class="red"><?= $exams[$i]['date_'.$lang] ?></strong> - <p><?= $exams[$i]['text_'.$lang] ?></p>
+                </span>
+                <?php endfor; ?>
+            </div>
+
+            <div>
+                <?php for($block1=0; $i<count($exams); $i++): ?>
+                    <span>
+                    <strong class="red"><?= $exams[$i]['date_'.$lang] ?></strong> - <p><?= $exams[$i]['text_'.$lang] ?></p>
+                </span>
+                <?php endfor; ?>
+            </div>
+
+        </div>
+
+        <!--
+        <div class="trainingBox">
+            <div>
                 <span>
                     <strong class="red">25 апреля</strong> - <p>Название экзамена, название, название,
                         название название, название.</p>
@@ -84,5 +110,7 @@
                 </span>
             </div>
         </div>
+        -->
+
     </div>
 </div>
