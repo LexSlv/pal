@@ -5,6 +5,7 @@ use yii\web\Controller;
 
 use Yii;
 use app\models\Meta;
+use app\models\Exams;
 
 class TrainingController extends Controller
 {
@@ -18,7 +19,10 @@ class TrainingController extends Controller
         Yii::$app->view->params['description'] = $meta['description_'.$lang];
         Yii::$app->view->params['keywords'] = $meta['keywords_'.$lang];
 
-        return $this->render('index');
+        $exams = Exams::find()->orderBy('Date DESC')->all();
+
+
+        return $this->render('index',['exams'=>$exams]);
     }
 
 }

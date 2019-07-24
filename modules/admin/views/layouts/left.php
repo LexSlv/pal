@@ -7,17 +7,21 @@
                 'items' => [
                     //['label' => 'Menu:', 'options' => ['class' => 'header']],
                     ['label' => 'Вернуться на сайт', 'icon' => 'fas fa-home', 'url' => ['/']],
+
                     ['label' => 'Содержание:', 'options' => ['class' => 'header']],
                     ['label' => 'Мета теги', 'icon' => 'fas fa-file-code', 'url' => ['/admin/meta']],
                     ['label' => 'Текстовые блоки', 'icon' => 'fas fa-cubes', 'url' => ['/admin/text-blocks']],
                     ['label' => 'Меню', 'icon' => 'fas fa-list-ol', 'url' => ['/admin/menu']],
                     ['label' => 'Слайдер', 'icon' => 'fas fa-hand-point-up', 'url' => ['/admin/slider']],
-                    ['label' => 'Страницы:', 'options' => ['class' => 'header']],
-                    ['label' => 'Партнёры', 'icon' => 'fas fa-handshake', 'url' => ['/admin/partners']],
-                    ['label' => 'Вопросы и ответы', 'icon' => 'far fa-question-circle', 'url' => ['/admin/faq']],
-                    ['label' => 'Новости', 'icon' => 'far fa-newspaper', 'url' => ['/admin/news']],
 
-                    ['label' => 'Файлы:', 'options' => ['class' => 'header']],
+                    ['label' => 'Страницы:', 'options' => ['class' => 'header']],
+                    ['label' => 'Новости', 'icon' => 'far fa-newspaper', 'url' => ['/admin/news']],
+                    ['label' => 'Вопросы и ответы', 'icon' => 'far fa-question-circle', 'url' => ['/admin/faq']],
+                    ['label' => 'Партнёры', 'icon' => 'fas fa-handshake', 'url' => ['/admin/partners']],
+                    ['label' => 'Экзамены', 'icon' => 'fas fa-graduation-cap', 'url' => ['/admin/exams']],
+
+
+                    ['label' => 'Ссылки и документы:', 'options' => ['class' => 'header']],
                     [
                         'label' => 'Документы',
                         'icon' => 'fas fa-file-word',
