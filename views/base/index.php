@@ -19,9 +19,9 @@
                 <?php if($i==1): ?>
                 <div class="swiper-slide"><div class="swiperBase">
                 <?php endif; ?>
-
-                        <div><?= $sdoc['text_'.$lang] ?></div>
-
+                        <a href="<?= $sdoc['link'] ?>">
+                            <div><?= $sdoc['text_'.$lang] ?></div>
+                        </a>
                 <?php if($i == 10): ?>
                 <?php $i=0; ?>
                     </div></div>
