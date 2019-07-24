@@ -37,7 +37,7 @@
                             [
                                 'label' => 'Библиотека палаты',
                                 'icon' => 'fas fa-arrow-right',
-                                'url' => '#',
+                                'url' => '/admin/docs/update?id=1',
                             ],
 
                             [
