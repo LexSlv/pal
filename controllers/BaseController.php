@@ -24,8 +24,17 @@ class BaseController extends Controller
         $qreports = Qreports::find()->orderBy("date DESC")->all();
         $library = Docs::find()->where(['alias'=>'library'])->one();
 
+        $zak_act_new = Docs::find()->where(['alias'=>'zak_act_new'])->one();
+        $zak_act_old = Docs::find()->where(['alias'=>'zak_act_old'])->one();
 
-        return $this->render('index',['sdocs'=>$sdocs, 'qreports' => $qreports, 'library'=> $library]);
+
+
+        return $this->render('index',[
+            'sdocs'=>$sdocs,
+            'qreports' => $qreports,
+            'library'=> $library,
+            'zak_act_new'=>$zak_act_new,
+            'zak_act_old'=>$zak_act_old]);
     }
 
 }

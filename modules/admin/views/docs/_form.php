@@ -15,7 +15,7 @@ use dosamigos\tinymce\TinyMce;
 
     <?= $form->field($model, 'alias')->textInput([
             'maxlength' => true,
-            'readOnly'=>($model->scenario == 'update')? "readonly" : ""
+            'readonly'=> true
     ]) ?>
 
     <?= $form->field($model, 'text_ru')->widget(TinyMce::className(), [
