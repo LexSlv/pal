@@ -24,37 +24,37 @@
                         'url' => '#',
                         'items' => [
                             [
-                                'label' => 'В слейдере',
-                                'icon' => 'fas fa-newspaper',
+                                'label' => 'В слaйдере',
+                                'icon' => 'fas fa-arrow-right',
                                 'url' => '/admin/sdocs/',
                             ],
                             [
-                                'label' => 'Ежеквартальная отчетность',
-                                'icon' => 'fas fa-newspaper',
+                                'label' => 'Ежеквартальная отче-сть',
+                                'icon' => 'fas fa-arrow-right',
+                                'url' => '/admin/qreports/',
+                            ],
+
+                            [
+                                'label' => 'Библиотека палаты',
+                                'icon' => 'fas fa-arrow-right',
                                 'url' => '#',
                             ],
 
                             [
                                 'label' => 'Библиотека палаты',
-                                'icon' => 'fas fa-newspaper',
-                                'url' => '#',
-                            ],
-
-                            [
-                                'label' => 'Библиотека палаты',
-                                'icon' => 'fas fa-newspaper',
+                                'icon' => 'fas fa-arrow-right',
                                 'url' => '#',
                             ],
 
                             [
                                 'label' => 'Зак. акты',
-                                'icon' => 'fas fa-newspaper',
+                                'icon' => 'fas fa-arrow-right',
                                 'url' => '#',
                             ],
 
                             [
                                 'label' => 'Зак. акты(утрат)',
-                                'icon' => 'fas fa-newspaper',
+                                'icon' => 'fas fa-arrow-right',
                                 'url' => '#',
                             ],
 
