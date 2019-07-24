@@ -6,53 +6,67 @@
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
                     //['label' => 'Menu:', 'options' => ['class' => 'header']],
-                    ['label' => 'HOME', 'icon' => 'fas fa-newspaper', 'url' => ['/']],
-                    ['label' => 'Мета', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/meta']],
-                    ['label' => 'Меню', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/menu']],
-                    ['label' => 'Слайдер', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/slider']],
-                    ['label' => 'Партнёры', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/partners']],
-                    ['label' => 'Вопросы и ответы', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/faq']],
-                    ['label' => 'Новости', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/news']],
-                    ['label' => 'Текстовые блоки', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/text-blocks']],
+                    ['label' => 'Вернуться на сайт', 'icon' => 'fas fa-home', 'url' => ['/']],
 
+                    ['label' => 'Содержание:', 'options' => ['class' => 'header']],
+                    ['label' => 'Мета теги', 'icon' => 'fas fa-file-code', 'url' => ['/admin/meta']],
+                    ['label' => 'Текстовые блоки', 'icon' => 'fas fa-cubes', 'url' => ['/admin/text-blocks']],
+                    ['label' => 'Меню', 'icon' => 'fas fa-list-ol', 'url' => ['/admin/menu']],
+                    ['label' => 'Слайдер', 'icon' => 'fas fa-hand-point-up', 'url' => ['/admin/slider']],
+
+                    ['label' => 'Страницы:', 'options' => ['class' => 'header']],
+                    ['label' => 'Новости', 'icon' => 'far fa-newspaper', 'url' => ['/admin/news']],
+                    ['label' => 'Вопросы и ответы', 'icon' => 'far fa-question-circle', 'url' => ['/admin/faq']],
+                    ['label' => 'Партнёры', 'icon' => 'fas fa-handshake', 'url' => ['/admin/partners']],
+                    ['label' => 'Экзамены', 'icon' => 'fas fa-graduation-cap', 'url' => ['/admin/exams']],
+
+
+                    ['label' => 'Ссылки и документы:', 'options' => ['class' => 'header']],
                     [
                         'label' => 'Документы',
-                        'icon' => 'share',
+                        'icon' => 'fas fa-file-word',
                         'url' => '#',
                         'items' => [
                             [
-                                'label' => 'В слейдере',
-                                'icon' => 'fas fa-newspaper',
-                                'url' => '#',
+                                'label' => 'В слaйдере',
+                                'icon' => 'fas fa-arrow-right',
+                                'url' => '/admin/sdocs/',
                             ],
                             [
-                                'label' => 'Ежеквартальная отчетность',
-                                'icon' => 'fas fa-newspaper',
-                                'url' => '#',
+                                'label' => 'Ежеквартальная отче-сть',
+                                'icon' => 'fas fa-arrow-right',
+                                'url' => '/admin/qreports/',
                             ],
 
                             [
                                 'label' => 'Библиотека палаты',
-                                'icon' => 'fas fa-newspaper',
-                                'url' => '#',
+                                'icon' => 'fas fa-arrow-right',
+                                'url' => '/admin/docs/update?id=1',
                             ],
 
-                            [
-                                'label' => 'Библиотека палаты',
-                                'icon' => 'fas fa-newspaper',
-                                'url' => '#',
-                            ],
 
                             [
                                 'label' => 'Зак. акты',
-                                'icon' => 'fas fa-newspaper',
-                                'url' => '#',
+                                'icon' => 'fas fa-arrow-right',
+                                'url' => '/admin/docs/update?id=2',
                             ],
 
                             [
                                 'label' => 'Зак. акты(утрат)',
-                                'icon' => 'fas fa-newspaper',
-                                'url' => '#',
+                                'icon' => 'fas fa-arrow-right',
+                                'url' => '/admin/docs/update?id=3',
+                            ],
+
+                            [
+                                'label' => 'Ссылки(эксп.)',
+                                'icon' => 'fas fa-arrow-right',
+                                'url' => '/admin/docs/update?id=3',
+                            ],
+
+                            [
+                                'label' => 'Документы(эксп.)',
+                                'icon' => 'fas fa-arrow-right',
+                                'url' => '/admin/docs/update?id=3',
                             ],
 
                         ],
