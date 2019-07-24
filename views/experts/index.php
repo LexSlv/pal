@@ -1,3 +1,4 @@
+<?php $lang = Yii::$app->language; ?>
 <div class="container pageBody">
 
     <div class="breadcrumbs">
@@ -26,22 +27,15 @@
             <h2 class="statementsTitle red">Ссылки на страницы, относящиеся к экспертизе</h2>
     
             <div class="statementsBlock">
-                <ul>
-                    <li>
-                        <a>Тарифы на оказание услуг по проведению экспертизы отчетов об оценке имущества</a>
-                    </li>
-                    <li>
-                        <a>Информация об отделе экспертиз</a>
-                    </li>
-                    <li>
-                        <a>Перейти на портал экспертиз</a>
-                    </li>
-                </ul>
+                <?= $links_exp['text_'.$lang] ?>
             </div>
         </div>
         <div class="statements">
                 <h2 class="statementsTitle red">Перечень документов</h2>
-        
+            <div class="statementsBox">
+                <?= $docs_exp['text_'.$lang] ?>
+            </div>
+            <!--
                 <div class="statementsBox">
                     <div>
                         <ul>
@@ -91,7 +85,7 @@
                         </ul>
                     </div>
                 </div>
-
+            -->
                 <button class="uniButton backBlue">Показать весь список</button>
 
             </div>
