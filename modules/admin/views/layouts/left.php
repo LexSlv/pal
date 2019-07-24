@@ -40,22 +40,17 @@
                                 'url' => '/admin/docs/update?id=1',
                             ],
 
-                            [
-                                'label' => 'Библиотека палаты',
-                                'icon' => 'fas fa-arrow-right',
-                                'url' => '#',
-                            ],
 
                             [
                                 'label' => 'Зак. акты',
                                 'icon' => 'fas fa-arrow-right',
-                                'url' => '#',
+                                'url' => '/admin/docs/update?id=2',
                             ],
 
                             [
                                 'label' => 'Зак. акты(утрат)',
                                 'icon' => 'fas fa-arrow-right',
-                                'url' => '#',
+                                'url' => '/admin/docs/update?id=3',
                             ],
 
                         ],
