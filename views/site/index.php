@@ -28,12 +28,11 @@
 <?php 
 
     function internoetics_string_strrpos($string, $length = 240, $trimmarker = '...') {
-        $len = strlen(trim($string));                             
+        $len = strlen(trim($string));
         $newstring = ($len > $length) ? rtrim(substr($string, 0, strrpos(substr($string, 0, $length), ' '))) . $trimmarker : $string;
     return $newstring;
     }
 ?>
-
 
 
 <article id="main">
@@ -48,9 +47,9 @@
         <div class="tabs container">
 
             <div class="tabsHead">
-                <a class="tab" @click="tab = 1">Везде</a>      
-                <a class="tab" @click="tab = 2">В стране</a>                             
-                <a class="tab" @click="tab = 3">В регионах</a>                             
+                <a class="tab" @click="tab = 1">Везде</a>
+                <a class="tab" @click="tab = 2">В стране</a>
+                <a class="tab" @click="tab = 3">В регионах</a>
             </div>
 
             <div class="newsBlock container" v-if="tab == 1">
@@ -92,8 +91,6 @@
                     <?php endif; ?>
                     <?php endforeach; ?>
                 </div>
-
-
             </div>
 
             <div class="newsBlock container" v-if="tab == 2">
@@ -131,8 +128,6 @@
                         <?php endif; ?>
                     <?php endforeach; ?>
                 </div>
-
-
             </div>
 
             <div class="newsBlock container" v-if="tab == 3">
