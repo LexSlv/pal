@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Meta */
 
-$this->title = 'Update Meta: ' . $model->id;
+$this->title = 'Обновить мета теги: ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Metas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';

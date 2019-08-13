@@ -44,13 +44,13 @@ class Meta extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'alias' => 'Alias',
-            'title_ru' => 'Title Ru',
-            'title_kz' => 'Title Kz',
-            'description_ru' => 'Description Ru',
-            'description_kz' => 'Description Kz',
-            'keywords_ru' => 'Keywords Ru',
-            'keywords_kz' => 'Keywords Kz',
+            'alias' => 'Страница',
+            'title_ru' => 'Заголовок (Ru)',
+            'title_kz' => 'Заголовок (Kz)',
+            'description_ru' => 'Краткое описание (ru)',
+            'description_kz' => 'Краткое описание (kz)',
+            'keywords_ru' => 'Ключевые слова (ru)',
+            'keywords_kz' => 'Ключевые слова (kz)',
         ];
     }
 }

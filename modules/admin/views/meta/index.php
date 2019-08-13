@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\MetaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Metas';
+$this->title = 'Мета теги';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="meta-index">
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Meta', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Прописать мета теги', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

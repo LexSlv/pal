@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Meta */
 
-$this->title = 'Create Meta';
+$this->title = 'Создать мета теги';
 $this->params['breadcrumbs'][] = ['label' => 'Metas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
