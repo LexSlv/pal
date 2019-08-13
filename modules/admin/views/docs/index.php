@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\DocsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Docs';
+$this->title = 'Документы';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="docs-index">
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Docs', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить документ', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

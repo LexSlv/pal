@@ -60,13 +60,13 @@
                             [
                                 'label' => 'Ссылки(эксп.)',
                                 'icon' => 'fas fa-arrow-right',
-                                'url' => '/admin/docs/update?id=3',
+                                'url' => '/admin/docs/update?id=4',
                             ],
 
                             [
                                 'label' => 'Документы(эксп.)',
                                 'icon' => 'fas fa-arrow-right',
-                                'url' => '/admin/docs/update?id=3',
+                                'url' => '/admin/docs/update?id=5',
                             ],
 
                         ],

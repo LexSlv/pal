@@ -41,9 +41,9 @@ class Docs extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'alias' => 'Alias',
-            'text_ru' => 'Text Ru',
-            'text_kz' => 'Text Kz',
+            'alias' => 'Блок',
+            'text_ru' => 'Текст (ru)',
+            'text_kz' => 'Текст (kz)',
         ];
     }
 }

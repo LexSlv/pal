@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Docs */
 
-$this->title = 'Create Docs';
+$this->title = 'Добавить документ';
 $this->params['breadcrumbs'][] = ['label' => 'Docs', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
