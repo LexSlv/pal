@@ -42,11 +42,11 @@ class Faq extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'q_ru' => 'Q Ru',
-            'a_ru' => 'A Ru',
-            'q_kz' => 'Q Kz',
-            'a_kz' => 'A Kz',
-            'position' => 'Position',
+            'q_ru' => 'Вопрос (ru)',
+            'a_ru' => 'Ответ (ru)',
+            'q_kz' => 'Вопрос (kz)',
+            'a_kz' => 'Ответ (kz)',
+            'position' => 'Расположение',
         ];
     }
 }

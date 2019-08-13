@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\FaqSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Faqs';
+$this->title = 'Вопросы и ответы';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="faq-index">
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Faq', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать вопрос- ответ', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -29,8 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'q_ru:ntext',
             'a_ru:ntext',
-            'q_kz:ntext',
-            'a_kz:ntext',
+            //'q_kz:ntext',
+            //'a_kz:ntext',
             //'position',
 
             ['class' => 'yii\grid\ActionColumn'],
