@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\ExamsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Exams';
+$this->title = 'Экзамены';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="exams-index">
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Exams', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить экзамен', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'date',
             'date_ru',
             'text_ru',
-            'date_kz',
+            //'date_kz',
             //'text_kz',
 
             ['class' => 'yii\grid\ActionColumn'],

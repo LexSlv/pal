@@ -43,11 +43,11 @@ class Exams extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'date' => 'Date',
-            'date_ru' => 'Date Ru',
-            'text_ru' => 'Text Ru',
-            'date_kz' => 'Date Kz',
-            'text_kz' => 'Text Kz',
+            'date' => 'Дата',
+            'date_ru' => 'Дата(ru)',
+            'text_ru' => 'Текст(ru)',
+            'date_kz' => 'Дата(kz)',
+            'text_kz' => 'Текст(kz)',
         ];
     }
 }
