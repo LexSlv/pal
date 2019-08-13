@@ -18,6 +18,7 @@
         <div class="newsImage" style="background-image: url(/web/uploads/news/big/<?= $news['image'] ?>)"> </div>
     </div>
 
+    <!--
     <div class="newsPageBlock">
         <h2 class="red">Заговловок 1</h2>
         <h3 class="blue">Заголовок 2</h3>
@@ -87,5 +88,5 @@
                 <li>Позволяет выполнять важные задания по разработке форм развития. </li>
             </ol>
         </div> 
-
+-->
 </div>

@@ -72,8 +72,9 @@ class NewsController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             $model->image = UploadedFile::getInstance($model, 'image');
-            Image::resize($model->image->tempName, 160, null)->save('uploads/news/small/' . $model->image->baseName . '.' . $model->image->extension);
-            Image::resize($model->image->tempName, 1000, null)->save('uploads/news/big/' . $model->image->baseName . '.' . $model->image->extension);
+            Image::resize($model->image->tempName, 160, null)->save('uploads/news/small/' . time() . '.' . $model->image->extension);
+            Image::resize($model->image->tempName, 1000, null)->save('uploads/news/big/' . time() . '.' . $model->image->extension);
+            $model->image = time() . '.' . $model->image->extension;
             $model->save(false);
 
             return $this->redirect(['view', 'id' => $model->id]);
@@ -96,9 +97,16 @@ class NewsController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+
+            if(file_exists(Yii::$app->basePath . '/web/uploads/news/big/' . $this->findModel($id)->image)){
+                unlink(Yii::$app->basePath . '/web/uploads/news/big/' . $this->findModel($id)->image);
+                unlink(Yii::$app->basePath . '/web/uploads/news/small/' . $this->findModel($id)->image);
+            }
+
             $model->image = UploadedFile::getInstance($model, 'image');
-            Image::resize($model->image->tempName, 400, null)->save('uploads/news/small/' . $model->image->baseName . '.' . $model->image->extension);
-            Image::resize($model->image->tempName, 1000, null)->save('uploads/news/big/' . $model->image->baseName . '.' . $model->image->extension);
+            Image::resize($model->image->tempName, 400, null)->save('uploads/news/small/' . time() . '.' . $model->image->extension);
+            Image::resize($model->image->tempName, 1000, null)->save('uploads/news/big/' . time() . '.' . $model->image->extension);
+            $model->image = time() . '.' . $model->image->extension;
             $model->save(false);
 
             return $this->redirect(['view', 'id' => $model->id]);
