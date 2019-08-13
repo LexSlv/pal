@@ -12,7 +12,7 @@ use dosamigos\datepicker\DatePicker;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <label for="">Date</label>
+    <label for="">Дата</label>
     <?= DatePicker::widget([
         'model' => $model,
         'attribute' => 'date',
@@ -23,6 +23,7 @@ use dosamigos\datepicker\DatePicker;
         ]
     ]);?>
 
+    <br>
 
     <?= $form->field($model, 'date_ru')->textInput(['maxlength' => true]) ?>
 
