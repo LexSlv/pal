@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
             //'description_kz:ntext',
             //'img',
             //'link',
-            //'position',
+            'position',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

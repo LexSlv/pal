@@ -42,10 +42,10 @@ class Sdocs extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'link' => 'Link',
-            'text_ru' => 'Text Ru',
-            'text_kz' => 'Text Kz',
-            'position' => 'Position',
+            'link' => 'Ссылка',
+            'text_ru' => 'Текст (ru)',
+            'text_kz' => 'Текст (kz)',
+            'position' => 'Расположение',
         ];
     }
 }
