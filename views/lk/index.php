@@ -29,34 +29,6 @@
 
 </div>
 
-<style>
-    
-.lkTabs {
-    display: flex;
-    flex-flow: column;
-}
-
-.lkTabsHead {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.lkTab {
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 1.333;
-}
-
-.lkTab:hover, .active {
-    color: rgb(192, 48, 24);
-} 
-
-
-</style>
-
 <script>
     
 new Vue({
