@@ -43,11 +43,11 @@ class Menu extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title_ru' => 'Title Ru',
-            'title_kz' => 'Title Kz',
-            'link' => 'Link',
-            'position' => 'Position',
-            'hide' => 'Hide',
+            'title_ru' => 'Заголовок (ru)',
+            'title_kz' => 'Заголовок (kz)',
+            'link' => 'Ссылка',
+            'position' => 'Расположение',
+            'hide' => 'Спрятать в (...)',
         ];
     }
 }
