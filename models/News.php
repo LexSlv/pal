@@ -48,14 +48,14 @@ class News extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'date' => 'Date',
-            'alias' => 'Alias',
-            'cat' => 'Cat',
-            'title_ru' => 'Title Ru',
-            'text_ru' => 'Text Ru',
-            'title_kz' => 'Title Kz',
-            'text_kz' => 'Text Kz',
-            'image' => 'Image',
+            'date' => 'Дата',
+            'alias' => 'ЧПУ',
+            'cat' => 'Категория',
+            'title_ru' => 'Заголовок (ru)',
+            'text_ru' => 'Текст (ru)',
+            'title_kz' => 'Заголовок (kz)',
+            'text_kz' => 'Текст (kz)',
+            'image' => 'Картинка',
         ];
     }
 }
