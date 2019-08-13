@@ -45,13 +45,13 @@ class Slider extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title_ru' => 'Title Ru',
-            'description_ru' => 'Description Ru',
-            'title_kz' => 'Title Kz',
-            'description_kz' => 'Description Kz',
-            'img' => 'Img',
-            'link' => 'Link',
-            'position' => 'Position',
+            'title_ru' => 'Заголовок (ru)',
+            'description_ru' => 'Описание (ru)',
+            'title_kz' => 'Заголовок (kz)',
+            'description_kz' => 'Заголовок (kz)',
+            'img' => 'Путь к картинке',
+            'link' => 'Ссылка',
+            'position' => 'Порядок показа',
         ];
     }
 }
