@@ -46,12 +46,12 @@ class Qreports extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'date' => 'Date',
-            'title_ru' => 'Title Ru',
-            'text_ru' => 'Text Ru',
-            'title_kz' => 'Title Kz',
-            'text_kz' => 'Text Kz',
-            'show' => 'Show',
+            'date' => 'Дата',
+            'title_ru' => 'Заголовок (ru)',
+            'text_ru' => 'Текст (ru)',
+            'title_kz' => 'Заголовок (kz)',
+            'text_kz' => 'Текст (kz)',
+            'show' => 'Показать',
         ];
     }
 }

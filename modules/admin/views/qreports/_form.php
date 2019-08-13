@@ -13,7 +13,7 @@ use dosamigos\tinymce\TinyMce;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <label for="">Date</label>
+    <label for="">Дата</label>
     <?= DatePicker::widget([
         'model' => $model,
         'attribute' => 'date',
@@ -59,7 +59,7 @@ use dosamigos\tinymce\TinyMce;
     <?= $form->field($model, 'show')->checkbox() ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

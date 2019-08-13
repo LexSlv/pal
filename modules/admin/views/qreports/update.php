@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Qreports */
 
-$this->title = 'Update Qreports: ' . $model->id;
+$this->title = 'Редактировать документ: ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Qreports', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';

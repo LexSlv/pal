@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Qreports */
 
-$this->title = 'Create Qreports';
+$this->title = 'Добавить документ';
 $this->params['breadcrumbs'][] = ['label' => 'Qreports', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\QreportsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Qreports';
+$this->title = 'Ежеквартальная отчётность';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="qreports-index">
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Qreports', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить документ', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -30,9 +30,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'date',
             'title_ru',
             'text_ru:ntext',
-            'title_kz',
+            //'title_kz',
             //'text_kz:ntext',
-            //'show',
+            'show',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
