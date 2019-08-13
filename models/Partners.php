@@ -41,10 +41,10 @@ class Partners extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title_ru' => 'Title Ru',
-            'title_kz' => 'Title Kz',
-            'link' => 'Link',
-            'position' => 'Position',
+            'title_ru' => 'Название (ru)',
+            'title_kz' => 'Название (kz)',
+            'link' => 'Ссылка',
+            'position' => 'Расположение',
         ];
     }
 }
