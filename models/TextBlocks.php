@@ -40,9 +40,9 @@ class TextBlocks extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'alias' => 'Alias',
-            'ru' => 'Ru',
-            'kz' => 'Kz',
+            'alias' => 'Уникальное назавание',
+            'ru' => 'Текстовый блок (ru)',
+            'kz' => 'Текстовый блок (kz)',
         ];
     }
 

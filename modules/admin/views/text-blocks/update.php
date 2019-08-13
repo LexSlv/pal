@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\TextBlocks */
 
-$this->title = 'Update Text Blocks: ' . $model->id;
+$this->title = 'Редактировать текстовый блок: ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Text Blocks', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';

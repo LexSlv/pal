@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\TextBlocks */
 
-$this->title = 'Create Text Blocks';
+$this->title = 'Создать текстовый блок';
 $this->params['breadcrumbs'][] = ['label' => 'Text Blocks', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
