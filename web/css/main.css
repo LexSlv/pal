@@ -1703,6 +1703,194 @@ footer {
     position: relative;
 }
 
+/* Reg */
+
+.regPage .subtitle {
+    width: 100%;
+}
+
+.regForm {
+    margin: 40px 0;
+    display: flex;
+    flex-flow: column;
+    align-items: baseline;
+}
+
+.regForm div {
+    margin: 10px 0;
+    display: flex;
+    width: 60%;
+}
+
+.regForm div span {
+    width: 50%;
+    font-size: 24px;
+    color: rgb(42, 45, 50);
+    line-height: 1.25;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+}
+
+.regForm div input {
+    padding: 5px 15px;
+    font-size: 24px;
+    font-weight: 300;
+    color: rgb(42, 45, 50);
+    line-height: 1.25;
+}
+
+
+.regForm .checkContainer {
+    width: 100%;
+}
+
+.regForm div .checkBox {
+    display: block;
+    margin: auto 10px;
+}
+
+.regForm div .checkText {
+    width: 100%;
+    margin: 40px 0;
+    font-size: 18px;
+    color: rgb(139, 139, 139);
+    line-height: 1.333;
+}
+
+.regForm div .round {
+    position: relative;
+    width: 20px;
+    display: block;
+    margin: auto 10px;
+    height: 20px;
+}
+
+.round label {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+
+.round label:after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 6px;
+    left: 2px;
+    opacity: 0;
+    position: absolute;
+    top: 2px;
+    transform: rotate(-45deg);
+    width: 10px;
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background-color: #66bb6a;
+  border-color: #66bb6a;
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+/* News */
+
+.pageBody .newsBlock {
+    background: transparent;
+}
+
+.pageBody .tabs {
+    min-height: 600px;
+}
+
+.moreNewsBlock {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    margin: 20px 0;;
+}
+
+.moreNewsBlock .uniButton {
+    color: #FFFFFF;
+    text-transform: unset;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.moreNewsBlock button.uniButton::after {
+    top: 15px;
+    right: auto;
+    margin-left: 10px;
+}
+
+.mNew {
+    display: block;
+    width: 360px;
+    margin: 20px 0;
+}
+
+.mTitle {
+    display: block;
+    font-size: 30px;
+    line-height: 1;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.mNew .bigPic {
+    height: 225px;
+}
+
+.mNew .bigText h4 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 10px 0;
+}
+
+.mNew .bigText p {
+    font-size: 16px;
+    line-height: 1.4;
+    height: 65px;
+}
+
+/* LK */
+
+.lkTabs {
+    display: flex;
+    flex-flow: column;
+}
+
+.lkTabsHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.lkTab {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.333;
+}
+
+.lkTab:hover, .active {
+    color: rgb(192, 48, 24);
+} 
+
 
 @media screen and (max-width: 1140px) {
 
@@ -2009,5 +2197,36 @@ footer {
         margin-left: 0; 
     }
 
+    .regPage {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .regForm div {
+        margin: 10px auto;
+        display: flex;
+        width: 100%;
+        flex-flow: column;
+    }
+
+    .regForm .checkContainer {
+        width: 100%;
+        flex-flow: row;
+    }
+
+    .regForm div span {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .regForm div .checkText {
+        margin: 40px 10px;
+        font-size: 14px;
+    }
+
+    .moreNewsBlock {
+        width: 90%;
+        margin: 20px auto;
+    }
 
 }
