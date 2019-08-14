@@ -94,6 +94,8 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
+        Yii::$app->view->params['title'] = 'Авторизация';
+
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->redirect('/admin/');
