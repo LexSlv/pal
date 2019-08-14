@@ -95,6 +95,8 @@ class SiteController extends Controller
         }
 
         Yii::$app->view->params['title'] = 'Авторизация';
+        Yii::$app->view->params['description'] = '';
+        Yii::$app->view->params['keywords'] = '';
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
