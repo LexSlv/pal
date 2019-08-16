@@ -18,10 +18,18 @@
 
 
         <div class="lkTabsBody">
-            <div v-if="currentTab == 0">1</div>
-            <div v-if="currentTab == 1">2</div>
-            <div v-if="currentTab == 2">3</div>
-            <div v-if="currentTab == 3">4</div>
+            <div v-if="currentTab == 0">
+                <?php include 'main.php' ?>
+            </div>
+            <div v-if="currentTab == 1">
+                <?php include 'payment.php' ?>
+            </div>
+            <div v-if="currentTab == 2">
+                <?php include 'reporting.php' ?>
+            </div>
+            <div v-if="currentTab == 3">
+                <?php include 'notices.php' ?>
+            </div>
 
         </div>
     </div>
@@ -34,6 +42,23 @@
 new Vue({
     el: '#lk',
     data: {
+        editName: '0',
+        editedName: {
+            date: '01.01.1970',
+            number: 'Номер 000000',
+            member: 'Действительный член',
+            register: '000000',
+            ppno: 'Алматинская ППНО'
+        },
+        editContacts: '0',
+        editedContacts: {
+            index: '000000',
+            region: 'Алматинская',
+            city: 'Алматы',
+            address: 'пр. Абая 120',
+            phone: '8 777 777 77 77',
+            email: 'mail@mail.kz'
+        },
         currentTab: 0,
         tabs: [
             'Главная',
@@ -42,7 +67,24 @@ new Vue({
             'Личные уведомления'
         ]
     },
+    methods: {
+            edit(val) {
+                if (val == 'name') {
+                    this.editName = 1;
+                } else if (val == 'contacts') {
+                    this.editContacts = 1;
+                }
+            }
+        }    
 });
 
+</script>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $( function() { $( "#datepickerOne" ).datepicker(); } );
+  $( function() { $( "#datepickerTwo" ).datepicker(); } );
 
 </script>

@@ -23,7 +23,7 @@
                 <span>Отчество:</span>
                 <input placeholder="Иванович" />
             </div>
-            <div>
+            <div class="calendar">
                 <span>Дата рождения:</span>
                 <input id="datepicker" placeholder="01/01/1970" />
             </div>

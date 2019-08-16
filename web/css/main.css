@@ -1891,6 +1891,128 @@ footer {
     color: rgb(192, 48, 24);
 } 
 
+.lkTabsBody {
+    width: 100%;
+    margin: 30px auto;
+}
+
+.calendar {
+    position: relative;
+}
+
+.calendar::after {
+    content: "";
+    background-image: url(/web/img/calendar.svg);
+    background-size: 24px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.editMainData {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.personData {
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.personData h3 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.25;
+}
+
+.personData div { 
+    margin: 15px 0;
+}
+
+.personData span {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.25;
+}
+
+.personData input {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.personData .blueButton {
+    margin: 20px 0;
+}
+
+.edited {
+    position: relative;
+    margin: 10px 0;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.edited:after {
+    position: absolute;
+    content: "";
+    background-image: url(/web/img/pencil.svg);
+    background-size: 24px;
+    width: 24px;
+    height: 24px;
+    display: block;
+    cursor: pointer;
+    top: 2px;
+    right: -36px;
+}
+
+.lkReports {
+
+}
+
+.reportTitle {
+    display: flex;
+    font-size: 28px;
+    color: rgb(42, 45, 50);
+    font-weight: bold;
+    line-height: 1.071;
+    align-items: center;
+}
+
+.reportTitle input {
+    margin: auto 20px;
+    font-size: 24px;
+    width: 150px;
+    padding: 0 15px;
+}
+
+.reportTitle .calendar::after {
+    background-size: 18px;
+    width: 18px;
+    height: 18px;
+    right: 30px;
+    top: 8px;
+}
+
+.reportBody {
+    display: flex;
+    flex-flow: column;
+    margin: 20px 0;
+}
+
+.reportBody span {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 24px; 
+    font-weight: 300;
+    color: rgb(131, 131, 131); 
+    line-height: 2; 
+}
 
 @media screen and (max-width: 1140px) {
 
