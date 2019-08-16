@@ -1971,7 +1971,7 @@ footer {
 }
 
 .lkReports {
-
+    margin: 40px 0;
 }
 
 .reportTitle {
@@ -2027,8 +2027,94 @@ footer {
 }
 
 .paymentBlock h3.red { font-size: 28px; }
-
 .paymentBlock button { margin: 20px 0; }
+
+.reportingBlock h2 {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.reportingBlock span {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 2;
+    display: block;
+    margin: 15px 0;
+}
+
+.reportingBlock span i { font-style: normal; }
+
+.reportingBlock .success, .reportingBlock .warning {
+    position: relative;
+    padding-left: 48px;
+}
+.reportingBlock .success {
+    position: relative;
+    color: #0c9222;
+}
+
+.reportingBlock .success::before, .reportingBlock .warning::before {
+    position: absolute;
+    content: "";
+    background-size: 38px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 38px;
+    height: 38px;
+    left: 0;
+    top: 4px;
+}
+
+.reportingBlock .warning i { color: #c03018; }
+
+.reportingBlock .success::before { background-image: url(/web/img/success.svg); }
+.reportingBlock .warning::before { background-image: url(/web/img/warning.svg); }
+
+.reportingPagination {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.reportingPagination .before, .reportingPagination  .after {
+    display: block;
+    position: relative;
+    padding: 0 30px;
+    font-size: 24px;
+    color: rgb(41, 59, 133);
+    line-height: 2;
+    cursor: pointer;
+}
+
+.reportingPagination .before:hover, .reportingPagination  .after:hover {
+    opacity: 1;
+}
+
+.reportingPagination .after {
+    opacity: 0.6;
+}
+
+.before::before, .after::after {
+    position: absolute;
+    content: "";
+    background-image: url(/web/img/chevronBlue.svg);
+    width: 18px;
+    height: 18px;
+    display: block;
+    background-size: 18px;
+    transform: rotate(180deg);
+    top: 15px;
+    left: 0;
+}
+
+.after::after {
+    transform: rotate(0deg);
+    right: 0;
+    left: auto;
+}
+
 
 @media screen and (max-width: 1140px) {
 

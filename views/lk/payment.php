@@ -4,5 +4,4 @@
         <h3 class="red">10 567 тенге</h3>
         <button class="blueButton blue" >Оплатить</button>
     </div>
-
 </div>
