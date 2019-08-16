@@ -2014,6 +2014,22 @@ footer {
     line-height: 2; 
 }
 
+.paymentBlock {
+    display: flex;
+    flex-flow: column;
+    align-items: baseline;
+}
+
+.paymentBlock h3 {
+    font-size: 24px;
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+.paymentBlock h3.red { font-size: 28px; }
+
+.paymentBlock button { margin: 20px 0; }
+
 @media screen and (max-width: 1140px) {
 
     .container { width: 100%;}
