@@ -75,6 +75,12 @@
 
 
                     ],
+
+
+                    ['label' => 'Пользователи:', 'options' => ['class' => 'header']],
+
+                    ['label' => 'Пользователи', 'icon' => 'fas fa-users', 'url' => ['/admin/users']],
+
                     /*
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
