@@ -14,7 +14,7 @@ class LkController extends Controller
     {
         $lang = Yii::$app->language;
 
-        $meta = Meta::find()->where(['alias'=>'exams'])->one();
+        $meta = Meta::find()->where(['alias'=>'cabinet'])->one();
         Yii::$app->view->params['title'] = $meta['title_'.$lang];
         Yii::$app->view->params['description'] = $meta['description_'.$lang];
         Yii::$app->view->params['keywords'] = $meta['keywords_'.$lang];
