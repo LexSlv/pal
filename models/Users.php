@@ -35,7 +35,7 @@ class Users extends \yii\db\ActiveRecord
         return [
             [['regDate', 'bornDate', 'firstName', 'middleName', 'lastName', 'certificateNumber', 'email', 'status'], 'required'],
             [['email'],'email'],
-            [['regDate', 'bornDate'], 'safe'],
+            [['regDate', 'bornDate', 'password'], 'safe'],
             [['certificateNumber', 'status'], 'integer'],
             [['firstName', 'middleName', 'lastName', 'email'], 'string', 'max' => 255],
         ];

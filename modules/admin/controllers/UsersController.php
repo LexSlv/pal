@@ -66,7 +66,11 @@ class UsersController extends Controller
     {
         $model = new Users();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $pass = Yii::$app->request->post()['Users']['password'];
+            $model->password =  md5($pass);
+            $model->save();
+
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -85,8 +89,18 @@ class UsersController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $oldPass = $model->password;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            if(Yii::$app->request->post()['Users']['password']!=''){
+                $pass = Yii::$app->request->post()['Users']['password'];
+                $model->password =  md5($pass);
+                $model->save();
+            }else{
+                $model->password =  $oldPass;
+                $model->save();
+            }
+
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

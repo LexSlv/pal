@@ -56,6 +56,12 @@ foreach ($userRules as $userRulesItem){
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'password')->textInput(
+            [
+                    'maxlength' => true,
+                    'value'=>''
+            ]) ?>
+
     <br>
 
 
