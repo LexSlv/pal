@@ -80,6 +80,7 @@
                     ['label' => 'Пользователи:', 'options' => ['class' => 'header']],
 
                     ['label' => 'Пользователи', 'icon' => 'fas fa-users', 'url' => ['/admin/users']],
+                    ['label' => 'Роли пользователей', 'icon' => 'fas fa-theater-masks', 'url' => ['/admin/users-rules']],
 
                     /*
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
