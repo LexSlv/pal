@@ -3,6 +3,12 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use dosamigos\datepicker\DatePicker;
+
+$userRules = \app\models\UsersRules::find()->all();
+foreach ($userRules as $userRulesItem){
+    $userRulesArr[$userRulesItem['id']] =$userRulesItem['text'];
+}
+
 /* @var $this yii\web\View */
 /* @var $model app\models\Users */
 /* @var $form yii\widgets\ActiveForm */
@@ -52,7 +58,11 @@ use dosamigos\datepicker\DatePicker;
 
     <br>
 
-    <?= $form->field($model, 'status')->textInput() ?>
+
+
+    <?=
+    $form->field($model, 'status')->dropDownList($userRulesArr);
+    ?>
 
     <div class="form-group">
         <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
