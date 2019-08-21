@@ -1,4 +1,7 @@
+<?php
 
+print_r($user);
+?>
 <div class="container pageBody">
     <div class="breadcrumbs">
         <a href="/" >Главная</a> / <span class="red">Личный кабинет</a>
@@ -44,8 +47,8 @@ new Vue({
     data: {
         editName: '0',
         editedName: {
-            date: '01.01.1970',
-            number: 'Номер 000000',
+            date: '<?= date("d.m.Y", strtotime($user['bornDate'])) ?>',
+            number: '<?= $user['certificateNumber'] ?>',
             member: 'Действительный член',
             register: '000000',
             ppno: 'Алматинская ППНО'
@@ -57,7 +60,7 @@ new Vue({
             city: 'Алматы',
             address: 'пр. Абая 120',
             phone: '8 777 777 77 77',
-            email: 'mail@mail.kz'
+            email: '<?= $user['email'] ?>'
         },
         currentTab: 0,
         tabs: [

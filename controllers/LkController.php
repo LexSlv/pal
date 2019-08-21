@@ -7,6 +7,7 @@ use yii\web\Controller;
 use Yii;
 use app\models\Meta;
 use app\models\Users;
+use app\models\UsersRules;
 
 class LkController extends Controller
 {
@@ -20,6 +21,8 @@ class LkController extends Controller
 
         if(!isset($session['uid'])){
             return $this->redirect('/'.$lang.'/lk/login/');
+        }else{
+            $userId = $session['uid'];
         }
 
         $meta = Meta::find()->where(['alias'=>'cabinet'])->one();
@@ -27,7 +30,20 @@ class LkController extends Controller
         Yii::$app->view->params['description'] = $meta['description_'.$lang];
         Yii::$app->view->params['keywords'] = $meta['keywords_'.$lang];
 
-        return $this->render('index');
+        $user = Users::find($userId)
+            ->join('LEFT JOIN','users_rules', 'users_rules.id = users.status')
+            ->asArray()
+            ->one();
+
+        $status = UsersRules::find($user['status'])
+            ->asArray()
+            ->one();
+
+        $user['status'] = $status['text'];
+
+
+
+        return $this->render('index',['user'=>$user]);
     }
 
 
