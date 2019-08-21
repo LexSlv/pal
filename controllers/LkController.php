@@ -42,6 +42,7 @@ class LkController extends Controller
 
         $bills = Bills::find()
             ->where(['user_id'=>$user['id']])
+            ->andWhere(['status'=>0])
             ->asArray()
             ->all();
 
