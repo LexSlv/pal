@@ -1,3 +1,24 @@
+<?php
+
+$month[1] = "январь";
+$month[2] = "февраль";
+$month[3] = "март";
+$month[4] = "апрель";
+$month[5] = "май";
+$month[6] = "июнь";
+$month[7] = "июль";
+$month[8] = "август";
+$month[9] = "сентябрь";
+$month[10] = "октябырь";
+$month[11] = "ноябырь";
+$month[12] = "декабрь";
+
+$currentMonth = substr(date('m'),1);
+
+
+
+?>
+
 
 <div class="container pageBody">
     <div class="breadcrumbs">

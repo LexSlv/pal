@@ -8,6 +8,7 @@ use Yii;
 use app\models\Meta;
 use app\models\Users;
 use app\models\UsersRules;
+use app\models\Bills;
 
 class LkController extends Controller
 {
@@ -39,11 +40,16 @@ class LkController extends Controller
             ->asArray()
             ->one();
 
+        $bills = Bills::find()
+            ->where(['user_id'=>$user['id']])
+            ->asArray()
+            ->all();
+
         $user['status'] = $status['text'];
 
 
 
-        return $this->render('index',['user'=>$user]);
+        return $this->render('index',['user'=>$user, 'bills'=>$bills]);
     }
 
 

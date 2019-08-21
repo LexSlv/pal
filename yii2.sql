@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.2:3306
--- Время создания: Авг 20 2019 г., 13:10
+-- Время создания: Авг 21 2019 г., 13:26
 -- Версия сервера: 5.7.20
 -- Версия PHP: 7.0.26
 
@@ -21,6 +21,27 @@ SET time_zone = "+00:00";
 --
 -- База данных: `yii2`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `bills`
+--
+
+CREATE TABLE `bills` (
+  `id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `summ` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `bills`
+--
+
+INSERT INTO `bills` (`id`, `date`, `user_id`, `summ`, `status`) VALUES
+(1, '2019-07-11', 1, 2000, 0);
 
 -- --------------------------------------------------------
 
@@ -385,7 +406,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `regDate`, `bornDate`, `firstName`, `middleName`, `lastName`, `certificateNumber`, `email`, `password`, `status`) VALUES
-(1, '2019-08-22', '1988-11-04', 'Тест', 'Тестович', 'Тестов', 111222333, 'test@mail.ru', '098f6bcd4621d373cade4e832627b4f6', 1),
+(1, '2019-08-22', '1988-11-04', 'Тест', 'Тестович', 'Тестов', 111222333, 'test@mail.ru', '202cb962ac59075b964b07152d234b70', 1),
 (8, '2019-08-22', '1988-11-04', 'Иван', 'Иванович', 'Иванов', 111222333, 'ivan@mail.ru', '550a141f12de6341fba65b0ad0433500', 3);
 
 -- --------------------------------------------------------
@@ -412,6 +433,12 @@ INSERT INTO `users_rules` (`id`, `text`) VALUES
 --
 -- Индексы сохранённых таблиц
 --
+
+--
+-- Индексы таблицы `bills`
+--
+ALTER TABLE `bills`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `docs`
@@ -500,6 +527,12 @@ ALTER TABLE `users_rules`
 --
 -- AUTO_INCREMENT для сохранённых таблиц
 --
+
+--
+-- AUTO_INCREMENT для таблицы `bills`
+--
+ALTER TABLE `bills`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `docs`
