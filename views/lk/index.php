@@ -1,7 +1,4 @@
-<?php
 
-print_r($user);
-?>
 <div class="container pageBody">
     <div class="breadcrumbs">
         <a href="/" >Главная</a> / <span class="red">Личный кабинет</a>
@@ -27,10 +24,10 @@ print_r($user);
             <div v-if="currentTab == 1">
                 <?php include 'payment.php' ?>
             </div>
-            <div v-if="currentTab == 2">
+            <div v-if="currentTab == 3">
                 <?php include 'reporting.php' ?>
             </div>
-            <div v-if="currentTab == 3">
+            <div v-if="currentTab == 2">
                 <?php include 'notices.php' ?>
             </div>
 
