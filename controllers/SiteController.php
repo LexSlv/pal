@@ -116,6 +116,8 @@ class SiteController extends Controller
      */
     public function actionLogout()
     {
+
+        setcookie("MutherHucker",'',time()+3600, '/');
         Yii::$app->user->logout();
 
         return $this->goHome();

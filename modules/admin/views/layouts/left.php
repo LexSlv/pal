@@ -75,6 +75,14 @@
 
 
                     ],
+
+
+                    ['label' => 'Пользователи:', 'options' => ['class' => 'header']],
+
+                    ['label' => 'Пользователи', 'icon' => 'fas fa-users', 'url' => ['/admin/users']],
+                    ['label' => 'Счета на оплату', 'icon' => 'fas fa-money-bill-alt', 'url' => ['/admin/bills']],
+                    ['label' => 'Роли пользователей', 'icon' => 'fas fa-theater-masks', 'url' => ['/admin/users-rules']],
+
                     /*
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],

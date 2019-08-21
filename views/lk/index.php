@@ -1,3 +1,24 @@
+<?php
+
+$month[1] = "январь";
+$month[2] = "февраль";
+$month[3] = "март";
+$month[4] = "апрель";
+$month[5] = "май";
+$month[6] = "июнь";
+$month[7] = "июль";
+$month[8] = "август";
+$month[9] = "сентябрь";
+$month[10] = "октябырь";
+$month[11] = "ноябырь";
+$month[12] = "декабрь";
+
+$currentMonth = substr(date('m'),1);
+
+
+
+?>
+
 
 <div class="container pageBody">
     <div class="breadcrumbs">
@@ -24,10 +45,10 @@
             <div v-if="currentTab == 1">
                 <?php include 'payment.php' ?>
             </div>
-            <div v-if="currentTab == 2">
+            <div v-if="currentTab == 3">
                 <?php include 'reporting.php' ?>
             </div>
-            <div v-if="currentTab == 3">
+            <div v-if="currentTab == 2">
                 <?php include 'notices.php' ?>
             </div>
 
@@ -44,8 +65,8 @@ new Vue({
     data: {
         editName: '0',
         editedName: {
-            date: '01.01.1970',
-            number: 'Номер 000000',
+            date: '<?= date("d.m.Y", strtotime($user['bornDate'])) ?>',
+            number: '<?= $user['certificateNumber'] ?>',
             member: 'Действительный член',
             register: '000000',
             ppno: 'Алматинская ППНО'
@@ -57,7 +78,7 @@ new Vue({
             city: 'Алматы',
             address: 'пр. Абая 120',
             phone: '8 777 777 77 77',
-            email: 'mail@mail.kz'
+            email: '<?= $user['email'] ?>'
         },
         currentTab: 0,
         tabs: [

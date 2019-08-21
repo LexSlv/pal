@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.2:3306
--- Время создания: Июл 24 2019 г., 11:35
+-- Время создания: Авг 21 2019 г., 13:26
 -- Версия сервера: 5.7.20
 -- Версия PHP: 7.0.26
 
@@ -21,6 +21,27 @@ SET time_zone = "+00:00";
 --
 -- База данных: `yii2`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `bills`
+--
+
+CREATE TABLE `bills` (
+  `id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `summ` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `bills`
+--
+
+INSERT INTO `bills` (`id`, `date`, `user_id`, `summ`, `status`) VALUES
+(1, '2019-07-11', 1, 2000, 0);
 
 -- --------------------------------------------------------
 
@@ -124,7 +145,7 @@ INSERT INTO `menu` (`id`, `title_ru`, `title_kz`, `link`, `position`, `hide`) VA
 (5, 'Партнёры', 'Партнёры', '/ru/partners', 5, 0),
 (6, 'База документов', 'База документов', '/ru/base', 6, 0),
 (7, 'Реестр членов палаты', 'Реестр членов палаты', '/ru/register', 7, 1),
-(8, 'Личный кабинет', 'Личный кабинет', '#', 8, 1),
+(8, 'Личный кабинет', 'Личный кабинет', '/lk/', 8, 1),
 (9, 'Экзамены', 'Экзамены', '/ru/exams', 9, 1),
 (10, 'Обучение', 'Обучение', '/ru/training', 10, 1),
 (12, 'Контакты', 'Контакты', '/ru/contacts', 12, 1);
@@ -162,7 +183,8 @@ INSERT INTO `meta` (`id`, `alias`, `title_ru`, `title_kz`, `description_ru`, `de
 (9, 'training', 'training', 'training', 'training', 'training', 'training', 'training'),
 (10, 'contacts', 'contacts', 'contacts', 'contacts', 'contacts', 'contacts', 'contacts'),
 (11, 'base', 'base', 'base', 'base', 'base', 'base', 'base'),
-(12, 'experts', 'experts', 'experts', 'experts', 'experts', 'experts', 'experts');
+(12, 'experts', 'experts', 'experts', 'experts', 'experts', 'experts', 'experts'),
+(13, 'cabinet', 'cabinet', 'cabinet', 'cabinet', 'cabinet', 'cabinet', 'cabinet');
 
 -- --------------------------------------------------------
 
@@ -215,7 +237,8 @@ INSERT INTO `news` (`id`, `date`, `alias`, `cat`, `title_ru`, `text_ru`, `title_
 (5, '2019-06-30', 'test2', 0, 'Название статьи 2', '<p>Повседневная практика показывает, что реализация<br />намеченных плановых заданий требуют определения<br />и уточнения существенных финансовых<br />и административных условий. Разнообразный<br />и богатый опыт консультация с широким активом<br />влечет за собой процесс внедрения и модернизации<br />форм развития. С другой стороны постоянный<br />количественный рост и сфера нашей активности<br />позволяет выполнять важные задания по разработке<br />форм развития. Не следует, однако забывать,<br />что сложившаяся структура организации<br />обеспечивает широкому кругу (специалистов)<br />участие в формировании систем массового участия.</p>', 'Название статьи 2', '<p>Повседневная практика показывает, что реализация<br />намеченных плановых заданий требуют определения<br />и уточнения существенных финансовых<br />и административных условий. Разнообразный<br />и богатый опыт консультация с широким активом<br />влечет за собой процесс внедрения и модернизации<br />форм развития. С другой стороны постоянный<br />количественный рост и сфера нашей активности<br />позволяет выполнять важные задания по разработке<br />форм развития. Не следует, однако забывать,<br />что сложившаяся структура организации<br />обеспечивает широкому кругу (специалистов)<br />участие в формировании систем массового участия.</p>', 'rbanner.jpg'),
 (6, '2019-06-04', 'test3', 0, 'Название статьи 3', '<p>Повседневная практика показывает, что реализация<br />намеченных плановых заданий требуют определения<br />и уточнения существенных финансовых<br />и административных условий. Разнообразный<br />и богатый опыт консультация с широким активом<br />влечет за собой процесс внедрения и модернизации<br />форм развития. С другой стороны постоянный<br />количественный рост и сфера нашей активности<br />позволяет выполнять важные задания по разработке<br />форм развития. Не следует, однако забывать,<br />что сложившаяся структура организации<br />обеспечивает широкому кругу (специалистов)<br />участие в формировании систем массового участия.</p>', 'Название статьи 3', '<p>Повседневная практика показывает, что реализация<br />намеченных плановых заданий требуют определения<br />и уточнения существенных финансовых<br />и административных условий. Разнообразный<br />и богатый опыт консультация с широким активом<br />влечет за собой процесс внедрения и модернизации<br />форм развития. С другой стороны постоянный<br />количественный рост и сфера нашей активности<br />позволяет выполнять важные задания по разработке<br />форм развития. Не следует, однако забывать,<br />что сложившаяся структура организации<br />обеспечивает широкому кругу (специалистов)<br />участие в формировании систем массового участия.</p>', 'new.png'),
 (7, '2019-07-10', 'test4', 0, 'Название статьи 4', '<p>Повседневная практика показывает, что реализация<br />намеченных плановых заданий требуют определения<br />и уточнения существенных финансовых<br />и административных условий. Разнообразный<br />и богатый опыт консультация с широким активом<br />влечет за собой процесс внедрения и модернизации<br />форм развития. С другой стороны постоянный<br />количественный рост и сфера нашей активности<br />позволяет выполнять важные задания по разработке<br />форм развития. Не следует, однако забывать,<br />что сложившаяся структура организации<br />обеспечивает широкому кругу (специалистов)<br />участие в формировании систем массового участия.</p>', 'Название статьи 4', '<p>Повседневная практика показывает, что реализация<br />намеченных плановых заданий требуют определения<br />и уточнения существенных финансовых<br />и административных условий. Разнообразный<br />и богатый опыт консультация с широким активом<br />влечет за собой процесс внедрения и модернизации<br />форм развития. С другой стороны постоянный<br />количественный рост и сфера нашей активности<br />позволяет выполнять важные задания по разработке<br />форм развития. Не следует, однако забывать,<br />что сложившаяся структура организации<br />обеспечивает широкому кругу (специалистов)<br />участие в формировании систем массового участия.</p>', 'new.png'),
-(8, '2019-07-11', 'test5', 0, 'Название статьи 5', '<p>Повседневная практика показывает, что реализация<br />намеченных плановых заданий требуют определения<br />и уточнения существенных финансовых<br />и административных условий. Разнообразный<br />и богатый опыт консультация с широким активом<br />влечет за собой процесс внедрения и модернизации<br />форм развития. С другой стороны постоянный<br />количественный рост и сфера нашей активности<br />позволяет выполнять важные задания по разработке<br />форм развития. Не следует, однако забывать,<br />что сложившаяся структура организации<br />обеспечивает широкому кругу (специалистов)<br />участие в формировании систем массового участия.</p>', 'Название статьи 5', '<p>Повседневная практика показывает, что реализация<br />намеченных плановых заданий требуют определения<br />и уточнения существенных финансовых<br />и административных условий. Разнообразный<br />и богатый опыт консультация с широким активом<br />влечет за собой процесс внедрения и модернизации<br />форм развития. С другой стороны постоянный<br />количественный рост и сфера нашей активности<br />позволяет выполнять важные задания по разработке<br />форм развития. Не следует, однако забывать,<br />что сложившаяся структура организации<br />обеспечивает широкому кругу (специалистов)<br />участие в формировании систем массового участия.</p>', 'new.png');
+(8, '2019-07-11', 'test5', 0, 'Название статьи 5', '<p>Повседневная практика показывает, что реализация<br />намеченных плановых заданий требуют определения<br />и уточнения существенных финансовых<br />и административных условий. Разнообразный<br />и богатый опыт консультация с широким активом<br />влечет за собой процесс внедрения и модернизации<br />форм развития. С другой стороны постоянный<br />количественный рост и сфера нашей активности<br />позволяет выполнять важные задания по разработке<br />форм развития. Не следует, однако забывать,<br />что сложившаяся структура организации<br />обеспечивает широкому кругу (специалистов)<br />участие в формировании систем массового участия.</p>', 'Название статьи 5', '<p>Повседневная практика показывает, что реализация<br />намеченных плановых заданий требуют определения<br />и уточнения существенных финансовых<br />и административных условий. Разнообразный<br />и богатый опыт консультация с широким активом<br />влечет за собой процесс внедрения и модернизации<br />форм развития. С другой стороны постоянный<br />количественный рост и сфера нашей активности<br />позволяет выполнять важные задания по разработке<br />форм развития. Не следует, однако забывать,<br />что сложившаяся структура организации<br />обеспечивает широкому кругу (специалистов)<br />участие в формировании систем массового участия.</p>', 'new.png'),
+(10, '2019-06-04', 'testovaya', 2, 'test', '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>', '$model->image = time() . \'.\' . $model->image->extension;', '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>', '1565691917.jpg');
 
 -- --------------------------------------------------------
 
@@ -359,9 +382,63 @@ INSERT INTO `text_blocks` (`id`, `alias`, `ru`, `kz`) VALUES
 (7, 'index_block3', '    <section class=\"whiteBack\">\r\n        <div class=\"infoBox container advert\">\r\n            <div class=\"shortBlock white\" style=\"background-image: url(/web/uploads/images/rbanner.jpg);\">\r\n                <h5><b>Реклама</b> в палате</h5>\r\n            </div>\r\n            <div class=\"longBlock\">\r\n                <h4>Важное обьявление</h4>\r\n                <p>Какое-то важное объявление, текст какого-то важного\r\n                объявления, текст какого-то важного объявления, текст\r\n                какого-то важного объявления, текст какого-то важного\r\n                объявления,</p>\r\n                <button class=\"redButton\">Подробнее</button>\r\n            </div>\r\n        </div>\r\n    </section>\r\n\r\n</article>', '    <section class=\"whiteBack\">\r\n        <div class=\"infoBox container advert\">\r\n            <div class=\"shortBlock white\" style=\"background-image: url(/web/uploads/images/rbanner.jpg);\">\r\n                <h5><b>Реклама</b> в палате</h5>\r\n            </div>\r\n            <div class=\"longBlock\">\r\n                <h4>Важное обьявление</h4>\r\n                <p>Какое-то важное объявление, текст какого-то важного\r\n                объявления, текст какого-то важного объявления, текст\r\n                какого-то важного объявления, текст какого-то важного\r\n                объявления,</p>\r\n                <button class=\"redButton\">Подробнее</button>\r\n            </div>\r\n        </div>\r\n    </section>\r\n\r\n</article>'),
 (8, 'footer_text2', '        <a>Пользовательское соглашение</a>\r\n            <a>Политика конфидециальности</a>\r\n            <a>Все права защищены (с) 2019</a>\r\n            <a>Сайт разработан в <span class=\"studio\"></span></a>', '        <a>Пользовательское соглашение</a>\r\n            <a>Политика конфидециальности</a>\r\n            <a>Все права защищены (с) 2019</a>\r\n            <a>Сайт разработан в <span class=\"studio\"></span></a>');
 
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `regDate` date NOT NULL,
+  `bornDate` date NOT NULL,
+  `firstName` varchar(255) NOT NULL,
+  `middleName` varchar(255) NOT NULL,
+  `lastName` varchar(255) NOT NULL,
+  `certificateNumber` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` text NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `regDate`, `bornDate`, `firstName`, `middleName`, `lastName`, `certificateNumber`, `email`, `password`, `status`) VALUES
+(1, '2019-08-22', '1988-11-04', 'Тест', 'Тестович', 'Тестов', 111222333, 'test@mail.ru', '202cb962ac59075b964b07152d234b70', 1),
+(8, '2019-08-22', '1988-11-04', 'Иван', 'Иванович', 'Иванов', 111222333, 'ivan@mail.ru', '550a141f12de6341fba65b0ad0433500', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users_rules`
+--
+
+CREATE TABLE `users_rules` (
+  `id` int(11) NOT NULL,
+  `text` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `users_rules`
+--
+
+INSERT INTO `users_rules` (`id`, `text`) VALUES
+(1, 'В реестре'),
+(2, 'Нет в реестре'),
+(3, 'Одобренный'),
+(4, 'Не одобренный');
+
 --
 -- Индексы сохранённых таблиц
 --
+
+--
+-- Индексы таблицы `bills`
+--
+ALTER TABLE `bills`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `docs`
@@ -436,8 +513,26 @@ ALTER TABLE `text_blocks`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `users_rules`
+--
+ALTER TABLE `users_rules`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
+
+--
+-- AUTO_INCREMENT для таблицы `bills`
+--
+ALTER TABLE `bills`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `docs`
@@ -467,13 +562,13 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT для таблицы `meta`
 --
 ALTER TABLE `meta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT для таблицы `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT для таблицы `partners`
@@ -491,7 +586,7 @@ ALTER TABLE `qreports`
 -- AUTO_INCREMENT для таблицы `sdocs`
 --
 ALTER TABLE `sdocs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT для таблицы `slider`
@@ -504,6 +599,18 @@ ALTER TABLE `slider`
 --
 ALTER TABLE `text_blocks`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT для таблицы `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT для таблицы `users_rules`
+--
+ALTER TABLE `users_rules`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

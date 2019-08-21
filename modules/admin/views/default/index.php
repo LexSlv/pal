@@ -6,10 +6,10 @@ use yii\helpers\Html;
 
 ?>
 
-<hr>
 
-
-
+<?php
+setcookie("MutherHucker",'FuckYou!',time()+3600, '/');
+?>
 
 <div class="admin-default-index">
 <h1>Welcome to admin panel!</h1>

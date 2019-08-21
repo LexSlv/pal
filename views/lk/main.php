@@ -2,7 +2,7 @@
 
     <div class="editMainData">
         <div class="personData" v-if="editedName">
-                <h2 class="edited" @click="edit('name')">Иванов Иван Иванович</h2>
+                <h2 class="edited" @click="edit('name')"><?= $user['lastName'] ?> <?= $user['middleName'] ?> <?= $user['firstName'] ?></h2>
 
                 <div>
                     <span>Дата рождения - 
