@@ -19,6 +19,8 @@ input { outline: none; }
 .backBlue {  background-color: #293b85; }
 .backRed { background-color: #C03018; }
 
+.error { border-color: #C03018; }
+
 .container {
     width: 1140px;
     display: flex;

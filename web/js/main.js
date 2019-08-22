@@ -5,66 +5,76 @@ new Vue({
     },
 });
 
+const emailCheckRegex = /.+@.+\..+/i;
+
+
+new Vue({
+    el: '#regform',
+    data: {
+      isEmailTouched: false,
+      abonent: {
+        firstname: '',
+        lastname: '',
+        surname: '',
+        birthday: '01/01/1970',
+        certnum: '',
+        email: '',
+        passwd1: '',
+        passwd2: ''
+      }
+    },
+    watch: {
+      passwd2: 'checkPasswordsEquality',
+      passwd1: 'checkPasswordsEquality',
+    },
+    computed: {
+      isEmailValid() {
+        return emailCheckRegex.test(this.email);
+      },
+  
+      isEmailError() {
+        return !this.isEmailValid && this.isEmailTouched;
+      },
+    },
+    methods: {
+      checkPasswordsEquality() {
+        const { password, passwd2 } = this;
+        const { refPasswd } = this.$refs;
+  
+        if (password !== passwd2) {
+          refPasswd.setCustomValidity(
+            'Пароли должны совпадать',
+          );
+        } else {
+          refPasswd.setCustomValidity('');
+        }
+      },
+      sendData(val) {
+          fetch(this.$urlAPI3 + '/mainTarrifs')
+                .then(function(response) {
+                  return response.json();
+                }).then((data) => {
+                for (let i = 0; i < data.length; i++) {
+                    const element = data[i];
+                      if(element.Soc.trim() == this.orderData.FmcFttbTp.trim()) {
+                        this.tariff = element.SocName;
+                      } 
+                    }
+              return data;
+            })
+            .catch(() => {
+              return false;
+          })
+      },
+
+    }
+});
+
+
 new Vue({
     el: '#mobileMenu',
     data: {
         show: false,
     },
-    methods: {
-
-        getWorks() {
-            let self = this;
-            let data = {}
-            //self.SrchBox = true;
-            fetch('/send-data', {
-
-                method: 'post',
-                body: JSON.stringify(data)
-
-              method: "GET",
-              headers: {
-                'Connection': 'keep-alive',
-                'Accept-encoding': 'gzip, deflate',
-                'Cache-Control': 'no-cache',
-                'Accept': '*/*',
-              }
-            })
-            .then(response => {
-              response.json().then((json) => {
-                self.projects = json; 
-               // console.log(self.projects);
-               // console.log(self.projects.length);
-                return json;
-              });  
-            })
-            .catch(function(err) {  
-              console.log('Fetch Error: ', err);  
-            });
-            //self.title = 0;
-          },
-
-
-
-
-/*
-        fetch('https://jsonplaceholder.typicode.com/posts/1')
-        .then((response) => {
-            if(response.ok) {
-                return response.json();
-            }
-        
-            throw new Error('Network response was not ok');
-        })
-        .then((json) => {
-            this.posts.push({
-                title: json.title,
-                body: json.body
-            });
-        })
-        .catch((error) => {
-            console.log(error);
-        });
-*/
-
-    }
+    methods: {}
 });

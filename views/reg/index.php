@@ -6,42 +6,46 @@
 
     <h1 class="pageTitle red">Регистрация</h1>
 
-    <div class="regPage">
+    <div class="regPage" id="regform">
 
         <h3 class="subtitle">Для того, чтобы зарегистрироваться, пожалуйста, заполните все поля формы:</h3>
 
         <div class="regForm">
             <div>
                 <span>Фамилия:</span>
-                <input placeholder="Иванов" />
+                <input v-model="abonent.lastname" placeholder="Иванов" />
             </div>
             <div>
                 <span>Имя:</span>
-                <input placeholder="Иван" />
+                <input v-model="abonent.firstname" placeholder="Иван" />
             </div>
             <div>
                 <span>Отчество:</span>
-                <input placeholder="Иванович" />
+                <input v-model="abonent.surname" placeholder="Иванович" />
             </div>
             <div class="calendar">
                 <span>Дата рождения:</span>
-                <input id="datepicker" placeholder="01/01/1970" />
+                <input v-model="abonent.birthday" id="datepicker" placeholder="01/01/1970" />
             </div>
             <div>
                 <span>Номер свидетельства:</span>
-                <input placeholder="0000 0000 0000" />
+                <input v-model="abonent.certnum" placeholder="0000 0000 0000" />
             </div>
             <div>
                 <span>Электронная почта:</span>
-                <input placeholder="mail@mail.kz" />
+                <input v-model="abonent.email" 
+                       @blur="isEmailTouched = true"
+                       :class="{ error: isEmailError }"  
+                       placeholder="mail@mail.kz" 
+                  />
             </div>
             <div>
                 <span>Пароль:</span>
-                <input placeholder="Не менее 8 символов" />
+                <input v-model="abonent.passwd1" placeholder="Не менее 8 символов" />
             </div>
             <div>
                 <span>Повторите пароль:</span>
-                <input placeholder="Не менее 8 символов" />
+                <input v-model="abonent.passwd2" ref="refPasswd" placeholder="Не менее 8 символов" />
             </div>
             <div class="checkContainer">
                 <div class="round">
@@ -52,7 +56,7 @@
                 Я понимаю ответственность за предоставление заведомо ложной информации<br />
                 или информации о третьих лицах согласно законодательству Республики Казахстан</span>
             </div>
-            <button class="blueButton blue">Зарегистрироваться</button>
+            <button :disabled="!isEmailValid" @click="sendData()" class="blueButton blue">Зарегистрироваться</button>
 
         </div>
     </div>
