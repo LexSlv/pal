@@ -81,7 +81,10 @@
 
                     ['label' => 'Пользователи', 'icon' => 'fas fa-users', 'url' => ['/admin/users']],
                     ['label' => 'Счета на оплату', 'icon' => 'fas fa-money-bill-alt', 'url' => ['/admin/bills']],
+
+                    ['label' => 'Настройки:', 'options' => ['class' => 'header']],
                     ['label' => 'Роли пользователей', 'icon' => 'fas fa-theater-masks', 'url' => ['/admin/users-rules']],
+                    ['label' => 'Степень членства', 'icon' => 'fas fa-crown', 'url' => ['/admin/member-status']],
 
                     /*
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
