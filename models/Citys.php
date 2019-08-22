@@ -41,7 +41,7 @@ class Citys extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'region_id' => 'ID области',
-            'text' => 'Название',
+            'text' => 'Город',
         ];
     }
 }
