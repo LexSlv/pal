@@ -14,14 +14,13 @@
                     ['label' => 'Меню', 'icon' => 'fas fa-list-ol', 'url' => ['/admin/menu']],
                     ['label' => 'Слайдер', 'icon' => 'fas fa-hand-point-up', 'url' => ['/admin/slider']],
 
-                    ['label' => 'Страницы:', 'options' => ['class' => 'header']],
+
                     ['label' => 'Новости', 'icon' => 'far fa-newspaper', 'url' => ['/admin/news']],
                     ['label' => 'Вопросы и ответы', 'icon' => 'far fa-question-circle', 'url' => ['/admin/faq']],
                     ['label' => 'Партнёры', 'icon' => 'fas fa-handshake', 'url' => ['/admin/partners']],
                     ['label' => 'Экзамены', 'icon' => 'fas fa-graduation-cap', 'url' => ['/admin/exams']],
 
 
-                    ['label' => 'Ссылки и документы:', 'options' => ['class' => 'header']],
                     [
                         'label' => 'Документы',
                         'icon' => 'fas fa-file-word',
@@ -79,11 +78,11 @@
 
                     ['label' => 'Пользователи:', 'options' => ['class' => 'header']],
 
-                    ['label' => 'Пользователи', 'icon' => 'fas fa-users', 'url' => ['/admin/users']],
+                    ['label' => 'Список пользователей', 'icon' => 'fas fa-users', 'url' => ['/admin/users']],
                     ['label' => 'Счета на оплату', 'icon' => 'fas fa-money-bill-alt', 'url' => ['/admin/bills']],
 
-                    ['label' => 'Настройки:', 'options' => ['class' => 'header']],
-                    ['label' => 'Роли пользователей', 'icon' => 'fas fa-theater-masks', 'url' => ['/admin/users-rules']],
+
+                    ['label' => 'Роли', 'icon' => 'fas fa-theater-masks', 'url' => ['/admin/users-rules']],
                     ['label' => 'Степень членства', 'icon' => 'fas fa-crown', 'url' => ['/admin/member-status']],
                     ['label' => 'Отделения', 'icon' => 'fas fa-building', 'url' => ['/admin/departmens']],
 
