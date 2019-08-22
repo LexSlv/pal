@@ -7,7 +7,6 @@ new Vue({
 
 const emailCheckRegex = /.+@.+\..+/i;
 
-
 new Vue({
     el: '#regform',
     data: {
@@ -31,7 +30,7 @@ new Vue({
       isEmailValid() {
         return emailCheckRegex.test(this.email);
       },
-  
+
       isEmailError() {
         return !this.isEmailValid && this.isEmailTouched;
       },
@@ -40,7 +39,7 @@ new Vue({
       checkPasswordsEquality() {
         const { password, passwd2 } = this;
         const { refPasswd } = this.$refs;
-  
+
         if (password !== passwd2) {
           refPasswd.setCustomValidity(
             'Пароли должны совпадать',
@@ -58,7 +57,7 @@ new Vue({
                     const element = data[i];
                       if(element.Soc.trim() == this.orderData.FmcFttbTp.trim()) {
                         this.tariff = element.SocName;
-                      } 
+                      }
                     }
               return data;
             })
