@@ -85,6 +85,7 @@
                     ['label' => 'Настройки:', 'options' => ['class' => 'header']],
                     ['label' => 'Роли пользователей', 'icon' => 'fas fa-theater-masks', 'url' => ['/admin/users-rules']],
                     ['label' => 'Степень членства', 'icon' => 'fas fa-crown', 'url' => ['/admin/member-status']],
+                    ['label' => 'Отделения', 'icon' => 'fas fa-building', 'url' => ['/admin/departmens']],
 
                     /*
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
