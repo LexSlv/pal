@@ -85,8 +85,15 @@
                     ['label' => 'Роли', 'icon' => 'fas fa-theater-masks', 'url' => ['/admin/users-rules']],
                     ['label' => 'Степень членства', 'icon' => 'fas fa-crown', 'url' => ['/admin/member-status']],
                     ['label' => 'Отделения', 'icon' => 'fas fa-building', 'url' => ['/admin/departmens']],
+                    ['label' => 'Области', 'icon' => 'fas fa-map-marked-alt', 'url' => ['/admin/regions']],
+                    ['label' => 'Города', 'icon' => 'fas fa-map-marker-alt', 'url' => ['/admin/citys']],
 
                     /*
+                     * <i class="fas fa-map-marked-alt"></i>
+                     * <i class="fas fa-map-marker-alt"></i>
+                     * <i class="fas fa-map-marker-alt"></i>
+                     * <i class="fas fa-map-marked-alt"></i>
+                     *
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
