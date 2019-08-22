@@ -5,6 +5,23 @@ use app\models\Citys;
 
 class ApiController extends \yii\web\Controller
 {
+    public function behaviors()
+    {
+        return [
+            // ...
+            'contentNegotiator' => [
+                'class' => \yii\filters\ContentNegotiator::className(),
+                'only' => ['index', 'view'],
+                'formatParam' => '_format',
+                'formats' => [
+                    'application/json' => \yii\web\Response::FORMAT_JSON,
+                    'application/xml' => \yii\web\Response::FORMAT_XML,
+                ],
+            ],
+        ];
+    }
+
+
     public function actionIndex()
     {
         return $this->render('index');
@@ -12,6 +29,7 @@ class ApiController extends \yii\web\Controller
 
     public function actionCitys(){
 
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
         isset($_GET['region']) ? $region = $_GET['region'] : die;
 
         $citys = Citys::find()
@@ -20,7 +38,7 @@ class ApiController extends \yii\web\Controller
                         ->asArray()
                         ->all();
 
-        echo json_encode($citys);
+        return $citys;
         die;
 
     }
