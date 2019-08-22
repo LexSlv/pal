@@ -35,7 +35,7 @@ class Users extends \yii\db\ActiveRecord
         return [
             [['regDate', 'bornDate', 'firstName', 'middleName', 'lastName', 'certificateNumber', 'email', 'status'], 'required'],
             [['email'],'email'],
-            [['regDate', 'bornDate', 'password'], 'safe'],
+            [['regDate', 'bornDate', 'password','member_status','dep_num','dep','post_index','region','city','address','phone'], 'safe'],
             [['certificateNumber', 'status'], 'integer'],
             [['firstName', 'middleName', 'lastName', 'email'], 'string', 'max' => 255],
         ];
@@ -56,6 +56,15 @@ class Users extends \yii\db\ActiveRecord
             'certificateNumber' => 'Номер свидетельства',
             'email' => 'Email',
             'status' => 'Роль',
+            'member_status' => 'Степень членства',
+            'dep_num' => 'Номер в реестре',
+            'dep' => 'Региональная ППНО',
+            'post_index' => 'Индекс',
+            'region' => 'Область',
+            'city' => 'Город',
+            'address' => 'Адрес',
+            'phone' => 'Телефон',
+
         ];
     }
 }
