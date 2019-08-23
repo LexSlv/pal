@@ -109,54 +109,53 @@ foreach ($regions as $region) {
 
 </div>
 
-<div class="btn btn-success" id="my-btn">Кнопка</div>
-
 
 <script>
+        let selectedRegion = $("#users-region").children("option:selected").val();
+        let dataset;
 
-    $('#my-btn').on('click', function() {
+        fetch('/api/citys?region=' + selectedRegion)
+            .then(response => response.json())
+            .then(data => dataset = data) // this unnecessary
+            .then(json => {
+                console.log(json[0]['id']);
+                var selected = '';
+                $("#users-city").empty();
+                for(i=0; i<50; i++){
 
-        /*
-        $.ajax({
-            url: '<?= Yii::$app->request->baseUrl ?>/api/citys?region=1',
-            type: 'GET',
-            dataType: "json",
-            data: {
-                _csrf: '<?=Yii::$app->request->getCsrfToken()?>'
-            },
-            success: function (data) {
-                console.log(data);
-            }
-        });*/
+                    if(json[i]['id'] == <?= $model->city ?>){
+                        selected = 'selected';
+                    }else{
+                        selected='';
+                    }
+                    $("#users-city").append("<option value='" + json[i]['id'] +  "' " + selected +">" + json[i]['text'] + "</option>" );
+                    if(json[i]['id'] == undefined || json[i]['id']==''){
+                        break;
+                    }
+                }
+            });
 
-        /*
-        $.ajax({
-            type: 'GET',
-            url: '/api/citys?region=1',
-            success: function(data){
-                console.log(data);
-            }
-            ,error: function(XMLHttpRequest, textStatus, errorThrown) {
-                console.log(XMLHttpRequest, textStatus);
-            }
-            ,complete: function(httpObj, textStatus){
-                console.log(httpObj, textStatus);
-            }
+
+
+        $("#users-region").change(function () {
+
+            selectedRegion = $("#users-region").children("option:selected").val();
+
+            fetch('/api/citys?region=' + selectedRegion)
+                .then(response => response.json())
+                .then(data => dataset = data) // this unnecessary
+                .then(json => {
+                    console.log(json[0]['id']);
+                    var selected = '';
+                    $("#users-city").empty();
+                    for(i=0; i<50; i++){
+                        $("#users-city").append("<option value='" + json[i]['id'] +  "' " + selected +">" + json[i]['text'] + "</option>" );
+                        if(json[i]['id'] == undefined || json[i]['id']==''){
+                            break;
+                        }
+                    }
+                });
         });
-        */
 
-        let citis;
-
-        citis = fetch('/api/citys?region=1',
-            {method:"GET"}
-        ).then(response => response.json())
-            .then(json => console.log(json))
-            .catch(err => console.error(err));
-
-        console.log(citis);
-
-
-
-
-    });
 </script>
+

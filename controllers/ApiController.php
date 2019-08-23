@@ -29,6 +29,8 @@ class ApiController extends \yii\web\Controller
 
     public function actionCitys(){
 
+
+
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
         isset($_GET['region']) ? $region = $_GET['region'] : die;
 
@@ -37,8 +39,9 @@ class ApiController extends \yii\web\Controller
                         ->orderBy('text ASC')
                         ->asArray()
                         ->all();
+        return (\Yii::$app->request->isAjax) ? $this->redirect(['/'], 301) : $citys;
 
-        return $citys;
+
         die;
 
     }

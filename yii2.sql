@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.2:3306
--- Время создания: Авг 21 2019 г., 13:26
+-- Время создания: Авг 23 2019 г., 08:50
 -- Версия сервера: 5.7.20
 -- Версия PHP: 7.0.26
 
@@ -42,6 +42,49 @@ CREATE TABLE `bills` (
 
 INSERT INTO `bills` (`id`, `date`, `user_id`, `summ`, `status`) VALUES
 (1, '2019-07-11', 1, 2000, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `citys`
+--
+
+CREATE TABLE `citys` (
+  `id` int(11) NOT NULL,
+  `region_id` int(255) NOT NULL,
+  `text` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `citys`
+--
+
+INSERT INTO `citys` (`id`, `region_id`, `text`) VALUES
+(1, 1, 'Алматы'),
+(2, 1, 'Талгар'),
+(3, 1, 'Талдыкорган'),
+(4, 2, 'Нур- Султан'),
+(5, 2, 'Кокшетау');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `department`
+--
+
+CREATE TABLE `department` (
+  `id` int(11) NOT NULL,
+  `text` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `department`
+--
+
+INSERT INTO `department` (`id`, `text`) VALUES
+(1, 'Отделение 1'),
+(2, 'Отделение 2'),
+(3, 'Отделение 3');
 
 -- --------------------------------------------------------
 
@@ -117,6 +160,25 @@ INSERT INTO `faq` (`id`, `q_ru`, `a_ru`, `q_kz`, `a_kz`, `position`) VALUES
 (2, 'I am here to assist you', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'I am here to assist you', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 2),
 (3, 'Какой-то вопрос, какой-то вопрос, какой-то вопрос, вопрос?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'Какой-то вопрос, какой-то вопрос, какой-то вопрос, вопрос?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 3),
 (4, 'Let\'s get started', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\n', 'Let\'s get started', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\n', 4);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `member_status`
+--
+
+CREATE TABLE `member_status` (
+  `id` int(11) NOT NULL,
+  `text` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `member_status`
+--
+
+INSERT INTO `member_status` (`id`, `text`) VALUES
+(1, 'Первая степень'),
+(2, 'Вторая степень');
 
 -- --------------------------------------------------------
 
@@ -294,6 +356,25 @@ INSERT INTO `qreports` (`id`, `date`, `title_ru`, `text_ru`, `title_kz`, `text_k
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `regions`
+--
+
+CREATE TABLE `regions` (
+  `id` int(11) NOT NULL,
+  `text` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `regions`
+--
+
+INSERT INTO `regions` (`id`, `text`) VALUES
+(1, 'Алматинская область'),
+(2, 'Акмолинская область');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `sdocs`
 --
 
@@ -398,16 +479,24 @@ CREATE TABLE `users` (
   `certificateNumber` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` text NOT NULL,
-  `status` int(11) NOT NULL
+  `status` int(11) NOT NULL,
+  `member_status` int(11) NOT NULL,
+  `dep_num` int(11) DEFAULT NULL,
+  `dep` int(11) NOT NULL,
+  `post_index` int(11) DEFAULT NULL,
+  `region` int(11) NOT NULL,
+  `city` int(11) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `phone` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `regDate`, `bornDate`, `firstName`, `middleName`, `lastName`, `certificateNumber`, `email`, `password`, `status`) VALUES
-(1, '2019-08-22', '1988-11-04', 'Тест', 'Тестович', 'Тестов', 111222333, 'test@mail.ru', '202cb962ac59075b964b07152d234b70', 1),
-(8, '2019-08-22', '1988-11-04', 'Иван', 'Иванович', 'Иванов', 111222333, 'ivan@mail.ru', '550a141f12de6341fba65b0ad0433500', 3);
+INSERT INTO `users` (`id`, `regDate`, `bornDate`, `firstName`, `middleName`, `lastName`, `certificateNumber`, `email`, `password`, `status`, `member_status`, `dep_num`, `dep`, `post_index`, `region`, `city`, `address`, `phone`) VALUES
+(1, '2019-08-22', '1988-11-04', 'Тест', 'Тестович', 'Тестов', 111222333, 'test@mail.ru', '202cb962ac59075b964b07152d234b70', 1, 1, 1111222333, 1, 444444, 2, 5, 'dasda das', 3213213),
+(8, '2019-08-22', '1988-11-04', 'Иван', 'Иванович', 'Иванов', 111222333, 'ivan@mail.ru', '550a141f12de6341fba65b0ad0433500', 3, 0, 0, 0, 0, 0, 0, '0', 0);
 
 -- --------------------------------------------------------
 
@@ -441,6 +530,18 @@ ALTER TABLE `bills`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `citys`
+--
+ALTER TABLE `citys`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `department`
+--
+ALTER TABLE `department`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `docs`
 --
 ALTER TABLE `docs`
@@ -456,6 +557,12 @@ ALTER TABLE `exams`
 -- Индексы таблицы `faq`
 --
 ALTER TABLE `faq`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `member_status`
+--
+ALTER TABLE `member_status`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -492,6 +599,12 @@ ALTER TABLE `partners`
 -- Индексы таблицы `qreports`
 --
 ALTER TABLE `qreports`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `regions`
+--
+ALTER TABLE `regions`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -535,6 +648,18 @@ ALTER TABLE `bills`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT для таблицы `citys`
+--
+ALTER TABLE `citys`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT для таблицы `department`
+--
+ALTER TABLE `department`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT для таблицы `docs`
 --
 ALTER TABLE `docs`
@@ -551,6 +676,12 @@ ALTER TABLE `exams`
 --
 ALTER TABLE `faq`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT для таблицы `member_status`
+--
+ALTER TABLE `member_status`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `menu`
@@ -580,6 +711,12 @@ ALTER TABLE `partners`
 -- AUTO_INCREMENT для таблицы `qreports`
 --
 ALTER TABLE `qreports`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT для таблицы `regions`
+--
+ALTER TABLE `regions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
