@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.2:3306
--- Время создания: Авг 23 2019 г., 09:47
+-- Время создания: Авг 23 2019 г., 14:01
 -- Версия сервера: 5.7.20
 -- Версия PHP: 7.0.26
 
@@ -305,6 +305,30 @@ INSERT INTO `news` (`id`, `date`, `alias`, `cat`, `title_ru`, `text_ru`, `title_
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `notice`
+--
+
+CREATE TABLE `notice` (
+  `id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `massage` text NOT NULL,
+  `icon` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `notice`
+--
+
+INSERT INTO `notice` (`id`, `date`, `user_id`, `massage`, `icon`) VALUES
+(1, '2019-08-23', 1, 'Уведомление с каким - то текстом', 0),
+(2, '2019-08-23', 1, 'Красное уведомление', 1),
+(3, '2019-07-17', 1, 'Прошлый месяц', 0),
+(4, '2019-06-23', 1, 'Минус 2 месяца', 0);
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `partners`
 --
 
@@ -590,6 +614,12 @@ ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `notice`
+--
+ALTER TABLE `notice`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `partners`
 --
 ALTER TABLE `partners`
@@ -700,6 +730,12 @@ ALTER TABLE `meta`
 --
 ALTER TABLE `news`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT для таблицы `notice`
+--
+ALTER TABLE `notice`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT для таблицы `partners`
