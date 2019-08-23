@@ -1,19 +1,30 @@
+<?php
+
+$lastNoticeDate = $notice[0]['date'];
+$noticeMonth = substr(date("m",strtotime($lastNoticeDate)),1);
+
+isset($_GET['notice_page']) ? $nextPage = $_GET['notice_page'] + 1 : $nextPage = 1;
+
+isset($_GET['notice_page']) ? $prevPage = $_GET['notice_page'] - 1 : $prevPage = 0;
+
+?>
+
 <div class="lkPage">
 
     <div class="reportingBlock">
 
-        <h2 class="blue">Уведомления за апрель</h2>
+        <h2 class="blue">Уведомления за <?= $month[$noticeMonth] ?></h2>
 
-        <span class="success">Оплатите членский взнос до <i>25.04.2019</i></span>
-        <span class="warning">Необходимо сдать отчет за 4 квартал 2019 года до <i>25.04.2019</i></span>
-        <span class="warning">Оплатите членский взнос до <i>25.04.2019</i></span>
-        <span class="success">Необходимо сдать отчет за 4 квартал 2019 года до <i>25.04.2019</i></span>
-        <span class="warning">Оплатите членский взнос до <i>25.04.2019</i></span>
-        <span class="warning">Необходимо сдать отчет за 4 квартал 2019 года до <i>25.04.2019</i></span>
+        <?php foreach ($notice as $notice_item): ?>
+        <?php $notice_item['icon'] == 0 ? $noticeClass = "success" : $noticeClass = "warning"; ?>
+        <span class="<?= $noticeClass ?>"><?= $notice_item['massage'] ?></span>
 
+        <?php endforeach; ?>
         <div class="reportingPagination">
-            <span class="before">Уведомления за март</span>
-            <span class="after">Уведомления за май</span>
+            <?php if($prevPage>=0): ?>
+            <a href="/lk/?notice_page=<?= $prevPage ?>"><span class="before">Уведомления за март</span></a>
+            <?php endif; ?>
+            <a href="/lk/?notice_page=<?= $nextPage ?>"><span class="after">Уведомления за май</span></a>
         </div>
 
     </div>

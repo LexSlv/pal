@@ -13,6 +13,7 @@ use app\models\MemberStatus;
 use app\models\Department;
 use app\models\Regions;
 use app\models\Citys;
+use app\models\Notice;
 
 class LkController extends Controller
 {
@@ -80,7 +81,25 @@ class LkController extends Controller
 
 
 
-        return $this->render('index',['user'=>$user, 'bills'=>$bills]);
+        isset($_GET['notice_page']) ? $notice_page = $_GET['notice_page'] : $notice_page = 0;
+        $oneDate = date("Y-m", strtotime("-".$notice_page." months"));
+
+        $twoDate = date("Y-m", strtotime("-".($notice_page - 1)." months"));
+
+
+
+        $notice = Notice::find()
+                        ->where(['user_id'=>$userId])
+                        //->andWhere(['between', 'date', "2019-08-23", "2019-06-23" ])
+                        ->andWhere(['>=', 'date', $oneDate."-1"])
+                        ->andWhere(['<=', 'date', $twoDate."-1"])
+                        ->orderBy("date DESC")
+                        ->asArray()
+                        ->all();
+
+        //print_r($notice); die;
+
+        return $this->render('index',['user'=>$user, 'bills' => $bills, 'notice' => $notice]);
     }
 
 

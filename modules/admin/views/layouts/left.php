@@ -80,13 +80,18 @@
 
                     ['label' => 'Список пользователей', 'icon' => 'fas fa-users', 'url' => ['/admin/users']],
                     ['label' => 'Счета на оплату', 'icon' => 'fas fa-money-bill-alt', 'url' => ['/admin/bills']],
+                    ['label' => 'Уведомления', 'icon' => 'fas fa-comment-dots', 'url' => ['/admin/notice']],
 
+
+                    ['label' => 'Настройки:', 'options' => ['class' => 'header']],
 
                     ['label' => 'Роли', 'icon' => 'fas fa-theater-masks', 'url' => ['/admin/users-rules']],
                     ['label' => 'Степень членства', 'icon' => 'fas fa-crown', 'url' => ['/admin/member-status']],
                     ['label' => 'Отделения', 'icon' => 'fas fa-building', 'url' => ['/admin/departmens']],
                     ['label' => 'Области', 'icon' => 'fas fa-map-marked-alt', 'url' => ['/admin/regions']],
                     ['label' => 'Города', 'icon' => 'fas fa-map-marker-alt', 'url' => ['/admin/citys']],
+
+
 
                     /*
                      * <i class="fas fa-map-marked-alt"></i>
