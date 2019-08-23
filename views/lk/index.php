@@ -15,8 +15,6 @@ $month[12] = "декабрь";
 
 $currentMonth = substr(date('m'),1);
 
-
-
 ?>
 
 
@@ -59,7 +57,7 @@ $currentMonth = substr(date('m'),1);
 </div>
 
 <script>
-    
+
 new Vue({
     el: '#lk',
     data: {
@@ -81,11 +79,16 @@ new Vue({
             email: '<?= $user['email'] ?>'
         },
         currentTab: 0,
+        currentSTab: 0,
         tabs: [
             'Главная',
             'Оплата членских взносов',
             'Предоставление отчетности',
             'Личные уведомления'
+        ],
+        sTabs: [
+          'Для оценщиков занимающихся частной практикой',
+          'Для оценщиков, заключивших Договор с юридическим лицом'
         ]
     },
     methods: {
@@ -96,7 +99,7 @@ new Vue({
                     this.editContacts = 1;
                 }
             }
-        }    
+        }
 });
 
 </script>
