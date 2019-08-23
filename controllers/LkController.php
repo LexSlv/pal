@@ -9,6 +9,10 @@ use app\models\Meta;
 use app\models\Users;
 use app\models\UsersRules;
 use app\models\Bills;
+use app\models\MemberStatus;
+use app\models\Department;
+use app\models\Regions;
+use app\models\Citys;
 
 class LkController extends Controller
 {
@@ -46,7 +50,33 @@ class LkController extends Controller
             ->asArray()
             ->all();
 
+        $member_status = MemberStatus::find()
+            ->where(['id'=>$user['member_status']])
+            ->asArray()
+            ->one();
+
+
+        $dep = Department::find()
+            ->where(['id'=>$user['dep']])
+            ->asArray()
+            ->one();
+
+        $region = Regions::find()
+            ->where(['id'=>$user['region']])
+            ->asArray()
+            ->one();
+
+
+        $city = Regions::find()
+            ->where(['id'=>$user['city']])
+            ->asArray()
+            ->one();
+
         $user['status'] = $status['text'];
+        $user['member_status'] = $member_status['text'];
+        $user['dep'] = $dep['text'];
+        $user['region_text'] = $region['text'];
+        $user['city_text'] = $city['text'];
 
 
 

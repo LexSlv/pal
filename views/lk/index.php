@@ -65,17 +65,17 @@ new Vue({
         editedName: {
             date: '<?= date("d.m.Y", strtotime($user['bornDate'])) ?>',
             number: '<?= $user['certificateNumber'] ?>',
-            member: 'Действительный член',
-            register: '000000',
-            ppno: 'Алматинская ППНО'
+            member: '<?= $user['member_status'] ?>',
+            register: '<?= $user['dep_num'] ?>',
+            ppno: '<?= $user['dep'] ?>'
         },
         editContacts: '0',
         editedContacts: {
-            index: '000000',
-            region: 'Алматинская',
-            city: 'Алматы',
-            address: 'пр. Абая 120',
-            phone: '8 777 777 77 77',
+            index: '<?= $user['post_index'] ?>',
+            region: '<?=  $user['region_text'] ?>',
+            city: '<?= $user['city_text'] ?>',
+            address: '<?= $user['address'] ?>',
+            phone: '<?= $user['phone'] ?>',
             email: '<?= $user['email'] ?>'
         },
         currentTab: 0,

@@ -36,7 +36,7 @@ class Users extends \yii\db\ActiveRecord
             [['regDate', 'bornDate', 'firstName', 'middleName', 'lastName', 'certificateNumber', 'email', 'status'], 'required'],
             [['email'],'email'],
             [['regDate', 'bornDate', 'password','member_status','dep_num','dep','post_index','region','city','address','phone'], 'safe'],
-            [['certificateNumber', 'status'], 'integer'],
+            [['certificateNumber', 'status', 'dep_num'], 'integer'],
             [['firstName', 'middleName', 'lastName', 'email'], 'string', 'max' => 255],
         ];
     }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.2:3306
--- Время создания: Авг 23 2019 г., 08:50
+-- Время создания: Авг 23 2019 г., 09:47
 -- Версия сервера: 5.7.20
 -- Версия PHP: 7.0.26
 
@@ -487,7 +487,7 @@ CREATE TABLE `users` (
   `region` int(11) NOT NULL,
   `city` int(11) NOT NULL,
   `address` varchar(255) NOT NULL,
-  `phone` int(11) DEFAULT NULL
+  `phone` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -495,8 +495,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `regDate`, `bornDate`, `firstName`, `middleName`, `lastName`, `certificateNumber`, `email`, `password`, `status`, `member_status`, `dep_num`, `dep`, `post_index`, `region`, `city`, `address`, `phone`) VALUES
-(1, '2019-08-22', '1988-11-04', 'Тест', 'Тестович', 'Тестов', 111222333, 'test@mail.ru', '202cb962ac59075b964b07152d234b70', 1, 1, 1111222333, 1, 444444, 2, 5, 'dasda das', 3213213),
-(8, '2019-08-22', '1988-11-04', 'Иван', 'Иванович', 'Иванов', 111222333, 'ivan@mail.ru', '550a141f12de6341fba65b0ad0433500', 3, 0, 0, 0, 0, 0, 0, '0', 0);
+(1, '2019-08-22', '1988-11-04', 'Тест', 'Тестович', 'Тестов', 1203050457, 'test@mail.ru', '202cb962ac59075b964b07152d234b70', 1, 1, 1111222333, 1, 4002578, 1, 1, 'Мн-8., дом 21, кв - 17', '77075681232'),
+(8, '2019-08-22', '1988-11-04', 'Иван', 'Иванович', 'Иванов', 111222333, 'ivan@mail.ru', '550a141f12de6341fba65b0ad0433500', 3, 1, 11222333, 1, 12345, 2, 5, 'выф', '434242');
 
 -- --------------------------------------------------------
 
