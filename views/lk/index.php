@@ -124,5 +124,7 @@ new Vue({
 <script>
   $( function() { $( "#datepickerOne" ).datepicker(); } );
   $( function() { $( "#datepickerTwo" ).datepicker(); } );
-
+  $( function() { $( "#datepickerThree" ).datepicker(); } );
+  $( function() { $( "#datepickerFour" ).datepicker(); } );
+  $( function() { $( "#datepickerFive" ).datepicker(); } );
 </script>
