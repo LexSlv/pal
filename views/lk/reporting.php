@@ -35,9 +35,9 @@ isset($_GET['notice_page']) ? $prevPage = $_GET['notice_page'] - 1 : $prevPage =
 
             <div class="reportingPagination">
                 <?php if ($prevPage >= 0): ?>
-                <a href="/lk/?notice_page=<?= $prevPage ?>"><span class="before">Уведомления за <?= $month[$noticeMonth + 1] ?></span></a>
+                <a @click="changeMonth" href="/lk/?notice_page=<?= $prevPage ?>"><span class="before">Уведомления за <?= $month[$noticeMonth + 1] ?></span></a>
                 <?php endif; ?>
-                <a href="/lk/?notice_page=<?= $nextPage ?>"><span class="after">Уведомления за <?= $month[$noticeMonth - 1] ?></span></a>
+                <a @click="changeMonth" href="/lk/?notice_page=<?= $nextPage ?>"><span class="after">Уведомления за <?= $month[$noticeMonth - 1] ?></span></a>
 
             </div>
         <?php } ?>

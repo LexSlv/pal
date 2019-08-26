@@ -26,13 +26,12 @@ $currentMonth = substr(date('m'),1);
     <h1 class="pageTitle red">Личный кабинет</h1>
 
 
-
 <div id="lk">
 
     <div class="lkTabs container">
 
             <div class="lkTabsHead">
-                <a v-for="(tb, index) in tabs" :key="index" :class="{'active' : currentTab === index}" class="lkTab" @click="currentTab = index">{{ tb }}</a>
+                <a v-for="(tb, index) in tabs" :key="index" :class="{'active' : currentTab === index}" class="lkTab" @click="currentTab = index, changeRoute()">{{ tb }}</a>
             </div>
 
 
@@ -61,6 +60,7 @@ $currentMonth = substr(date('m'),1);
 new Vue({
     el: '#lk',
     data: {
+        router: window.location.href,
         editName: '0',
         editedName: {
             date: '<?= date("d.m.Y", strtotime($user['bornDate'])) ?>',
@@ -91,7 +91,21 @@ new Vue({
           'Для оценщиков, заключивших Договор с юридическим лицом'
         ]
     },
+    mounted() {
+        if(this.router.indexOf('?notice_page=') > -1) {
+            this.currentTab = 3;
+        }
+    },
     methods: {
+            changeMonth() {
+                this.currentTab = 3;
+            },
+            changeRoute(){
+                if(this.router.indexOf('?notice_page=') > -1) {
+                    const rt = this.router.split('?');
+                    this.router = rt[0]
+                 }
+            },
             edit(val) {
                 if (val == 'name') {
                     this.editName = 1;
