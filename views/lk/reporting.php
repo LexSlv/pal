@@ -1,7 +1,10 @@
 <?php
-$lastNoticeDate = $notice[0]['date'];
-
-$noticeMonth = (int)date("m", strtotime($lastNoticeDate));
+if(isset($notice[0]['date'])){
+    $lastNoticeDate = $notice[0]['date'];
+    $noticeMonth = (int)date("m", strtotime($lastNoticeDate));
+}else{
+    $noticeMonth = date('m');
+}
 
 
 isset($_GET['notice_page']) ? $nextPage = $_GET['notice_page'] + 1 : $nextPage = 1;
