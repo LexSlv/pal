@@ -34,7 +34,7 @@ class Slider extends \yii\db\ActiveRecord
         return [
             [['description_ru', 'description_kz'], 'string'],
             [['position'], 'integer'],
-            [['title_ru', 'title_kz', 'img', 'link'], 'string', 'max' => 255],
+            [['title_ru', 'title_kz', 'img', 'link','link_kz'], 'string', 'max' => 255],
         ];
     }
 
@@ -51,6 +51,7 @@ class Slider extends \yii\db\ActiveRecord
             'description_kz' => 'Заголовок (kz)',
             'img' => 'Путь к картинке',
             'link' => 'Ссылка',
+            'link_kz' => 'Ссылка(kz)',
             'position' => 'Порядок показа',
         ];
     }

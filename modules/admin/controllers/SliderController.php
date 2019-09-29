@@ -8,6 +8,7 @@ use app\models\SliderSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * SliderController implements the CRUD actions for Slider model.
@@ -66,7 +67,11 @@ class SliderController extends Controller
     {
         $model = new Slider();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $model->img = UploadedFile::getInstance($model, 'img');
+            $model->img->saveAs('uploads/slider/' . time() . '.' . $model->img->extension);
+            $model->img = '/web/uploads/slider/'. time() . '.' . $model->img->extension;
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -86,7 +91,17 @@ class SliderController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+
+            if(file_exists("uploads/slider/'/".$model->img)){
+                unlink("uploads/slider/'".$model->img);
+            }
+
+            $model->img = UploadedFile::getInstance($model, 'img');
+            $model->img->saveAs('uploads/slider/' . time() . '.' . $model->img->extension);
+            $model->img = '/web/uploads/slider/'. time() . '.' . $model->img->extension;
+            $model->save();
+
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -104,6 +119,14 @@ class SliderController extends Controller
      */
     public function actionDelete($id)
     {
+
+        $model = Slider::findOne($id);
+
+
+        if(file_exists("uploads/slider/'/".$model->img)){
+            unlink("uploads/slider/'".$model->img);
+        }
+
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

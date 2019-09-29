@@ -12,7 +12,11 @@
                 <div class="container swiperBanner">
                     <h3><?= $slide['title_'.$lang] ?></h3>
                     <p><?= $slide['description_'.$lang] ?></p>
-                    <a class="redButton" href="<?= $slide['link'] ?>">Подробнее</a>                                   
+                    <?php if($lang == "ru"){ ?>
+                        <a class="redButton" href="<?= $slide['link'] ?>">Подробнее</a>
+                    <?php }else{ ?>
+                        <a class="redButton" href="<?= $slide['link_kz'] ?>">Подробнее</a>
+                    <?php } ?>
                 </div>
             </div>
             <?php endforeach; ?>

@@ -1,19 +1,18 @@
-
+<?php
+use app\components\TbWidget;
+use yii\helpers\Html;
+?>
 <div class="container pageBody">
 
     <div class="breadcrumbs">
-        <a href="/" >Главная</a> / <span class="red">Вопрос-ответ</a>
+        <a href="/" >Главная</a> / <span class="red"><?= Html::encode($this->params['title']) ?></a>
     </div>
 
-    <h1 class="pageTitle red">Вопрос-ответ</h1>
+    <h1 class="pageTitle red"><?= Html::encode($this->params['title']) ?></h1>
 
     <div class="answerBlock">
 
-        <p>Какой-то текст об экспертах и экспертный совете, идейные соображения высшего
-        порядка, а также рамки и место обучения кадров играет важную роль в формировании
-        форм развития. Идейные соображения высшего порядка, а также новая модель
-        организационной деятельности способствует подготовки и реализации новых
-        предложений.</p>
+        <?= TbWidget::widget(['alias' => 'faq']); ?>
 
         <div class="answerBox">
 

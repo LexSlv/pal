@@ -20,9 +20,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'description_kz')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'img')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'img')->fileInput() ?>
 
     <?= $form->field($model, 'link')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'link_kz')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'position')->textInput() ?>
 
